@@ -1,0 +1,1452 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Like Button Voting & Rating\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-05 17:12+0400\n"
+"PO-Revision-Date: 2015-06-05 17:13+0400\n"
+"Last-Translator: LikeBtn <info@likebtn.com>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../likebtn_like_button.php:104
+msgid "Standard"
+msgstr "Standard"
+
+#: ../likebtn_like_button.php:105
+msgid "Aside"
+msgstr "Seitlich"
+
+#: ../likebtn_like_button.php:106
+msgid "Image"
+msgstr "Bild"
+
+#: ../likebtn_like_button.php:107
+msgid "Link"
+msgstr "Link"
+
+#: ../likebtn_like_button.php:108
+msgid "Quote"
+msgstr "Zitat"
+
+#: ../likebtn_like_button.php:109 ../likebtn_like_button.php:1161
+#: ../likebtn_like_button.php:3226
+msgid "Status"
+msgstr "Status"
+
+#: ../likebtn_like_button.php:121
+msgid "Post"
+msgstr "Post"
+
+#: ../likebtn_like_button.php:122
+msgid "Post List"
+msgstr "Post Liste"
+
+#: ../likebtn_like_button.php:123
+msgid "Page"
+msgstr "Seiten"
+
+#: ../likebtn_like_button.php:124
+msgid "Page List"
+msgstr "Seiten Liste"
+
+#: ../likebtn_like_button.php:125
+msgid "Comments"
+msgstr "Kommentare"
+
+#: ../likebtn_like_button.php:126
+msgid "User"
+msgstr "User"
+
+#: ../likebtn_like_button.php:127
+msgid "Custom Items"
+msgstr "Nutzerdefinierte Elemente"
+
+#: ../likebtn_like_button.php:128
+msgid "Product [WooCommerce]"
+msgstr "Produkte [WooCommerce]"
+
+#: ../likebtn_like_button.php:129
+msgid "Product List [WooCommerce]"
+msgstr "Produkt-Liste [WooCommerce]"
+
+#: ../likebtn_like_button.php:130
+msgid "Activity Posts [BuddyPress]"
+msgstr "Aktivität Posts [BuddyPress]"
+
+#: ../likebtn_like_button.php:131
+msgid "Activity Updates [BuddyPress]"
+msgstr "Aktivität Updates [BuddyPress]"
+
+#: ../likebtn_like_button.php:132
+msgid "Activity Comments [BuddyPress]"
+msgstr "Aktivität Kommentare [BuddyPress]"
+
+#: ../likebtn_like_button.php:133
+msgid "Activity Topics [BuddyPress]"
+msgstr "Aktivität Themen [BuddyPress]"
+
+#: ../likebtn_like_button.php:134
+msgid "Member Profile [BuddyPress]"
+msgstr "Nutzerprofil [BuddyPress]"
+
+#: ../likebtn_like_button.php:135
+msgid "Forum Posts [bbPress]"
+msgstr "Forumposts [bbPress]"
+
+#: ../likebtn_like_button.php:136
+msgid "User Profile [bbPress]"
+msgstr "Userprofile [bbPress]"
+
+#: ../likebtn_like_button.php:931 ../likebtn_like_button.php:2160
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: ../likebtn_like_button.php:943
+msgid "Like Buttons"
+msgstr "Like Buttons"
+
+#: ../likebtn_like_button.php:945 ../likebtn_like_button.php:1032
+msgid "Buttons"
+msgstr "Buttons"
+
+#: ../likebtn_like_button.php:945 ../likebtn_like_button.php:949
+msgid "LikeBtn Like Button"
+msgstr "LikeBTN Like Button"
+
+#: ../likebtn_like_button.php:949 ../likebtn_like_button.php:1017
+#: ../likebtn_like_button.php:1033 ../likebtn_like_button.php:1104
+msgid "Synchronization"
+msgstr "Synchronisation"
+
+#: ../likebtn_like_button.php:952 ../likebtn_like_button.php:1034
+#: ../likebtn_like_button.php:1103
+msgid "Statistics"
+msgstr "Statistiken"
+
+#: ../likebtn_like_button.php:955 ../likebtn_like_button.php:1035
+msgid "Help"
+msgstr "Hilfe"
+
+#: ../likebtn_like_button.php:1013
+msgid "Plan & Features"
+msgstr "Plan & Features"
+
+#: ../likebtn_like_button.php:1023
+msgid "Follow"
+msgstr "Folgen"
+
+#: ../likebtn_like_button.php:1039
+msgid "Premium / Trial features"
+msgstr "Premium / Demo Features"
+
+#: ../likebtn_like_button.php:1092
+msgid "Configure Synchronization in order to use this feature"
+msgstr "Konfiguriere die Synchronisation, um dieses Feature zu nutzen"
+
+#: ../likebtn_like_button.php:1098
+msgid "Max buttons per page"
+msgstr "Maximale Anzahl Buttons pro Seite"
+
+#: ../likebtn_like_button.php:1098 ../likebtn_like_button.php:2588
+msgid "Unlimited"
+msgstr "Unlimitiert"
+
+#: ../likebtn_like_button.php:1105
+msgid "Most liked content widget"
+msgstr "Meist gemochte Inhalte"
+
+#: ../likebtn_like_button.php:1106
+msgid "Sorting content by likes"
+msgstr "Sortiere Inhalte nach Likes"
+
+#: ../likebtn_like_button.php:1121
+msgid "Upgrade"
+msgstr "Upgrade"
+
+#: ../likebtn_like_button.php:1121 ../likebtn_like_button.php:1219
+#: ../likebtn_like_button.php:1786 ../likebtn_like_button.php:2599
+#: ../likebtn_like_button.php:3155
+msgid "http://likebtn.com/en/"
+msgstr "http://likebtn.com/en/"
+
+#: ../likebtn_like_button.php:1138
+msgid "Enabled"
+msgstr "Aktiviert"
+
+#: ../likebtn_like_button.php:1144
+msgid "min(s) ago"
+msgstr "Minute(n) her"
+
+#: ../likebtn_like_button.php:1152
+msgid "Never"
+msgstr "Nie"
+
+#: ../likebtn_like_button.php:1155
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+#: ../likebtn_like_button.php:1164 ../likebtn_like_button.php:1246
+#: ../likebtn_like_button.php:1256
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../likebtn_like_button.php:1170
+msgid "Last sync"
+msgstr "Letzter Sync"
+
+#: ../likebtn_like_button.php:1175 ../likebtn_like_button.php:4467
+#: ../likebtn_like_button.php:4512 ../likebtn_like_button.php:4557
+#: ../likebtn_like_button.php:4619
+msgid "Error"
+msgstr "Fehler"
+
+#: ../likebtn_like_button.php:1219
+msgid "Plans & Pricing"
+msgstr "Pläne & Preise"
+
+#: ../likebtn_like_button.php:1220
+msgid "Error occured, please try again later."
+msgstr "Ein Fehler ist aufgetreten, bitte versuche es später erneut."
+
+#: ../likebtn_like_button.php:1220
+msgid "Disable WP HTTP Compression plugin if you have it enabled."
+msgstr ""
+"Es ist ein Fehler aufgetreten. Deaktiviere WP HTTP-Kompressions-PlugIns, "
+"wenn du ein solches aktiviert hast."
+
+#: ../likebtn_like_button.php:1220
+msgid "Plan data refreshed"
+msgstr "Plan-Daten aktualisiert"
+
+#: ../likebtn_like_button.php:1220
+msgid "Refresh data"
+msgstr "Aktualisieren"
+
+#: ../likebtn_like_button.php:1221
+msgid "Please wait..."
+msgstr "Bitte warten..."
+
+#: ../likebtn_like_button.php:1238 ../likebtn_like_button.php:1243
+msgid "Expires in"
+msgstr "Endet in"
+
+#: ../likebtn_like_button.php:1238
+msgid "day(s)"
+msgstr "Tage(n)"
+
+#: ../likebtn_like_button.php:1244 ../likebtn_like_button.php:1253
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: ../likebtn_like_button.php:1245 ../likebtn_like_button.php:1255
+msgid "Enter your LikeBtn.com account data on Synchronization tab"
+msgstr "Gib deine LikeBTN.com-Account-Daten in den Synchronisations-Tab ein"
+
+#: ../likebtn_like_button.php:1260
+msgid "Plan"
+msgstr "Plan"
+
+#: ../likebtn_like_button.php:1305
+msgid "Like Button"
+msgstr "Like Button"
+
+#: ../likebtn_like_button.php:1305
+msgid ""
+"Please enter your LikeBtn.com account data on <a href=\"%url_sync%"
+"\">Synchronization</a> tab."
+msgstr ""
+"Bitte gib deine LikeBTN.com-Account-Daten im <a href=\"%url_sync%"
+"\">Synchronisations</a>-Tab."
+
+#: ../likebtn_like_button.php:1319
+msgid "Your LikeBtn plan has been switched to:"
+msgstr "Dein LikeBTN-Plan wurde geändert:"
+
+#: ../likebtn_like_button.php:1717
+msgid ""
+"Enable synchronization of likes from LikeBtn.com system into your database "
+"to get the opportunity to use the following features:"
+msgstr ""
+"Aktiviere die Synchronisation von Likes auf LikeBTN.com um die folgenden "
+"Features nutzen zu können:"
+
+#: ../likebtn_like_button.php:1718
+msgid "View statistics on Statistics tab."
+msgstr "Siehe die Statistiken im Statistik-Tab"
+
+#: ../likebtn_like_button.php:1719
+msgid "Sort content by likes."
+msgstr "Sortiere Inhalte nach Likes."
+
+#: ../likebtn_like_button.php:1720
+msgid "Use most liked content widget and shortcode."
+msgstr "Nutze Meist gemochte Inhalte-Widget und Shortcodes."
+
+#: ../likebtn_like_button.php:1725
+msgid "LikeBtn.com Account"
+msgstr "LikeBTN.com-Account"
+
+#: ../likebtn_like_button.php:1728
+msgid "To get your account data:"
+msgstr "Um deine Account-Daten zu bekommen:"
+
+#: ../likebtn_like_button.php:1732
+msgid "Register on <a href=\"%url_register%\">LikeBtn.com</a>"
+msgstr "Registriere dich auf <a href=\"%url_register%\">LikeBTN.com</a>"
+
+#: ../likebtn_like_button.php:1733 ../likebtn_like_button.php:1744
+msgid "http://likebtn.com/en/customer.php/register/"
+msgstr "http://likebtn.com/en/customer.php/register/"
+
+#: ../likebtn_like_button.php:1738
+msgid ""
+"Add your website to your account on <a href=\"%url_websites%\">Websites</a> "
+"page."
+msgstr ""
+"Füge deine Website zu deinem <a href=\"%url_websites%\">Account</a> hinzu."
+
+#: ../likebtn_like_button.php:1739
+msgid "http://likebtn.com/en/customer.php/websites"
+msgstr "http://likebtn.com/en/customer.php/websites"
+
+#: ../likebtn_like_button.php:1744
+msgid "Get Account Data"
+msgstr "Bekomme die Account-Daten"
+
+#: ../likebtn_like_button.php:1747
+msgid "E-mail"
+msgstr "E-Maail"
+
+#: ../likebtn_like_button.php:1750
+msgid ""
+"Your LikeBtn.com account email. Can be found on <a href=\"http://likebtn.com/"
+"en/customer.php/profile/edit\" target=\"_blank\">Profile</a> page"
+msgstr ""
+"Deine LikeBTN.com-Account-E-Mail. Findest du in deinem <a href=\"http://"
+"likebtn.com/en/customer.php/profile/edit\" target=\"_blank\">Profil</a>"
+
+#: ../likebtn_like_button.php:1754
+msgid "API key"
+msgstr "API-Key"
+
+#: ../likebtn_like_button.php:1757
+msgid ""
+"Your website API key on LikeBtn.com. Can be obtained on <a href=\"http://"
+"likebtn.com/en/customer.php/websites\" target=\"_blank\">Websites</a> page"
+msgstr ""
+"Dein API Key von LikeBTN.com findest du <a href=\"http://likebtn.com/en/"
+"customer.php/websites\" target=\"_blank\">hier</a>."
+
+#: ../likebtn_like_button.php:1761
+msgid "Site ID"
+msgstr "Site ID"
+
+#: ../likebtn_like_button.php:1768
+msgid ""
+"Your Site ID on LikeBtn.com. Can be obtained on <a href=\"http://likebtn.com/"
+"en/customer.php/websites\" target=\"_blank\">Websites</a> page."
+msgstr ""
+"Deine Site ID von LikeBTN.com findest du <a href=\"http://likebtn.com/en/"
+"customer.php/websites\" target=\"_blank\">hier</a>."
+
+#: ../likebtn_like_button.php:1775
+msgid "Check Account Data"
+msgstr "Überprüfe deine Account-Daten"
+
+#: ../likebtn_like_button.php:1785
+msgid ""
+"Website tariff plan does not allow to synchronize likes into your database – "
+"<a href=\"%url_upgrade%\">upgrade</a> your website to PRO or higher plan."
+msgstr ""
+"Dein Tarif-Plan erlaubt keine Synchronisation – <a href=\"%url_upgrade%"
+"\">upgrade</a> deine Website zu PRO oder höher."
+
+#: ../likebtn_like_button.php:1796
+msgid "Synchronization Interval"
+msgstr "Synchronisationsintervall"
+
+#: ../likebtn_like_button.php:1797
+msgid ""
+"Time interval in minutes in which fetching of vote results from LikeBtn.com "
+"into your database is being launched. When synchronization is enabled you "
+"can view Statistics, number of likes and dislikes for each post as Custom "
+"Field, sort posts by vote results, use Like Button widgets. The less the "
+"interval the heavier your database load."
+msgstr ""
+"Zeit-Intervall, in dem Synchronisierungen mit LikeBTN.com stattfinden. \n"
+"Wenn die Synchronisierung\n"
+" \n"
+"aktiviert ist,\n"
+" \n"
+"kannst du\n"
+" \n"
+"Statistiken\n"
+" sehen\n"
+", die Anzahl der\n"
+" Likes \n"
+"und Dislikes \n"
+"für jeden\n"
+" \n"
+"Posten als\n"
+" \n"
+"benutzerdefiniertes Feld\n"
+",\n"
+" \n"
+"sortiere\n"
+" \n"
+"Beiträge\n"
+" \n"
+"nach Abstimmungse\n"
+"rgebnissen\n"
+".\n"
+" Je kleiner das Intervall desto höher die Datenbank-Nutzung."
+
+#: ../likebtn_like_button.php:1801
+msgid "Do not fetch votes from LikeBtn.com into my database"
+msgstr "Hole keine Bewertungen von LikeBTN.com in meine Datenbank"
+
+#: ../likebtn_like_button.php:1803
+msgid "min"
+msgstr "Minuten"
+
+#: ../likebtn_like_button.php:1807
+msgid "Test sync"
+msgstr "Test Sync"
+
+#: ../likebtn_like_button.php:1810
+msgid "Run Full Sync Manually"
+msgstr "Starte einen vollen Sync manuell"
+
+#: ../likebtn_like_button.php:1810
+msgid ""
+"ATTENTION: Use this feature carefully since full synchronization may affect "
+"your website performance. If you don't experience any problems with likes "
+"synchronization better to avoid using this feature."
+msgstr ""
+"ACHTUNG: Volle Synchronisation kann deine Website-Performance "
+"verschlechtern. Wenn keine Probleme mit den Bewertungen auftauchen, sollte "
+"das Feature deaktiviert sein."
+
+#: ../likebtn_like_button.php:1854 ../likebtn_like_button.php:2146
+#: ../likebtn_like_button.php:2846
+msgid "Save Changes"
+msgstr "Speichern"
+
+#: ../likebtn_like_button.php:1921 ../likebtn_like_button.php:1922
+msgid "Automatic"
+msgstr "Automatisch"
+
+#: ../likebtn_like_button.php:1993
+msgid "Are you sure you want to reset settings for this entity?"
+msgstr ""
+"Bist du dir sicher, dass du die Einstellungen für dieses Objekt zurücksetzen "
+"möchtest?"
+
+#: ../likebtn_like_button.php:1994
+msgid "CUSTOM ITEM NAME"
+msgstr "CUSTOM ITEM NAME"
+
+#: ../likebtn_like_button.php:2061
+msgid "Like Button enabled"
+msgstr "Like-Button aktiviert"
+
+#: ../likebtn_like_button.php:2106
+msgid "Enable Like Button"
+msgstr "Like-Button aktivieren"
+
+#: ../likebtn_like_button.php:2116
+msgid "Copy Settings From"
+msgstr "Einstellungen kopieren von"
+
+#: ../likebtn_like_button.php:2117
+msgid "Choose the entity from which you want to copy settings"
+msgstr "Wähle das Objekt, von welchem du die Einstellungen kopieren möchtest"
+
+#: ../likebtn_like_button.php:2140
+msgid "Preview"
+msgstr "Vorschau"
+
+#: ../likebtn_like_button.php:2149
+msgid "Like it?"
+msgstr "Magst du es?"
+
+#: ../likebtn_like_button.php:2151
+msgid "Support the plugin with 5 Stars"
+msgstr "Unterstütze das PlugIn mit 5 Sternen"
+
+#: ../likebtn_like_button.php:2165
+msgid "Theme"
+msgstr "Theme"
+
+#: ../likebtn_like_button.php:2175
+msgid "Language"
+msgstr "Sprache"
+
+#: ../likebtn_like_button.php:2185
+msgid "Show buttons"
+msgstr "Buttons anzeigen"
+
+#: ../likebtn_like_button.php:2188 ../likebtn_like_button.php:2198
+#: ../likebtn_like_button.php:2208 ../likebtn_like_button.php:2234
+#: ../likebtn_like_button.php:2758
+msgid "Like"
+msgstr "Like"
+
+#: ../likebtn_like_button.php:2191 ../likebtn_like_button.php:2201
+#: ../likebtn_like_button.php:2211 ../likebtn_like_button.php:2240
+#: ../likebtn_like_button.php:2764
+msgid "Dislike"
+msgstr "Dislike"
+
+#: ../likebtn_like_button.php:2195
+msgid "Show labels"
+msgstr "Labels anzeigen"
+
+#: ../likebtn_like_button.php:2205
+msgid "Show icons"
+msgstr "Icons anzeigen"
+
+#: ../likebtn_like_button.php:2215
+msgid "Counter type"
+msgstr "Zähler-Typ"
+
+#: ../likebtn_like_button.php:2218
+msgid "Number"
+msgstr "Nummer"
+
+#: ../likebtn_like_button.php:2219
+msgid "Percent"
+msgstr "Prozent"
+
+#: ../likebtn_like_button.php:2220
+msgid "Subtract dislikes"
+msgstr "Dislikes abziehen"
+
+#: ../likebtn_like_button.php:2221
+msgid "Single number outside"
+msgstr "Alleinstehende Nummer"
+
+#: ../likebtn_like_button.php:2226
+msgid "Show tooltips"
+msgstr "Tooltips anzeigen"
+
+#: ../likebtn_like_button.php:2232
+msgid "Like button text"
+msgstr "Like-Button Text"
+
+#: ../likebtn_like_button.php:2238
+msgid "Dislike button text"
+msgstr "Dislike-Button Text"
+
+#: ../likebtn_like_button.php:2244
+msgid "White-label"
+msgstr "Weißes Label"
+
+#: ../likebtn_like_button.php:2245
+msgid "No LikeBtn branding link"
+msgstr "Kein LikeBTN-Branding-Link"
+
+#: ../likebtn_like_button.php:2253
+msgid "Horizontal alignment"
+msgstr "Horitzontale Ausrichtung"
+
+#: ../likebtn_like_button.php:2255
+msgid "Left"
+msgstr "Links"
+
+#: ../likebtn_like_button.php:2257
+msgid "Center"
+msgstr "Mitte"
+
+#: ../likebtn_like_button.php:2259
+msgid "Right"
+msgstr "Rechts"
+
+#: ../likebtn_like_button.php:2266
+msgid "Vertical alignment"
+msgstr "Vertikale Ausrichtung"
+
+#: ../likebtn_like_button.php:2268
+msgid "Top of Content"
+msgstr "Oberhalb des Inhalts"
+
+#: ../likebtn_like_button.php:2269
+msgid "Bottom of Content"
+msgstr "Unterhalb des Inhalts"
+
+#: ../likebtn_like_button.php:2270
+msgid "Top and Bottom"
+msgstr "Oben und Unten"
+
+#: ../likebtn_like_button.php:2288
+msgid "General"
+msgstr "Allgemein"
+
+#: ../likebtn_like_button.php:2290
+msgid "Popup"
+msgstr "PopUp"
+
+#: ../likebtn_like_button.php:2292
+msgid "Voting"
+msgstr "Bewertungen"
+
+#: ../likebtn_like_button.php:2294
+msgid "Counter"
+msgstr "Zähler"
+
+#: ../likebtn_like_button.php:2296
+msgid "Loading"
+msgstr "Laden"
+
+#: ../likebtn_like_button.php:2298
+msgid "Tooltips"
+msgstr "Tooltips"
+
+#: ../likebtn_like_button.php:2300
+msgid "Events"
+msgstr "Events (JS)"
+
+#: ../likebtn_like_button.php:2302
+msgid "Texts"
+msgstr "Texte"
+
+#: ../likebtn_like_button.php:2323
+msgid "Format"
+msgstr "Format"
+
+#: ../likebtn_like_button.php:2324
+msgid "Select post formats for which you want to show the Like Button"
+msgstr "Wähle die Post-Formate, in welchen der Like-Button erscheinen soll"
+
+#: ../likebtn_like_button.php:2327
+msgid "All"
+msgstr "Alle"
+
+#: ../likebtn_like_button.php:2337
+msgid "Exclude on selected sections"
+msgstr "Ausgewählte Bereiche ausschließen"
+
+#: ../likebtn_like_button.php:2338
+msgid "Choose sections where you DO NOT want to show the Like Button"
+msgstr ""
+"Wähle Bereiche aus, in denen der Like-Button <em>nicht</em> erscheinen soll "
+"(STRG nutzen für Mehrfachauswahl)"
+
+#: ../likebtn_like_button.php:2341
+msgid "Home"
+msgstr "Startseite"
+
+#: ../likebtn_like_button.php:2342
+msgid "Archive"
+msgstr "Archiv"
+
+#: ../likebtn_like_button.php:2343
+msgid "Search"
+msgstr "Suche"
+
+#: ../likebtn_like_button.php:2344
+msgid "Category"
+msgstr "Kategorie"
+
+#: ../likebtn_like_button.php:2348
+msgid "Exclude in selected categories"
+msgstr "Ausgewählte Kategorien ausschließen"
+
+#: ../likebtn_like_button.php:2349
+msgid ""
+"Select categories where you DO NOT want to show the Like Button (use CTRL "
+"key to pick categories)"
+msgstr ""
+"Wähle die Kategorien aus, in denen der Like-Button <em>nicht</em> erscheinen "
+"soll (STRG nutzen für Mehrfachauswahl)"
+
+#: ../likebtn_like_button.php:2369
+msgid "Allow post/page IDs"
+msgstr "Erlaube Post/Seiten IDs"
+
+#: ../likebtn_like_button.php:2370
+msgid ""
+"Suppose you have a post which belongs to more than one category and you have "
+"excluded one of those categories. So the Like Button will not be available "
+"for that post. Enter comma separated post ids where you want to show the "
+"Like Button irrespective of that post category being excluded."
+msgstr ""
+"Angenommen es gibt einen Beitrag, der zu mehr als einer Kategorie gehört, "
+"und eine dieser Kategorien ausgeschlossen ist. So ist der Like-Button in "
+"diesem Beitrag nicht sichtbar. Geben Sie durch Komma separierte Post IDs, "
+"die den Like-Button trotzdem anzeigen."
+
+#: ../likebtn_like_button.php:2377
+msgid "Exclude post/page IDs"
+msgstr "Ausgeschlossene Post/Seiten IDs"
+
+#: ../likebtn_like_button.php:2378
+msgid ""
+"Comma separated post/page IDs where you DO NOT want to show the Like Button"
+msgstr ""
+"Komma separierte Seiten/Post IDs, die nicht den Like-Button enthalten sollen."
+
+#: ../likebtn_like_button.php:2385
+msgid "User authorization"
+msgstr "User Authentifizierung"
+
+#: ../likebtn_like_button.php:2386
+msgid ""
+"Show the Like Button when user is logged in, not logged in or show always"
+msgstr ""
+"Zeige den Like-Button wenn ein Nutzer eingeloggt ist, nicht eingeloggt ist "
+"oder immer."
+
+#: ../likebtn_like_button.php:2389
+msgid "Logged in"
+msgstr "Eingeloggte Nutzer"
+
+#: ../likebtn_like_button.php:2390
+msgid "Not logged in"
+msgstr "Nicht eingeloggte Nutzer"
+
+#: ../likebtn_like_button.php:2391
+msgid "For all"
+msgstr "Für alle"
+
+#: ../likebtn_like_button.php:2396
+msgid "HTML to put before"
+msgstr "HTML-Code davor"
+
+#: ../likebtn_like_button.php:2404
+msgid "HTML to put after"
+msgstr "HTML-Code danach"
+
+#: ../likebtn_like_button.php:2412
+msgid "Display on a new line"
+msgstr "In einer neuen Zeile einblenden"
+
+#: ../likebtn_like_button.php:2413
+msgid "Add a 'clear:both' style to the like button container"
+msgstr "Füge ein <code>clear:both</code> Style zum Like-Button-Container hinzu"
+
+#: ../likebtn_like_button.php:2420
+msgid "Wrap button in a div"
+msgstr "Wrappe den Button in einem div"
+
+#: ../likebtn_like_button.php:2421
+msgid "If disabled alignment and new line options have no affect"
+msgstr ""
+"Wenn aktiviert werden Ausrichtungen und Neue Linie keine Auswirkungen haben."
+
+#: ../likebtn_like_button.php:2436
+msgid "Disable popup"
+msgstr "Deaktiviert PopUp"
+
+#: ../likebtn_like_button.php:2442
+msgid "Show popup on disliking"
+msgstr "Zeige ein PopUp während des Dislikens"
+
+#: ../likebtn_like_button.php:2448
+msgid "Show popup on button load"
+msgstr "Zeige ein PopUp während des Ladens"
+
+#: ../likebtn_like_button.php:2454
+msgid "Popup position"
+msgstr "PopUp-Position"
+
+#: ../likebtn_like_button.php:2458
+msgid "top"
+msgstr "oben"
+
+#: ../likebtn_like_button.php:2461
+msgid "right"
+msgstr "rechts"
+
+#: ../likebtn_like_button.php:2464
+msgid "bottom"
+msgstr "unten"
+
+#: ../likebtn_like_button.php:2467
+msgid "left"
+msgstr "links"
+
+#: ../likebtn_like_button.php:2472
+msgid "Popup style"
+msgstr "PopUp Style"
+
+#: ../likebtn_like_button.php:2476
+msgid "light"
+msgstr "hell"
+
+#: ../likebtn_like_button.php:2478
+msgid "dark"
+msgstr "dunkel"
+
+#: ../likebtn_like_button.php:2483
+msgid "Hide popup when clicking outside"
+msgstr "Verstecke PopUp, wenn ausserhalb geklickt wird"
+
+#: ../likebtn_like_button.php:2489
+msgid "Show share buttons"
+msgstr "Zeige Share-buttons"
+
+#: ../likebtn_like_button.php:2496
+msgid ""
+"AddThis <a href=\"https://www.addthis.com/settings/publisher\" target="
+"\"_blank\">Profile ID</a>"
+msgstr ""
+"AddThis <a href=\"https://www.addthis.com/settings/publisher\" target="
+"\"_blank\">Profil ID</a>"
+
+#: ../likebtn_like_button.php:2497
+msgid ""
+"Enter your AddThis Profile ID to collect sharing statistics and view it on "
+"AddThis analytics page"
+msgstr ""
+"Gib deine AddThis Profil ID ein, um Sharing-Statistiken zu sammeln und sie "
+"auf deiner AddThis Analytics Seite anzuzeigen"
+
+#: ../likebtn_like_button.php:2505
+msgid "AddThis share buttons"
+msgstr "AddThis Share-Buttons"
+
+#: ../likebtn_like_button.php:2516
+msgid ""
+"<a href=\"http://www.addthis.com\" target=\"_blank\">AddThis</a> is the "
+"content sharing and social insights platform helping users to share your "
+"content and drive viral traffic."
+msgstr ""
+"<a href=\"http://www.addthis.com\" target=\"_blank\">AddThis</a> ist eine "
+"Plattform, um Dinge mit anderen Nutzern zu teilen."
+
+#: ../likebtn_like_button.php:2521 ../likebtn_like_button.php:2548
+msgid "Donate buttons"
+msgstr "Spenden Buttons"
+
+#: ../likebtn_like_button.php:2526
+msgid "Configure donate buttons"
+msgstr "Spenden Buttons-Einstellungen"
+
+#: ../likebtn_like_button.php:2532
+msgid "Collect donations using"
+msgstr "Nutzungsstatistik aufstellen"
+
+#: ../likebtn_like_button.php:2532
+msgid "Zaypay Mobile Payments"
+msgstr "Zaypay Mobile Payments"
+
+#: ../likebtn_like_button.php:2537 ../likebtn_like_button.php:2550
+msgid "Custom HTML"
+msgstr "Nutzerdefiniertes HTML"
+
+#: ../likebtn_like_button.php:2538
+msgid "Custom HTML to insert into the popup"
+msgstr "Nutzerdefiniertes HTML (wird in das PopUp-Fenster eingefügt)"
+
+#: ../likebtn_like_button.php:2545
+msgid "Popup content order"
+msgstr "PopUp Inhaltsanordnung"
+
+#: ../likebtn_like_button.php:2549
+msgid "Share buttons"
+msgstr "Share Buttons"
+
+#: ../likebtn_like_button.php:2565
+msgid "Allow voting"
+msgstr "Bewertungen erlauben"
+
+#: ../likebtn_like_button.php:2571
+msgid "Allow to cancel a vote"
+msgstr "Bewertungen zurücknehmen erlauben"
+
+#: ../likebtn_like_button.php:2577
+msgid "Allow to like and dislike at the same time"
+msgstr "Like und Dislike gleichzeitig erlauben"
+
+#: ../likebtn_like_button.php:2583
+msgid "Voting frequency"
+msgstr "Bewertungsfrequenz"
+
+#: ../likebtn_like_button.php:2587
+msgid "Once"
+msgstr "Einmalig"
+
+#: ../likebtn_like_button.php:2589
+msgid "Every minute"
+msgstr "Minütlich"
+
+#: ../likebtn_like_button.php:2590
+msgid "Hourly"
+msgstr "Stündlich"
+
+#: ../likebtn_like_button.php:2591
+msgid "Daily"
+msgstr "Täglich"
+
+#: ../likebtn_like_button.php:2592
+msgid "Weekly"
+msgstr "Wöchentlich"
+
+#: ../likebtn_like_button.php:2593
+msgid "Monthly"
+msgstr "Monatlich"
+
+#: ../likebtn_like_button.php:2594
+msgid "Annually"
+msgstr "Jährlich"
+
+#: ../likebtn_like_button.php:2598
+msgid ""
+"Make sure that its value is larger than <a href=\"%url_interval%\">IP "
+"address vote interval</a> of your website."
+msgstr ""
+"Die Auswahl muss größer sein, als der <a href=\"%url_interval%\">IP-Adressen "
+"Bewertungsintervall</a> deiner Website."
+
+#: ../likebtn_like_button.php:2613
+msgid "Show votes counter"
+msgstr "Zeige Zähler"
+
+#: ../likebtn_like_button.php:2619
+msgid "Votes counter is clickable"
+msgstr "Zähler ist anklickbar"
+
+#: ../likebtn_like_button.php:2625
+msgid "Counter padding"
+msgstr "Zähler Padding"
+
+#: ../likebtn_like_button.php:2631
+msgid "Show zero value in counter"
+msgstr "Zeige 0 im Zähler"
+
+#: ../likebtn_like_button.php:2654
+msgid "Lazy load"
+msgstr "Langsamer Lader"
+
+#: ../likebtn_like_button.php:2655
+msgid "If button is outside a viewport it is loaded when user scrolls to it"
+msgstr ""
+"Wenn der Button ausserhalb des Viewports ist, wird er geladen wenn der "
+"Nutzer zum Button scrollt."
+
+#: ../likebtn_like_button.php:2662
+msgid "Show loader"
+msgstr "Zeige Ladebild"
+
+#: ../likebtn_like_button.php:2663
+msgid "Show loader while loading a button"
+msgstr "Zeige Ladebild, während der Button lädt"
+
+#: ../likebtn_like_button.php:2670
+msgid "Loader image"
+msgstr "Ladebild"
+
+#: ../likebtn_like_button.php:2671
+msgid ""
+"URL of the image to use as loader image (leave empty to display default "
+"image)"
+msgstr "Ladebild-URL (leer = Standard-Bild)"
+
+#: ../likebtn_like_button.php:2685
+msgid "Always show Like button tooltip"
+msgstr "Zeige das Like-Button-Tooltip immer"
+
+#: ../likebtn_like_button.php:2691
+msgid "Always show Dislike button tooltip"
+msgstr "Zeige das Dislike-Button-Tooltip immer"
+
+#: ../likebtn_like_button.php:2722
+msgid "JavaScript callback function"
+msgstr "Javascript Callback-Funktion"
+
+#: ../likebtn_like_button.php:2727
+msgid ""
+"The provided function receives the event object as its single argument. The "
+"event object has the following properties:"
+msgstr ""
+"Die bereitgestellte Funktion empfängt das Ereignis-Objekt als einzelnes "
+"Argument. Das Ereignisobjekt verfügt über die folgenden Eigenschaften:"
+
+#: ../likebtn_like_button.php:2728
+msgid "indicates which event was dispatched:"
+msgstr ""
+"zeigt an, welches\n"
+" \n"
+"Ereignis ausgelöst\n"
+" \n"
+"wurde\n"
+":"
+
+#: ../likebtn_like_button.php:2734
+msgid "button settings"
+msgstr "Button Einstellungen"
+
+#: ../likebtn_like_button.php:2735
+msgid "button DOM-element"
+msgstr "Button DOM-Element"
+
+#: ../likebtn_like_button.php:2756
+msgid "Like button text after liking"
+msgstr "Like-Button Text nach dem Klick"
+
+#: ../likebtn_like_button.php:2762
+msgid "Dislike button text after disliking"
+msgstr "Dislike-Button Text nach dem Klick"
+
+#: ../likebtn_like_button.php:2768
+msgid "Like button tooltip"
+msgstr "Like-Button Tooltip"
+
+#: ../likebtn_like_button.php:2770
+msgid "I like this"
+msgstr "Mag ich"
+
+#: ../likebtn_like_button.php:2774
+msgid "Dislike button tooltip"
+msgstr "Dislike-Button Tooltip"
+
+#: ../likebtn_like_button.php:2776
+msgid "I dislike this"
+msgstr "Mag ich nicht"
+
+#: ../likebtn_like_button.php:2780
+msgid "Like button tooltip after liking"
+msgstr "Like-Button Tooltip nach dem Klick"
+
+#: ../likebtn_like_button.php:2782
+msgid "Unlike"
+msgstr "Mag ich nicht mehr"
+
+#: ../likebtn_like_button.php:2786
+msgid "Dislike button tooltip after disliking"
+msgstr "Dislike-Button Tooltip nach dem Klick"
+
+#: ../likebtn_like_button.php:2788
+msgid "Undislike"
+msgstr "Mag ich doch"
+
+#: ../likebtn_like_button.php:2792
+msgid "Text before share buttons"
+msgstr "Text vor den Share-Buttons"
+
+#: ../likebtn_like_button.php:2794
+msgid "Would you like to share?"
+msgstr "Möchtest du es teilen?"
+
+#: ../likebtn_like_button.php:2798
+msgid "Popup close button text"
+msgstr "PopUp-Schließen Text"
+
+#: ../likebtn_like_button.php:2800
+msgid "Close"
+msgstr "Schließen"
+
+#: ../likebtn_like_button.php:2804
+msgid "Popup text when sharing disabled"
+msgstr "PopUp Text, wenn Sharing deaktiviert ist"
+
+#: ../likebtn_like_button.php:2806
+msgid "Glad you liked it!"
+msgstr "Schön das Sie es mögen!"
+
+#: ../likebtn_like_button.php:2810
+msgid "Text before donate buttons"
+msgstr "Text vor dem Spenden-Button"
+
+#: ../likebtn_like_button.php:2812
+msgid "Show gratitude in the form of a donation"
+msgstr ""
+"Zeige\n"
+" \n"
+"deine Dankbarkeit\n"
+" \n"
+"in\n"
+" \n"
+"Form einer\n"
+" \n"
+"Spende"
+
+#: ../likebtn_like_button.php:2818
+msgid "http://likebtn.com/en/translate-like-button-widget"
+msgstr "http://likebtn.com/en/translate-like-button-widget"
+
+#: ../likebtn_like_button.php:2818
+msgid "Send us Translation"
+msgstr "Sende uns eine Übersetzung"
+
+#: ../likebtn_like_button.php:2828
+#: ../likebtn_like_button_most_liked_widget.class.php:183
+msgid "Get shortcode"
+msgstr "Shortcode einblenden"
+
+#: ../likebtn_like_button.php:2829 ../likebtn_like_button.php:3249
+msgid "Reset"
+msgstr "Reset"
+
+#: ../likebtn_like_button.php:2835
+msgid ""
+"Replace \"CUSTOM ITEM NAME\" with the custom unique text. The custom item "
+"name will be displayed in Statistics and in the Most liked content widget."
+msgstr ""
+"Ersetze \"CUSTOM ITEM NAME\" mit einem eigenen <em>einzigartigen</em> Text. "
+"Dieser Name wird in der Statistik und im Meist gemochte Inhalte Widget "
+"gezeigt."
+
+#: ../likebtn_like_button.php:2867
+#: ../likebtn_like_button_most_liked_widget.class.php:55
+msgid "Custom item"
+msgstr "Nutzerdefiniertes Element"
+
+#: ../likebtn_like_button.php:2909
+msgid "All Sites"
+msgstr "Alle Seiten"
+
+#: ../likebtn_like_button.php:2933
+msgid "Comment not approved"
+msgstr ""
+"Kommentar\n"
+" \n"
+"nicht genehmigt"
+
+#: ../likebtn_like_button.php:2934
+msgid "Comment approved"
+msgstr ""
+"Kommentar\n"
+" \n"
+"genehmigt"
+
+#: ../likebtn_like_button.php:2977
+msgid "Previous"
+msgstr "Vorheriger"
+
+#: ../likebtn_like_button.php:2978
+msgid "Next"
+msgstr "Nächster"
+
+# There are better translations...
+#: ../likebtn_like_button.php:3135
+msgid "Please select item(s)"
+msgstr "Bitte wähle ein/mehrere Element(e)"
+
+#: ../likebtn_like_button.php:3136
+msgid "Upgrade your website to VIP to be able to use the feature"
+msgstr "Upgrade zu einem VIP, um dieses Feature zu nutzen"
+
+#: ../likebtn_like_button.php:3144
+msgid ""
+"Statistics not available, enable synchronization in order to view statistics:"
+msgstr ""
+"Statistiken nicht verfügbar, schalte die Synchronisation ein, um die "
+"Statistiken zu sehen:"
+
+#: ../likebtn_like_button.php:3154
+msgid ""
+"<a href=\"%url_upgrade%\">Upgrade</a> your website to PRO or higher plan on "
+"LikeBtn.com."
+msgstr ""
+"<a href=\"%url_upgrade%\">Upgrade</a> deine Website zu PRO oder höher auf "
+"LikeBTN.com"
+
+#: ../likebtn_like_button.php:3161
+msgid ""
+"Enable synchronization on <a href=\"%url_sync%\">Synchronization</a> tab."
+msgstr "Aktiviere die <a href=\"%url_sync%\">Synchronisation</a>."
+
+#: ../likebtn_like_button.php:3172
+msgid ""
+"Keep in mind that items appear in Statistics after receiving at least one "
+"vote."
+msgstr ""
+"Elemente werden erst angezeigt, wenn mindestens eine Bewertung eingegangen "
+"ist."
+
+#: ../likebtn_like_button.php:3173
+msgid ""
+"Select <u>Custom item</u> content type to view votes of like buttons added "
+"using shortcode or HTML code."
+msgstr ""
+"Wähle den <u>Benutzerdefiniertes Element</u> Inhaltstyp um Bewertungen von "
+"Like-Buttons, die durch Shortcodes oder HTML-Code eingefügt wurden."
+
+#: ../likebtn_like_button.php:3174
+msgid ""
+"To edit item votes click on a number of likes/dislikes in the statistics "
+"table."
+msgstr ""
+"Um Bewertungen eines Elementes zu ändern, klicke auf die Likes/Dislikes in "
+"der Statistik-Tabelle."
+
+#: ../likebtn_like_button.php:3182 ../likebtn_like_button.php:3270
+msgid "Site"
+msgstr "Seite"
+
+#: ../likebtn_like_button.php:3191
+msgid "Content type"
+msgstr "Inhaltstyp"
+
+#: ../likebtn_like_button.php:3198
+msgid "Order by"
+msgstr "Ordnen nach"
+
+#: ../likebtn_like_button.php:3200 ../likebtn_like_button.php:3272
+#: ../likebtn_like_button_most_liked_widget.class.php:58
+msgid "Likes"
+msgstr "Likes"
+
+#: ../likebtn_like_button.php:3201 ../likebtn_like_button.php:3273
+#: ../likebtn_like_button_most_liked_widget.class.php:59
+msgid "Dislikes"
+msgstr "Dislikes"
+
+#: ../likebtn_like_button.php:3202 ../likebtn_like_button.php:3274
+#: ../likebtn_like_button_most_liked_widget.class.php:60
+msgid "Likes minus dislikes"
+msgstr "Likes minus Dislikes"
+
+#: ../likebtn_like_button.php:3203 ../likebtn_like_button.php:3220
+msgid "ID"
+msgstr "ID"
+
+#: ../likebtn_like_button.php:3204 ../likebtn_like_button.php:3223
+#: ../likebtn_like_button.php:3268
+#: ../likebtn_like_button_most_liked_widget.class.php:123
+msgid "Title"
+msgstr "Titel"
+
+#: ../likebtn_like_button.php:3209
+msgid "Per page"
+msgstr "Pro Seite"
+
+#: ../likebtn_like_button.php:3235
+msgid "Reset filter"
+msgstr "Filter zurücksetzen"
+
+#: ../likebtn_like_button.php:3240
+msgid "View"
+msgstr "Anzeigen"
+
+#: ../likebtn_like_button.php:3243
+msgid "Total found"
+msgstr "Gefunden"
+
+#: ../likebtn_like_button.php:3249
+msgid ""
+"The votes count can not be recovered after resetting. Are you sure you want "
+"to reset likes and dislikes for the selected item(s)?"
+msgstr ""
+"Die Bewertungen können nach dem Zurücksetzen nicht mehr hergestellt werden. "
+"Bist du sicher, das du die Bewertungen der gewählten Elemente löschen "
+"möchtest?"
+
+#: ../likebtn_like_button.php:3249
+msgid "Set to zero number of likes and dislikes for selected items"
+msgstr "Leere die Likes und Dislikes der gewählten Elemente"
+
+#: ../likebtn_like_button.php:3251
+msgid ""
+"The votes count can not be recovered after deleting. Are you sure you want "
+"to delete selected item(s) from statistics?"
+msgstr ""
+"Die Bewertungen können nicht mehr wiederhergestellt werden. Sicher das du "
+"die Bewertungen aus der Statistik löschen möchtest?"
+
+#: ../likebtn_like_button.php:3251
+msgid "Delete"
+msgstr "Löschen"
+
+#: ../likebtn_like_button.php:3251
+msgid ""
+"Delete selected items from statistics: no posts, pages, comments, etc will "
+"be deleted, just their votes will be deleted from statistics"
+msgstr ""
+"Lösche die ausgewählten Elemente aus der Statistik (Es werden <em>nur</em> "
+"die Bewertung aus der Statistik gelöscht)"
+
+#: ../likebtn_like_button.php:3266
+msgid "Featured image"
+msgstr "Ausgewähltes Bild"
+
+#: ../likebtn_like_button.php:3324 ../likebtn_like_button.php:3331
+msgid "Enter new value:"
+msgstr "Gib einen neuen Inhalt ein:"
+
+#: ../likebtn_like_button.php:3324 ../likebtn_like_button.php:3331
+msgid "Upgrade your website plan to the ULTRA plan to use the feature"
+msgstr "Upgrade deine Website auf ULTRA, um dieses Feature zu nutzen"
+
+#: ../likebtn_like_button.php:3324 ../likebtn_like_button.php:3331
+msgid "Error occured. Please, try again later."
+msgstr "Ein Fehler ist aufgetreten, bitte versuche es später erneut."
+
+#: ../likebtn_like_button.php:3324 ../likebtn_like_button.php:3331
+msgid "Click to change"
+msgstr "Ändern"
+
+#: ../likebtn_like_button.php:3548
+msgid ""
+"<a href=\"http://likebtn.com/en/wordpress-like-button-plugin\" target="
+"\"_blank\">WordPress LikeBtn Plugin FAQ</a>"
+msgstr ""
+"<a href=\"http://likebtn.com/en/wordpress-like-button-plugin\" target="
+"\"_blank\">WordPress LikeBTN Plugin FAQ</a>"
+
+#: ../likebtn_like_button.php:3549
+msgid "<a href=\"http://likebtn.com/en/faq\" target=\"_blank\">LikeBtn FAQ</a>"
+msgstr ""
+"<a href=\"http://likebtn.com/en/faq\" target=\"_blank\">LikeBTN FAQ</a>"
+
+#: ../likebtn_like_button.php:3550
+msgid ""
+"<a href=\"http://forum.likebtn.com/forums/34-WordPress\" target=\"_blank"
+"\">Forum</a>"
+msgstr ""
+"<a href=\"http://forum.likebtn.com/forums/34-WordPress\" target=\"_blank"
+"\">Forum</a>"
+
+# Schlampiges Deutsch....
+#: ../likebtn_like_button.php:3571
+msgid ""
+"Likes and dislikes for the following number of items have been successfully "
+"reseted:"
+msgstr ""
+"Likes und Dislikes wurden in folgender Anzahl an Elementen erfolgreich "
+"zurückgesetzt:"
+
+# Schlampiges Deutsch....
+#: ../likebtn_like_button.php:3578
+msgid "The following number of items have been successfully deleted:"
+msgstr "In folgender Anzahl wurden Elemente erfolgreich gelöscht:"
+
+#: ../likebtn_like_button.php:4465 ../likebtn_like_button.php:4510
+#: ../likebtn_like_button.php:4555 ../likebtn_like_button.php:4607
+msgid "OK"
+msgstr "OK"
+
+#: ../likebtn_like_button.php:4845
+msgid "List"
+msgstr "Liste"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:27
+msgid "A list of most liked posts, comments, etc"
+msgstr "Eine Liste der meist-gelikten Posts, Kommentare, etc."
+
+#: ../likebtn_like_button_most_liked_widget.class.php:28
+msgid "(LikeBtn) Most Liked Content"
+msgstr "(LikeBTN) Meist gemochte Inhalte"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:64
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:65
+msgid "Medium"
+msgstr "Mittel"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:66
+msgid "Large"
+msgstr "Groß"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:67
+msgid "Full size"
+msgstr "Volle Größe"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:71
+msgid "All time"
+msgstr "Alles"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:72
+msgid "1 day"
+msgstr "1 Tag"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:73
+msgid "2 days"
+msgstr "2 Tage"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:74
+msgid "3 days"
+msgstr "3 Tage"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:75
+msgid "1 week"
+msgstr "1 Woche"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:76
+msgid "2 weeks"
+msgstr "2 Wochen"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:77
+msgid "3 weeks"
+msgstr "3 Wochen"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:78
+msgid "1 month"
+msgstr "1 Monat"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:79
+msgid "2 months"
+msgstr "2 Monate"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:80
+msgid "3 months"
+msgstr "3 Monate"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:81
+msgid "6 months"
+msgstr "6 Monate"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:82
+msgid "1 year"
+msgstr "1 Jahr"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:87
+#: ../likebtn_like_button_most_liked_widget.class.php:206
+msgid "Most Liked Content"
+msgstr "Meist gemochtr Inhalte"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:127
+msgid "Items to show"
+msgstr "Zu zeigende Elemente"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:138
+msgid "Number of items to show:"
+msgstr "Anzahl der Element:"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:142
+msgid "Order by:"
+msgstr "Ordnen:"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:150
+msgid "Time range:"
+msgstr "Zeit:"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:159
+msgid "Display likes count"
+msgstr "Zeige Zahl der Likes"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:163
+msgid "Display dislikes count"
+msgstr "Zeige Zahl der Dislikes"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:167
+msgid "Display featured image"
+msgstr "Zeige ausgewähltes Bild"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:176
+msgid "Display excerpt"
+msgstr "Zeige einen Ausschnitt"
+
+#: ../likebtn_like_button_most_liked_widget.class.php:180
+msgid "Display item date"
+msgstr "Element-Datum anzeigen."
+
+#: ../templates/most-liked-widget.php:61
+msgid "No items liked yet."
+msgstr "Keine Elemente bewertet"
+
+#~ msgid "Show popup on voting"
+#~ msgstr "Zeige ein PopUp während des Bewertens"

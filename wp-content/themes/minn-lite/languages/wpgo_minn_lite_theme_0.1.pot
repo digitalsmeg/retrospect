@@ -1,0 +1,366 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPGO Minn Lite Theme 0.1\n"
+"POT-Creation-Date: 2014-07-28 16:06-0000\n"
+"PO-Revision-Date: 2014-07-28 16:06-0000\n"
+"Last-Translator: David Gwyer <david@wpgothemes.com>\n"
+"Language-Team: WPGO Themes <hello@wpgothemes.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:4
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: ../comments.php:18 ../comments.php:29
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:19 ../comments.php:30
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../api/classes/api.php:237
+msgid "Primary Navigation"
+msgstr ""
+
+#: ../api/classes/api.php:329
+msgid "Search..."
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:30
+msgid "Post Display Options"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:31
+msgid "Page Display Options"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:54 ../api/classes/meta-boxes.php:55
+msgid "Column layout"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:59
+msgid "(Default theme setting)"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:60
+#: ../api/classes/customizer/customize-column-layout.php:63
+msgid "1-Column (full width)"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:61
+#: ../api/classes/customizer/customize-column-layout.php:64
+msgid "2-Column Sidebar Left"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:62
+#: ../api/classes/customizer/customize-column-layout.php:65
+msgid "2-Column Sidebar Right"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:63
+#: ../api/classes/customizer/customize-column-layout.php:66
+msgid "3-Column Sidebars Left"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:64
+#: ../api/classes/customizer/customize-column-layout.php:67
+msgid "3-Column Sidebars Right"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:65
+msgid "3-Column Content Center"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:108
+msgid "Portfolio group"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:129
+msgid "Portfolio image size"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:131
+msgid "Large"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:132
+msgid "Medium"
+msgstr ""
+
+#: ../api/classes/meta-boxes.php:133
+msgid "Small"
+msgstr ""
+
+#: ../api/classes/template-parts.php:22
+msgid "Read More"
+msgstr ""
+
+#: ../api/classes/template-parts.php:23
+msgid "Older Entries"
+msgstr ""
+
+#: ../api/classes/template-parts.php:24
+msgid "Newer Entries"
+msgstr ""
+
+#: ../api/classes/template-parts.php:29
+msgid "By "
+msgstr ""
+
+#: ../api/classes/template-parts.php:30
+msgid "Tags"
+msgstr ""
+
+#: ../api/classes/template-parts.php:31
+msgid "In"
+msgstr ""
+
+#: ../api/classes/template-parts.php:55 ../api/classes/template-parts.php:155
+#: ../api/classes/template-parts.php:253 ../api/classes/template-parts.php:648
+#: ../api/classes/template-parts.php:725 ../api/classes/template-parts.php:798
+#: ../api/classes/template-parts.php:871 ../api/classes/utility.php:1073
+msgid "Next"
+msgstr ""
+
+#: ../api/classes/template-parts.php:58 ../api/classes/template-parts.php:156
+#: ../api/classes/template-parts.php:254 ../api/classes/template-parts.php:649
+#: ../api/classes/template-parts.php:726 ../api/classes/template-parts.php:799
+#: ../api/classes/template-parts.php:872 ../api/classes/utility.php:1076
+msgid "Previous"
+msgstr ""
+
+#: ../api/classes/template-parts.php:86 ../api/classes/template-parts.php:183
+#: ../api/classes/template-parts.php:308 ../api/classes/template-parts.php:356
+#: ../api/classes/template-parts.php:677 ../api/classes/template-parts.php:754
+#: ../api/classes/template-parts.php:827 ../api/classes/template-parts.php:900
+#: ../api/classes/template-parts.php:1066
+msgid "Leave Comment"
+msgstr ""
+
+#: ../api/classes/template-parts.php:86 ../api/classes/template-parts.php:183
+#: ../api/classes/template-parts.php:308 ../api/classes/template-parts.php:356
+#: ../api/classes/template-parts.php:677 ../api/classes/template-parts.php:754
+#: ../api/classes/template-parts.php:827 ../api/classes/template-parts.php:900
+#: ../api/classes/template-parts.php:1066
+msgid "1 Comment"
+msgstr ""
+
+#: ../api/classes/template-parts.php:86 ../api/classes/template-parts.php:183
+#: ../api/classes/template-parts.php:308 ../api/classes/template-parts.php:356
+#: ../api/classes/template-parts.php:677 ../api/classes/template-parts.php:754
+#: ../api/classes/template-parts.php:827 ../api/classes/template-parts.php:900
+#: ../api/classes/template-parts.php:1066
+msgid "% Comments"
+msgstr ""
+
+#: ../api/classes/template-parts.php:387 ../api/classes/template-parts.php:431
+#: ../api/classes/template-parts.php:468 ../api/classes/template-parts.php:529
+#: ../api/classes/template-parts.php:570 ../api/classes/template-parts.php:603
+#: ../api/classes/template-parts.php:636
+msgid "Edit"
+msgstr ""
+
+#: ../api/classes/template-parts.php:482
+msgid "Error 404 - Page not found!"
+msgstr ""
+
+#: ../api/classes/template-parts.php:486
+#: ../api/classes/template-parts.php:1103
+msgid ""
+"Apologies, but the page you trying to reach does not exist, or has been "
+"moved. Why not try going back to the "
+msgstr ""
+
+#: ../api/classes/template-parts.php:487
+#: ../api/classes/template-parts.php:1104
+msgid "home"
+msgstr ""
+
+#: ../api/classes/template-parts.php:487
+#: ../api/classes/template-parts.php:1104
+msgid ", using the menus, or searching for something more specific?"
+msgstr ""
+
+#: ../api/classes/template-parts.php:958
+msgid "Search results for"
+msgstr ""
+
+#: ../api/classes/template-parts.php:979 ../api/classes/utility.php:780
+msgid "(no title)"
+msgstr ""
+
+#: ../api/classes/template-parts.php:1012
+msgid "No search results found..."
+msgstr ""
+
+#: ../api/classes/template-parts.php:1014
+msgid ""
+"Sorry, but nothing matched your search criteria. Please try again with some "
+"different keywords. Or, choose from the links below to navigate to another "
+"page."
+msgstr ""
+
+#: ../api/classes/template-parts.php:1019
+msgid "Pages"
+msgstr ""
+
+#: ../api/classes/template-parts.php:1026
+msgid "Post Categories"
+msgstr ""
+
+#: ../api/classes/template-parts.php:1099
+msgid "Page not found!"
+msgstr ""
+
+#: ../api/classes/theme-options.php:46
+msgid "Support and Tutorials"
+msgstr ""
+
+#: ../api/classes/theme-options.php:55
+msgid "Latest News & Updates"
+msgstr ""
+
+#: ../api/classes/theme-options.php:64
+msgid "Upgrade Offer"
+msgstr ""
+
+#: ../api/classes/theme-options.php:136
+#, php-format
+msgid "%s Theme Support"
+msgstr ""
+
+#: ../api/classes/theme-options.php:150
+#, php-format
+msgid "%s theme options have been reset!"
+msgstr ""
+
+#: ../api/classes/theme-options.php:159
+#, php-format
+msgid "%s theme options updated!"
+msgstr ""
+
+#: ../api/classes/theme-options.php:339
+#, php-format
+msgid "%s Support"
+msgstr ""
+
+#: ../api/classes/utility-callbacks.php:164
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: ../api/classes/utility-callbacks.php:168
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../api/classes/utility-callbacks.php:175
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../api/classes/utility-callbacks.php:175
+#: ../api/classes/utility-callbacks.php:195
+msgid "(Edit)"
+msgstr ""
+
+#: ../api/classes/utility-callbacks.php:195
+msgid "Pingback:"
+msgstr ""
+
+#: ../api/classes/utility.php:513
+msgid "no title"
+msgstr ""
+
+#: ../api/classes/widget-admin.php:30
+msgid "Post: Primary"
+msgstr ""
+
+#: ../api/classes/widget-admin.php:32
+msgid "The primary single post, and main blog page, widget area"
+msgstr ""
+
+#: ../api/classes/widget-admin.php:42
+msgid "Post: Secondary"
+msgstr ""
+
+#: ../api/classes/widget-admin.php:44
+msgid ""
+"The secondary single post widget area. Only displayed on three-column post "
+"layouts."
+msgstr ""
+
+#: ../api/classes/widget-admin.php:54
+msgid "Page: Primary"
+msgstr ""
+
+#: ../api/classes/widget-admin.php:56
+msgid "The primary single page widget area"
+msgstr ""
+
+#: ../api/classes/widget-admin.php:66
+msgid "Page: Secondary"
+msgstr ""
+
+#: ../api/classes/widget-admin.php:68
+msgid ""
+"The secondary single page widget area. Only displayed on three-column page "
+"layouts."
+msgstr ""
+
+#: ../api/classes/widget-admin.php:78
+msgid "Footer"
+msgstr ""
+
+#: ../api/classes/widget-admin.php:80
+msgid "The footer widget area"
+msgstr ""
+
+#: ../api/classes/customizer/customize-column-layout.php:68
+msgid "3-Column Sidebars Center"
+msgstr ""
+
+#: ../api/classes/customizer/customize-column-layout.php:72
+msgid "Column Layout"
+msgstr ""
+
+#: ../api/classes/customizer/customize-column-layout.php:82
+msgid "Select Global Column Layout"
+msgstr ""
+
+#: ../api/classes/customizer/customize-footer-links.php:98
+msgid "Footer Links"
+msgstr ""
+
+#: ../api/classes/customizer/customize-footer-links.php:110
+msgid "Customize Footer Links HTML"
+msgstr ""
+
+#: ../api/classes/customizer/customize-site-title-and-tagline.php:69
+msgid "Hide tagline"
+msgstr ""
+
+#: ../api/classes/customizer/customize-theme-colors.php:278
+msgid "Content Text Color"
+msgstr ""
+
+#: ../api/classes/customizer/customize-theme-colors.php:282
+msgid "Content Link Color"
+msgstr ""
+
+#: ../api/classes/customizer/customize-theme-colors.php:312
+msgid "Default"
+msgstr ""
+
+#: ../api/classes/customizer/customize-theme-colors.php:444
+msgid "Select Color Scheme"
+msgstr ""

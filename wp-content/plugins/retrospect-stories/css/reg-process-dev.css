@@ -1,0 +1,23 @@
+*{box-sizing:border-box;}
+body{text-align:center;background:#ADE2F5;}
+#container{margin:auto;width:960px;text-align:left;background:#fff;padding:30px;}
+.race-calendar td, .race-calendar th{border:1px solid #ccc;margin:-1px 0px 0px -1px;}
+.registered{background:#ddffaa;}
+
+
+.race{display:inline-block;width:200px;height:150px;border:1px solid #000;text-align:center;padding:10px;}
+.race .date{}
+
+
+/* GENERAL USE */
+.message{color:#cc0000;}
+
+.button{display:inline-block;background:#00cc00;color:#fff;text-shadow:2px 2px #000;border-radius:7px;padding:5px;width:100px;border:1px solid #000;margin:10px auto;}
+
+
+/* FORM */
+#ClubRacingStatusOptions label{display:inline-block;}
+
+
+/* REAL */
+
