@@ -110,7 +110,7 @@ function featured_MostPopular(){
 
 }
 
-
+add_shortcode("homeStories", "home_Stories");
 function home_Stories(){
 	
 	
@@ -135,7 +135,7 @@ function home_Stories(){
 	$total = sizeof($thePosts);
 	$perpage = 6;
   	?>
-<div class="content" style="height:496px;" >
+<div class="content pagedStories" >
   <?
 	
 	$loop = new WP_Query( array( 'post__in' => $thePosts,'post_type' => 'stories', 'orderby'=> 'date','order'   => 'DESC', 'posts_per_page' => -1) );
@@ -258,15 +258,15 @@ There are no other stories to share for this week's prompt yet.
 	
 }
 
-add_shortcode("homeStories", "home_Stories");
 
 
 
 
-function otherRecent(){
+add_shortcode("otherRecent", "otherRecentStories");
+function otherRecentStories(){
 	global $wpdb, $post, $fid, $popid, $last;
 	
-	
+	ob_start();
 		$cid  = getCurrent();
 	
 		
@@ -331,6 +331,8 @@ function otherRecent(){
 			
 		
   	?>
+	 <h1 style="margin:0px;">Other Recent Stories</h1>
+   
 <div class="content" style="" >
   <?
 	//$loop = new WP_Query( array( 'post_type' => 'stories', 'posts_per_page' => 2, 'meta_key' => 'stories_embargo_until', 'first_time' => $golive , meta_compare => '>', 'orderby'=>'rand' ,'meta_type' => 'NUMERIC') );
@@ -385,7 +387,11 @@ function otherRecent(){
 	
 	?>
 </div>
+
 <?
+$content = ob_get_contents();
+ob_end_clean();
+return $content;
 	
 	
 		
@@ -629,6 +635,11 @@ function featured_LastWeek(){
 
 	
 }
+
+
+
+
+
 
 add_shortcode("acceptprivacy", "acceptPrivacy");
 
@@ -916,6 +927,18 @@ function show_votes($admin,$cid){
 	
 
 	
+}
+
+
+
+add_shortcode("optionalText", "optional_text");
+
+function optional_text(){
+	ob_start();
+	$cid  = getCurrent();
+	$content = get_post_meta( $cid , 'optional_text' , true );
+	ob_end_clean();
+	return $content;
 }
 
 add_shortcode("showVotes", "show_votes");

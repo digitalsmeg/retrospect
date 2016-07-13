@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Home Page Template 
+Template Name: Home Page Preview  Template 
 */
 get_header();
 ?>
@@ -64,8 +64,6 @@ $currentID = getCurrent();
   
   <div class="content">
   
-	<?  echo otherRecentStories(); ?>
-   
   <div class="content advertisement">
  
   <!--

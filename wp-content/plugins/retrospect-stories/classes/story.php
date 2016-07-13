@@ -89,6 +89,15 @@ function showPrompts($post){
 	?>
 <table class="form-table">
   <tbody>
+    <tr valign="top">
+   <th scope="row"><label for="stories_some_text">Optional Text</label></th>
+      <td>
+ 
+ <? wp_editor( get_post_meta( $post->ID , 'optional_text' , true ), "optional_text", array("textarea_name"=>"optional_text",'teeny' => true,'media_buttons' => false)); ?>
+ 
+ 
+</td>
+</tr>
     <!--
     <tr valign="top">
       <th scope="row"><label for="stories_some_text">Some Text</label></th>

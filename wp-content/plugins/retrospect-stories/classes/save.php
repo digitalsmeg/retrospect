@@ -60,6 +60,9 @@ function myplugin_save_meta_box_data( $post_id ) {
 	}
 	
 	if($_POST[post_type] == "prompts"){
+			$optional_text = ( $_POST['optional_text'] );
+		update_post_meta( $post_id, 'optional_text', $optional_text );
+		
 		if($_POST[publish] == "Submit for Review"){
 			$args = array("id"=>"","action"=>"Submitted a writing prompt for review: '".$_POST[post_title]."'","content"=>"You can view this story <a href='".get_permalink($post_id)."'>here</a> when it is ready.","user_id"=>$_POST[post_author],"primary_link"=>"","type"=>"New Prompt","component"=>"activity");
 				
@@ -118,6 +121,7 @@ function myplugin_save_meta_box_data( $post_id ) {
 		$stories_some_setting = ( $_POST['stories_some_setting'] );
 		$stories_hide_until = sanitize_text_field( $_POST['stories_hide_until'] );
 		$stories_embargo_until = sanitize_text_field( $_POST['stories_embargo_until'] );
+	
 		$stories_prompt_id = $_POST['stories_prompt_id'];
 		$stories_featured = $_POST['stories_featured'];
 		$stories_featured_story = $_POST['stories_featured_story'];

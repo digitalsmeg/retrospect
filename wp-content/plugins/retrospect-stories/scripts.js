@@ -5,8 +5,9 @@ jQuery(document).ready(function(){
 		jQuery("[for=ping_status]").remove();
 		jQuery("[for=default_ping_status]").remove();
 		jQuery(".wp-pwd").after('<p class="description indicator-hint">Hint: To strengthen your password, make it longer and use a mix of upper and lowercase letters, numbers, and symbols like ! “ ? $ ^ & ).</p>');
-		
+		if(jQuery("#post_type") == "stories"){
 		jQuery('#timestamp').after( 'Your story will be published the same date as your selected prompt.');
+		}
 		jQuery(".wp-switch-editor.switch-tmce").trigger("click");
 		jQuery("#wp-admin-bar-site-name").find("a:eq(0)").html("Back To Retrospect");
 		if(jQuery("#post_type").val() == "stories"){

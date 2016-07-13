@@ -6,6 +6,9 @@ body, html {
 	font-family: 'Poppins', sans-serif !important;
 	color: #777 !important;
 }
+.showMobile{
+	display:none;
+}
 #branding {
 	display: none;
 }
@@ -810,6 +813,16 @@ margin-bottom:20px;
 	top: 10px;
 	left: 9px;
 	width: 90%;
+}
+
+.showMobile{
+	display:block;
+}
+.hideMobile{
+	display:none;
+}
+.lastweek .col6 {
+    width: 100%;
 }
 .headline span {
 	display: block;
