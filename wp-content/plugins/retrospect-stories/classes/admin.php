@@ -549,3 +549,23 @@ set_transient( 'shortCodeUsed', false);
 add_shortcode("currentuser", "currentusercan_func",1);
 
 
+add_action( 'user_register', 'fix_reg_date', 10, 1 );
+
+function fix_reg_date( $user_id ) {
+	// change time zone
+	 date_default_timezone_set('America/Los_Angeles');
+	 wp_update_user( array( 'ID' => $user_id, 'user_registered' => date("Y-m-d H:i:s") ) );
+	
+
+}
+
+add_filter( 'remove_user_from_blog', 'delete_user_for_good', 10, 1 );
+function delete_user_for_good( $user_id ) {
+	global $wpdb;
+	
+	$q1 = "DELETE FROM ".$wpdb->prefix."users WHERE ID = '$user_id'";
+	$q2 = "DELETE FROM ".$wpdb->prefix."user_meta WHERE user_id = '$user_id'";
+	$wpdb->query($q1);
+	$wpdb->query($q2);
+	
+}
