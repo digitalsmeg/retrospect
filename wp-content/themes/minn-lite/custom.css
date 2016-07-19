@@ -700,7 +700,7 @@ h1, h2, h3, h4, h5, h6 {
 .home .textwidget .content .homeps {
 	min-height: 192px;
 }
-.home .textwidget .content .allStories, .home .textwidget .content .homeps {
+.home .textwidget .content .allStories, .home .textwidget .content .homeps, .page-id-4447 .textwidget .content .homeps  {
 	width: 48%;
 	margin-left: 0px !important;
 	margin-right: 2%;

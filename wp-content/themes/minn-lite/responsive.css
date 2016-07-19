@@ -361,6 +361,18 @@ a:focus {
   .content .col12 {
     width: 100%;
   }
+  .homeText2{display:none;}
+  
+.slide {
+	height: auto !important;
+}
+	.slide .headline {
+    	position: relative !important;
+    	bottom: auto !important;
+    	font-size: 24px !important;
+		left:auto !important;
+		margin-top:10px !important;
+	}
 }
 
 /* Custom sizes
@@ -380,7 +392,6 @@ a:focus {
 /* Add your styles for devices with a maximum width of 480 */
 
 @media screen and (max-width: 480px) {
-  
 }
 
 /* Add your styles for devices with a maximum width of 768 */

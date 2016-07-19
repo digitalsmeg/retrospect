@@ -128,7 +128,10 @@ You are viewing this page as ADMIN.
 	
 	 if(empty($firsttime)){
 		 //firsttime = date("Y-m-d",strtotime($post->post_date)); 
-		update_post_meta( get_the_ID(), 'first_time',  date("Y-m-d")  );
+		 # trying to pinpoint where stories publish dates are being rewritten
+		 # the following command was basically put in for grandfathtered stories
+		 # update_post_meta( get_the_ID(), 'first_time',  date("Y-m-d")  );
+		 
 		 $firsttime = get_post_meta( get_the_ID(), 'first_time' , true);
 	 }
 	 

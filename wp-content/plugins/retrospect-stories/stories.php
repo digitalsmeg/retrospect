@@ -961,6 +961,7 @@ add_filter('parse_query', 'my_files_only' );
 function wps_get_comment_list_by_user($clauses) {
 	$temp = $clauses;
 	
+		
 	
 	if(current_user_can( 'administrator' )){
 		return $temp;
@@ -968,7 +969,8 @@ function wps_get_comment_list_by_user($clauses) {
 	if (!current_user_can( 'administrator' ) && is_admin()) {
 		global $user_ID, $wpdb;
 		$clauses['join'] = ", wp_posts";
-		$clauses['where'] .= " AND wp_posts.post_author = ".$user_ID." AND wp_comments.comment_post_ID = wp_posts.ID";
+		$clauses['where'] .= " AND ((wp_comments.user_id = ".$user_ID." AND wp_comments.comment_post_ID = wp_posts.ID) OR (wp_posts.post_author = ".$user_ID." AND wp_comments.comment_post_ID = wp_posts.ID)) ";
+		////AND wp_comments.user_id = wp_posts.ID
 		return $clauses;
 	}
 	if(!current_user_can( 'administrator' )){
@@ -982,7 +984,66 @@ function wps_get_comment_list_by_user($clauses) {
 add_filter('comments_clauses', 'wps_get_comment_list_by_user');
 
 
+// comment header count filter 
 
+add_filter( 'load-edit-comments.php', function() {
+    add_filter( 'wp_count_comments', function( $stats, $post_id ){
+        global $wpdb,  $current_user;
+		static $instance = 0;
+		if(!current_user_can( 'administrator' )){
+        if(  2 === $instance++ ) {
+            $stats = wp_count_comments( $stats, $post_id );
+			
+		
+			
+			
+            // Set the trash count to 999
+            if ( is_object( $stats ) && property_exists( $stats, 'trash' ) )
+				$args = array(
+					'post_author__in' => array($current_user->ID),
+					'status' => 'trash',
+					'count' => true //return only the count
+				);
+				$comments = get_comments($args);
+                $stats->trash = $comments; // <-- Adjust this count
+			 if ( is_object( $stats ) && property_exists( $stats, 'spam' ) )
+			 	$args = array(
+					'post_author__in' => array($current_user->ID),
+					'status' => 'spam',
+					'count' => true //return only the count
+				);
+				$comments = get_comments($args);
+                $stats->spam = $comments; // <-- Adjust this count
+			if ( is_object( $stats ) && property_exists( $stats, 'approved' ) )
+				$args = array(
+					'post_author__in' => array($current_user->ID),
+					'status' => 'approve',
+					'count' => true //return only the count
+				);
+				$comments = get_comments($args);
+                $stats->approved = $comments; // <-- Adjust this count
+			if ( is_object( $stats ) && property_exists( $stats, 'moderated' ) )
+				$args = array(
+					'post_author__in' => array($current_user->ID),
+					'status' => 'hold',
+					'count' => true //return only the count
+				);
+				$comments = get_comments($args);
+                $stats->moderated = $comments; // <-- Adjust this count
+			if ( is_object( $stats ) && property_exists( $stats, 'all' ) )
+				
+				$args = array(
+					'post_author__in' => array($current_user->ID),
+					'count' => true //return only the count
+				);
+				$comments = get_comments($args);
+                $stats->all = $comments; // <-- Adjust this count
+        }
+		}
+        return $stats;
+	
+    }, 10, 2 );
+} );
 
 
 
@@ -1738,64 +1799,7 @@ function wp_notify_moderator($comment_id) {
 
 
 
-add_filter( 'load-edit-comments.php', function() {
-    add_filter( 'wp_count_comments', function( $stats, $post_id ){
-        global $wpdb,  $current_user;
-		static $instance = 0;
-		if(!current_user_can( 'administrator' )){
-        if(  2 === $instance++ ) {
-            $stats = wp_count_comments( $stats, $post_id );
-			
-		
-			
-			
-            // Set the trash count to 999
-            if ( is_object( $stats ) && property_exists( $stats, 'trash' ) )
-				$args = array(
-					'post_author__in' => array($current_user->ID),
-					'status' => 'trash',
-					'count' => true //return only the count
-				);
-				$comments = get_comments($args);
-                $stats->trash = $comments; // <-- Adjust this count
-			 if ( is_object( $stats ) && property_exists( $stats, 'spam' ) )
-			 	$args = array(
-					'post_author__in' => array($current_user->ID),
-					'status' => 'spam',
-					'count' => true //return only the count
-				);
-				$comments = get_comments($args);
-                $stats->spam = $comments; // <-- Adjust this count
-			if ( is_object( $stats ) && property_exists( $stats, 'approved' ) )
-				$args = array(
-					'post_author__in' => array($current_user->ID),
-					'status' => 'approve',
-					'count' => true //return only the count
-				);
-				$comments = get_comments($args);
-                $stats->approved = $comments; // <-- Adjust this count
-			if ( is_object( $stats ) && property_exists( $stats, 'moderated' ) )
-				$args = array(
-					'post_author__in' => array($current_user->ID),
-					'status' => 'hold',
-					'count' => true //return only the count
-				);
-				$comments = get_comments($args);
-                $stats->moderated = $comments; // <-- Adjust this count
-			if ( is_object( $stats ) && property_exists( $stats, 'all' ) )
-				
-				$args = array(
-					'post_author__in' => array($current_user->ID),
-					'count' => true //return only the count
-				);
-				$comments = get_comments($args);
-                $stats->all = $comments; // <-- Adjust this count
-        }
-		}
-        return $stats;
-	
-    }, 10, 2 );
-} );
+
 
  function create_slug($string){     
         $replace = '-';  
