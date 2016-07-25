@@ -13,7 +13,7 @@
 <link href='http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/wp-content/themes/minn-lite/font-awesome//css/font-awesome.min.css">
 <script>
-
+var addThisInv = 0;
 jQuery(document).ready(function($){
 	if (window.location.hash && window.location.hash == '#_=_') {
         if (window.history && history.pushState) {
@@ -30,6 +30,10 @@ jQuery(document).ready(function($){
             document.body.scrollLeft = scroll.left;
         }
     }
+	
+	
+	
+	
 	
 	// why did we add this
 	//jQuery("iframe").attr("src",jQuery("iframe").attr("src")+"&entry_1195960677=<? echo $_SERVER['HTTP_REFERER']; ?>");

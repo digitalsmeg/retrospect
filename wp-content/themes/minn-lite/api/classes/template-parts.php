@@ -916,7 +916,11 @@ class WPGo_Template_Parts {
 				<div class="post-content">
 
 					<?php
-
+					the_post_thumbnail('large', array(
+						'align' => 'left',
+						'style' => 'margin:0px 5px 5px 0px'
+					));
+					the_post_thumbnail_caption();
 					the_content( '' );
 
 					wp_link_pages( array( 'before' => '<div class="page-link">', 'after' => '</div>' ) );

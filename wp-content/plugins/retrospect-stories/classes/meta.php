@@ -13,9 +13,25 @@
  
 function showAddThis($post){
 	 //if(current_user_can("administrator")){
-	 ?><div class="addthis_sharing_toolbox"></div>
+	 ?><div class="addthis_sharing_toolbox"><p id="lsbuttons"><em>Loading Share Buttons...</em></p></div>
 <?	 
 	 //}
+	 $add_title = $post->post_title;
+	 $add_permalink = get_permalink($post->ID);
+	 ?>
+     <script>
+	 
+jQuery(document).ready(function($){
+		var addThisInv = setInterval(function(){
+		if(jQuery("a.at-share-btn.at-svc-facebook").length > 0){
+				jQuery("a.at-share-btn.at-svc-facebook").after('<div onclick="window.location=\'mailto:?subject=<? echo $add_title; ?> | Retrospect&body=<? echo $add_permalink; ?>\';return false;"  tabindex="1" style="display:inline-block;cursor:pointer;" class="at-svc-email"><span class="at4-visually-hidden">Share to Email</span><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px; background-color: rgb(132, 132, 132);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" class="at-icon at-icon-email" style="width: 20px; height: 20px;"><g><g fill-rule="evenodd"></g><path d="M27 22.757c0 1.24-.988 2.243-2.19 2.243H7.19C5.98 25 5 23.994 5 22.757V13.67c0-.556.39-.773.855-.496l8.78 5.238c.782.467 1.95.467 2.73 0l8.78-5.238c.472-.28.855-.063.855.495v9.087z"></path><path d="M27 9.243C27 8.006 26.02 7 24.81 7H7.19C5.988 7 5 8.004 5 9.243v.465c0 .554.385 1.232.857 1.514l9.61 5.733c.267.16.8.16 1.067 0l9.61-5.733c.473-.283.856-.96.856-1.514v-.465z"></path></g></svg></span></div>');
+				jQuery("#lsbuttons").remove();
+				clearInterval(addThisInv);
+		}
+	},100);
+});
+</script>
+<?
  
 }
   function showVotes($post){

@@ -16,6 +16,7 @@ div#profile-page.wrap form#your-profile #profile-nav {
 	margin: 10px 0px;
 	background: white!important;
 }
+a.submitdelete{ background:red!important;color:white!important;padding:3px;border-radius:5px;display:inline-block;}
 li.draft {
 	display: none;
 }
