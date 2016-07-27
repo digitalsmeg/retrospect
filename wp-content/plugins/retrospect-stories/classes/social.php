@@ -141,12 +141,12 @@ function fBcallback($graphObject){
 				$user = new WP_User( $user_id );
 				$user->set_role( 'writer' );
 				$user_login = $user->user_login;
-				
-
+				wp_new_social_user_notification( $user_id, "Facebook", "admin" );
+				fix_reg_date($user_id);
 			}
 			wp_update_user( array( 'ID' => $user_id, 'user_url' => "https://www.facebook.com/".$id ) );
-			fix_reg_date($user_id);
-			wp_new_social_user_notification( $user_id, "Facebook", "admin" );
+			
+			
 			wp_set_current_user( $user_id, $user_login );
         	wp_set_auth_cookie( $user_id );
         	do_action( 'wp_login', $user_login );
@@ -217,11 +217,12 @@ function googleCallback(){
 					$user = new WP_User( $user_id );
 					$user->set_role( 'writer' );
 					$user_login = $user->user_login;
-	
+					wp_new_social_user_notification( $user_id, "Google", "admin" );
+					fix_reg_date($user_id);
 				}
 				wp_update_user( array( 'ID' => $user_id, 'user_url' => "https://plus.google.com/u/0/".$id ) );
-				fix_reg_date($user_id);
-				wp_new_social_user_notification( $user_id, "Google", "admin" );
+				
+				
 				wp_set_current_user( $user_id, $user_login );
 				wp_set_auth_cookie( $user_id );
 				do_action( 'wp_login', $user_login );
