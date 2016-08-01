@@ -95,7 +95,8 @@ function myplugin_save_meta_box_data( $post_id ) {
 	}
 	$post = get_post( $post_id);
 	$permalink = get_permalink($post_id);
-	
+	if($_POST[publish] != "Publish"){
+		//delete_post_meta( $post_id, 'first_time');
 	if($_POST[post_type] == "stories" || $_POST[post_type] == "prompts"){
 		
 		if(empty( $_POST['is_anonymous'])){
@@ -191,7 +192,8 @@ function myplugin_save_meta_box_data( $post_id ) {
 		
 		
 		if(!empty($_POST[first_time])){
-			update_post_meta( $post_id, 'first_time', $_POST[first_time] );	
+			// updating during auto save?
+			//update_post_meta( $post_id, 'first_time', $_POST[first_time] );	
 		}
 	}
 	
