@@ -83,8 +83,8 @@ You are viewing this page as ADMIN.
     story
     <? } else { ?>
     stories
-    <? } ?>
-    )
+    <? } ?>)
+    <? newCommentCount($post->ID); ?>
     <? } ?>
     <?
 		wp_reset_query();
@@ -253,7 +253,7 @@ You are viewing this page as ADMIN.
     <!-- sharing system -->
     <?php
 		if (($single && is_single()) && $post->post_type == "stories") {
-			shareSystem($post->ID);
+			//shareSystem($post->ID);
 		} ?>
     <!-- PDF LINK -->
     <?php

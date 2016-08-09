@@ -472,6 +472,7 @@ add_action( 'wp_ajax_setExtMeta', 'setExtMeta' );
 function filterStories_callback(){
 	global $wpdb;
 	$user_id = get_current_user_id();
+	
 	if(!empty($_POST[wpid])){
 		// if prompt-based filter
 		$sql = "SELECT * FROM ".$wpdb->prefix."usermeta LEFT JOIN ".$wpdb->prefix."posts ON ".$wpdb->prefix."posts.ID = ".$wpdb->prefix."usermeta.meta_value WHERE meta_key = 'stories_prompted_{$_POST[wpid]}' AND post_type = 'stories'"; 
@@ -675,4 +676,16 @@ function voteit_callback(){
 }
 
 add_action( 'wp_ajax_voteit', 'voteit_callback' );
+
+
+function retrospect_check_email(){
+	global $wpdb;
+	$user = wp_get_current_user();
+	$sql = "SELECT * FROM  ".$wpdb->prefix."users WHERE user_email = '$_POST[email]' AND ID != $user->ID";
+	$result = $wpdb->get_results($sql,ARRAY_A);
+	echo sizeof($result);
+	wp_die();
+}
+
+add_action( 'wp_ajax_retrospect_check_email', 'retrospect_check_email' );
 

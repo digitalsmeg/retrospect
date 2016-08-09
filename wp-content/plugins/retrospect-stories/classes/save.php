@@ -12,8 +12,12 @@
 
 
 function profile_save_hook(){
+	global $wpdb;
+	$user = wp_get_current_user();
+	 $user_id  = $user->ID;
+	 	
 	if($_POST){
-		$user_id = bp_displayed_user_id();
+		
 		if(sizeof($_POST[gender]) > 0){
 			if(!empty($_POST[gender][1])){
 				$_POST[gender][0] = $_POST[gender][1];
@@ -23,10 +27,38 @@ function profile_save_hook(){
 		if(!empty($_POST[relationship_status])){
 			update_user_meta( $user_id, 'relationship_status', $_POST[relationship_status] ) ;
 		}
+		if(!empty($_POST[fname])){
+			
+			wp_update_user( array( 'ID' =>  $user_id, 'first_name' => $_POST[fname] ) );
+			
+			
+		}
+		if(!empty($_POST[lname])){
+			wp_update_user( array( 'ID' =>  $user_id, 'last_name' => $_POST[lname] ) );
+			
+		}
+		
+		
+		
+		if(!empty($_POST[uemail])){
+			wp_update_user( array( 'ID' =>  $user_id, 'user_email' => sanitize_email( $_POST[uemail] ) ) );
+			
+		}
+		if(!empty($_POST[upass])){
+			
+			
+			wp_update_user( array( 'ID' =>  $user_id, 'user_pass' => $_POST[upass] ) );
+			wp_redirect("/members/".$nick."/profile/edit/" );		
+			
+			
+		}
+		$nick = $user->user_nicename;
+		
+		
 					
 	}
 }
-add_action('init', 'profile_save_hook');
+add_action('init', 'profile_save_hook', 1);
 
 function myplugin_save_meta_box_data( $post_id ) {
 	global $wpdb;
@@ -95,8 +127,7 @@ function myplugin_save_meta_box_data( $post_id ) {
 	}
 	$post = get_post( $post_id);
 	$permalink = get_permalink($post_id);
-	if($_POST[publish] != "Publish"){
-		//delete_post_meta( $post_id, 'first_time');
+	
 	if($_POST[post_type] == "stories" || $_POST[post_type] == "prompts"){
 		
 		if(empty( $_POST['is_anonymous'])){
@@ -192,8 +223,7 @@ function myplugin_save_meta_box_data( $post_id ) {
 		
 		
 		if(!empty($_POST[first_time])){
-			// updating during auto save?
-			//update_post_meta( $post_id, 'first_time', $_POST[first_time] );	
+			update_post_meta( $post_id, 'first_time', $_POST[first_time] );	
 		}
 	}
 	

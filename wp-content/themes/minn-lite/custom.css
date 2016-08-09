@@ -894,3 +894,11 @@ display:none;
 .alignright{margin:0px 0px 15px 15px;}
 .alignleft{margin:0px 15px 15px 0px;}
 .aligncenter{margin:0px auto 15px auto;}
+#groups-personal-li{
+	display:none;
+}
+.newcommentcount{
+	font-size:14px;	
+	position:relative;
+	top:4px;
+}

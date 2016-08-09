@@ -3,6 +3,9 @@
 	display:none!important;
 }
 
+tr.active[data-slug=woocommerce] {
+    display: none!important;
+}
 div#profile-page.wrap form#your-profile #profile-nav {
     position: absolute;
     top: -3.65em;

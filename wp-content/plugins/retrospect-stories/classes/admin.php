@@ -32,6 +32,7 @@ function init_the_admin() {
 	register_setting( 'mythos-settings-group', 'myth_event_7' );
 	register_setting( 'mythos-settings-group', 'myth_event_8' );
 	register_setting( 'mythos-settings-group', 'myth_event_9' );
+	register_setting( 'mythos-settings-group', 'myth_event_10' );
 	register_setting( 'mythos-settings-group', 'myth_event_1_s' );
 	register_setting( 'mythos-settings-group', 'myth_event_2_s' );
 	register_setting( 'mythos-settings-group', 'myth_event_3_s' );
@@ -41,6 +42,7 @@ function init_the_admin() {
 	register_setting( 'mythos-settings-group', 'myth_event_7_s' );
 	register_setting( 'mythos-settings-group', 'myth_event_8_s' );
 	register_setting( 'mythos-settings-group', 'myth_event_9_s' );
+	register_setting( 'mythos-settings-group', 'myth_event_10_s' );
 	register_setting( 'mythos-settings-group', 'myth_deferred_date' );
 	register_setting( 'mythos-settings-group', 'myth_deferred_date_interval' );
 	

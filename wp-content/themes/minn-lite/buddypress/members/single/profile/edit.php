@@ -23,8 +23,8 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
 		/** This action is documented in bp-templates/bp-legacy/buddypress/members/single/profile/profile-wp.php */
 		do_action( 'bp_before_profile_field_content' ); ?>
 
-		<h4><?php printf( __( "Editing '%s' Profile Group", "buddypress" ), bp_get_the_profile_group_name() ); ?></h4>
-Please visit your <a style="color:blue;text-decoration:underline;" href="/wp-admin/profile.php">profile</a> to change your first or last name.
+		
+
 		<?php if ( bp_profile_has_multiple_groups() ) : ?>
 			<ul class="button-nav">
 
@@ -103,6 +103,53 @@ Please visit your <a style="color:blue;text-decoration:underline;" href="/wp-adm
 		}
 		
 		?>
+        <style>
+		.error{
+			background:red;
+			margin: 2px 0px;	
+			padding:2px;
+			color:white;
+			display:none;
+		}
+		</style>
+        
+         
+      
+         <p>
+        <? if(preg_match("/facebook\.com/",$user->user_url) || preg_match("/google\.com/",$user->user_url)){ ?>
+        <em>Note: Your account was registered via social media. </em>
+        <? } ?>
+        </p>
+          <p>
+        <label for="fname">First Name</label>
+        <input name="fname" id="fname" type="text" value="<? echo  get_user_meta( $user_id, 'first_name', true ); ?>" required />
+        </p>
+        
+          <p>
+        <label for="lname">Last Name</label>
+        <input name="lname" id="lname" type="text" value="<? echo  get_user_meta( $user_id, 'last_name', true ); ?>"   />
+        </p>
+        
+        <p>
+        <label for="uemail">Email</label>
+    
+        <input name="uemail" id="uemail" type="text" value="<? echo $user->user_email; ?>" required  />
+        <div class="error emailused email">Please select another email address.</div>
+        <div class="error emailvalid email">Please enter a valid email address.</div>
+        </p>
+      
+        <? if(1 || !preg_match("/facebook\.com/",$user->user_url) && !preg_match("/google\.com/",$user->user_url)){ ?>
+          <p>
+        <label for="user_email">Change Password</label>
+      
+        <input name="upass" id="user_password" type="password" value="" placeholder="new password"   />  <input name="ucpass"  id="confirm_password" type="password" value="" placeholder="confirm password"   />
+        <div class="error pwmatch passwords" >Passwords must match.</div>
+         <div class="error pwconfirm passwords" >Please confirm password .</div>
+        <br><em>Note: Only if you want to change your password. Otherwise leave blank.</em>
+       
+        </p>
+        <? } ?>
+        
         <p>
          <label for="gender">Gender</label>
  <? $v = get_user_meta( $user_id, 'gender', true ) ; 
@@ -154,7 +201,54 @@ Please visit your <a style="color:blue;text-decoration:underline;" href="/wp-adm
 	</div>
 
 	<input type="hidden" name="field_ids" id="field_ids" value="<?php bp_the_profile_field_ids(); ?>" />
+<script>
+jQuery(document).ready(function(){
+	jQuery("#upass").val('');
+	jQuery("#profile-edit-form").on("submit",function(){
+		var pw1 = jQuery("#user_password").val();
+		var pw2 = jQuery("#confirm_password").val();	
+		jQuery(".error.passwords").hide();
+		if(pw1 && !pw2){
+			jQuery(".pwmatch").show();
+			return false;
+		}
+		if(pw1 && pw2 && pw1 != pw2){
+			jQuery(".pwmatch").show();
+			return false;
+		}
+	});
+	jQuery("#user_password").on("keypress blur change",function(){
+		jQuery(".error.passwords").hide();
+	});
+	jQuery("#confirm_password").on("keypress blur change",function(){
+		jQuery(".error.passwords").hide();
+	});
+	jQuery("#user_email").on("keypress blur change",function(){
+		jQuery(".error.email").hide();
+		jQuery("#profile-group-edit-submit").attr("disabled",true);
+		 jQuery.post(ajaxurl, {action: 'retrospect_check_email', email: jQuery("#user_email").val() }, function(response) {
+			 if(response > 0){
+				 jQuery(".emailused").show();
+			 } else if(!ValidateEmail(jQuery("#user_email").val())){
+				  jQuery(".emailvalid").show(); 
+			 } else {
+				jQuery("#profile-group-edit-submit").attr("disabled",false); 
+			 }
+           
+          });	
+		
+	});
+	function ValidateEmail(inputText) {  
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+		if(inputText.match(mailformat)) {  
+			return true;  
+		} else {  
+			return false;  
+		}  
+	}  
+});
 
+</script>
 	<?php wp_nonce_field( 'bp_xprofile_edit' ); ?>
 
 </form>

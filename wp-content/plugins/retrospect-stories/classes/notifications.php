@@ -428,7 +428,7 @@ function story_notification_settings() {
 		</thead>
 
 		<tbody>
-			<tr style="display:none;" >
+			<tr >
 				<td></td>
 				<td>Receive notifications when someone comments on a story I commented on</td>
 				<td class="yes"><input type="radio" name="notifications[notification_story_comment]" value="yes" <?php checked( $notify4, 'yes', true ) ?>/></td>

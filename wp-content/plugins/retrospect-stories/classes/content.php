@@ -77,6 +77,7 @@ function featured_MostPopular(){
 	*/
 	?>
     <a href="<? echo $permalink; ?>" class="homeLink"> <? echo (get_the_title())?get_the_title():"Untitled"; ?></a>
+    <? newCommentCount($pid) ?>
     <div class="author" style="font-size:14px;">
       <?
 	  $anon = get_post_meta($pid , 'stories_is_anonymous', true);
@@ -160,7 +161,7 @@ function home_Stories(){
 	echo $featured_image;
   
     ?>
-    </a> <a href="<? echo $permalink; ?>" class="homeLink"> <? echo (get_the_title())?get_the_title():"Untitled"; ?></a>
+    </a> <a href="<? echo $permalink; ?>" class="homeLink"> <? echo (get_the_title())?get_the_title():"Untitled"; ?></a> <? newCommentCount($pid) ?>
     <div class="author" style="font-size:14px;">
       <?
 	   $anon = get_post_meta($post->ID, 'stories_is_anonymous', true);
@@ -354,7 +355,8 @@ function otherRecentStories(){
 	    ?>
   <div class="col6 homeps"> <a href="<? echo $permalink; ?>">
     <? echo $featured_image; ?>
-    </a> <a href="<? echo $permalink; ?>" class="homeLink"> <? echo (get_the_title())?get_the_title():"Untitled"; ?></a>
+    </a> <a href="<? echo $permalink; ?>" class="homeLink"> <? echo (get_the_title())?get_the_title():"Untitled"; ?></a> 
+    <? newCommentCount($pid) ?>
     <div class="author" style="font-size:14px;">
       <?
 	   $anon = get_post_meta($post->ID, 'stories_is_anonymous', true);
@@ -439,7 +441,8 @@ function twoRandomStories($cid){
 	$featured_image = newFeaturedImage($pid );
 	echo $featured_image;
 	?>
-    <a href="<? echo $permalink; ?>" class="homeLink"> <? echo (get_the_title())?get_the_title():"Untitled"; ?></a>
+    <a href="<? echo $permalink; ?>" class="homeLink"> <? echo (get_the_title())?get_the_title():"Untitled"; ?></a> 
+    <? newCommentCount($pid) ?>
     <div class="author" style="font-size:14px;">
       <?
 	  $anon = get_post_meta($post->ID, 'stories_is_anonymous', true);
@@ -526,7 +529,8 @@ function readersChoice($cid){
     $featured_image = newFeaturedImage($pid );
 	echo $featured_image;
 	?>
-    <a href="<? echo $permalink; ?>" class="homeLink"> <? echo (get_the_title())?get_the_title():"Untitled"; ?></a>
+    <a href="<? echo $permalink; ?>" class="homeLink"> <? echo (get_the_title())?get_the_title():"Untitled"; ?></a> 
+	<? newCommentCount($pid) ?>
     <div class="author" style="font-size:14px;">
       <?
 	  $anon = get_post_meta($post->ID, 'stories_is_anonymous', true);
@@ -619,7 +623,7 @@ function featured_LastWeek(){
 	
 	?>
 <div class="col6 homeps">
-  <h1 style=""><a href="<?php echo get_permalink($prompt[post_id]); ?>"><? echo $prompt[post_title]; ?></a></h1>
+  <h1 style=""><a href="<?php echo get_permalink($prompt[post_id]); ?>"><? echo $prompt[post_title]; ?></a> </h1>
   <a href="<?php echo get_permalink($prompt[post_id]); ?>"><img style="height: 300px!important;" src="<? echo $image; ?>" /></a><? echo $caption; ?></div>
 <?
 	

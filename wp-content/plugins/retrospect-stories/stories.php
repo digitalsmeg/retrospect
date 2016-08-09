@@ -94,7 +94,20 @@ function my_custom_init() {
 	global $wpdb;
 	$pluginfolder = get_bloginfo('url') . '/' . PLUGINDIR . '/' . dirname(plugin_basename(__FILE__));
 	wp_enqueue_style('story-admin-styles',$pluginfolder.'/css/style.css');
+	if($_SERVER[REDIRECT_URL] == "/lost-password/"){
+		wp_safe_redirect("/wp-login.php?action=lostpassword" );	
+		exit;
+	}
 	
+	if(preg_match("/wp-admin\/profile.php/",$_SERVER[REQUEST_URI]) && !current_user_can( 'administrator' ) && is_admin() && is_user_logged_in()){
+		 global $current_user;
+      	get_currentuserinfo();
+		$nick = $current_user->user_nicename;
+		 echo "TEST";
+		 exit;
+		wp_safe_redirect("/members/".$nick."/profile/edit/" );	
+		exit;
+	}
 	$labels = array(
 		'name' => _x('Stories', 'post type general name'),
 		'singular_name' => _x('Story', 'post type singular name'),
@@ -1504,7 +1517,7 @@ jQuery(function() {
 						.css({top: item.pageY+5, left: item.pageX+5})
 						.fadeIn(200);
 				} else {
-					$("#tooltip").hide();
+					jQuery("#tooltip").hide();
 				}
 			
 		});
@@ -2074,39 +2087,61 @@ function retrospect_comment_notification($comment_id, $comment_object) {
 	// INSERT NOTIFICATION SETTINGS CHECK HERE
     if ($comment_object->comment_approved) {
 		
-		echo $_SERVER['DOCUMENT_ROOT'];
+		
 		// send to author of comment that was replied to
 		if ($parent_id) {	
 		
 				 // if its a response
-				 
 				$msg = get_option('myth_event_7');
-				 
 				$msg .= "\n\nComment:  ".$comment_object->comment_content."\n\n";
-				
 				$commenter = $comment_object->comment_author;
 				$msg = str_replace('{$commenter}',$commenter,$msg);
-				
 				$notify = bp_get_user_meta( $parent_author, 'notification_story_comment_reply', true ) ;
-				
 				sendNotify(get_option('myth_event_7_s'),$msg,$parent_author,$comment_object->comment_post_ID, $notify, "View the story and reply to this comment at");
 				
+				// logs
+				ob_start();
+				echo "Comment\n------------\n";
+				print_r($comment_object);
+				echo "Parent\n------------\n";
+				print_r($comment_parent);
+				$log = ob_get_contents();
+				ob_clean();
 				
+				$fp = fopen($_SERVER['DOCUMENT_ROOT']."/comment-logs/".date("Y-m-d-H-i-s").".txt","w");
+				fwrite($fp,$log);
+				fclose($fp);
+				
+		} else {
+			// find all users who commented on story
+			$sql = "SELECT *  FROM   ".$wpdb->prefix."comments WHERE  `comment_post_ID` = ".$comment_object->comment_post_ID." AND user_id != ".$comment_object->user_id." GROUP BY user_id";
+			$result = $wpdb->get_results($sql,ARRAY_A);
+			
+			$msg = get_option('myth_event_10');
+			$msg .= "\n\nComment:  ".$comment_object->comment_content."\n\n";
+			$commenter = $comment_object->comment_author;
+			$msg = str_replace('{$commenter}',$commenter,$msg);
+			
+			// logs
+			$fp = fopen($_SERVER['DOCUMENT_ROOT']."/comment-logs/".date("Y-m-d-H-i-s").".txt","a");
+			fwrite($fp,$sql."\n\n");	
+			foreach($result as $user){
+				$notify = bp_get_user_meta( $user[user_id], 'notification_story_comment', true ) ;
+				ob_start();
+				echo "$msg $notify $user[comment_author] \n\n";
+				$log = ob_get_contents();
+				ob_clean();
+				fwrite($fp,$log);
+				
+				
+				sendNotify(get_option('myth_event_10_s'),$msg,$user[user_id],$comment_object->comment_post_ID, $notify, "View the story and comment at");
 			}
+			fclose($fp);
+		}
 			
 		
 	}
-	ob_start();
-	echo "Comment\n------------\n";
-	print_r($comment_object);
-	echo "Parent\n------------\n";
-	print_r($comment_parent);
-	$log = ob_get_contents();
-	ob_clean();
 	
-	$fp = fopen($_SERVER['DOCUMENT_ROOT']."/logs/".date("Y-m-d-H-i-s").".txt","w");
-	fwrite($fp,$log);
-	fclose($fp);
 	
 }
 

@@ -138,6 +138,12 @@
         <div style="color:grey;">Note: You can use {$author}, {$title} and {$commenter} accordingly.</div>
         </td>
       </tr>
+       <tr>
+        <th>Comment</th>
+        <td><input type="text" class="" name="myth_event_10_s" placeholder="Subject" size="60"  value="<?php echo esc_attr( get_option('myth_event_10_s') ); ?>" /><br><textarea name="myth_event_10" placeholder="When  comment on story you commented on" style="margin: 0px; width: 100%; height: 85px;"><? echo get_option('myth_event_10'); ?></textarea>
+        <div style="color:grey;">Note: You can use {$author}, {$title} and {$commenter} accordingly.</div>
+        </td>
+      </tr>
       <tr>
         <th>Response Story</th>
         <td><input type="text" class="" name="myth_event_6_s" placeholder="Subject" size="60"  value="<?php echo esc_attr( get_option('myth_event_6_s') ); ?>" /><br><textarea name="myth_event_6" placeholder="When someone writes a response story to your story" style="margin: 0px; width: 100%; height: 85px;"><? echo get_option('myth_event_6'); ?></textarea>
