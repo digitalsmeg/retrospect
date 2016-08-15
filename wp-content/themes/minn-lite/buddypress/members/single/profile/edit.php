@@ -64,10 +64,13 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
         <?
 		global $wpdb;
 		
-		$user = wp_get_current_user();
-		$user_id = $user->ID;
-		
 	
+		
+	  global $bp;
+			
+			$user_id = $bp->displayed_user->id;
+			
+			$user = get_userdata($user_id);
 		
 		if($_POST[retro_opt] != ""){
 			
@@ -101,8 +104,9 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
 			
 			$user = wp_get_current_user();
 		}
-		
+		wp_enqueue_script( 'password-strength-meter' );
 		?>
+        <link rel='stylesheet' href='/wp-admin/load-styles.php?c=1&amp;dir=ltr&amp;load%5B%5D=dashicons,admin-bar,common,forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,widgets,site-icon,&amp;load%5B%5D=l10n,buttons,wp-auth-check,editor-buttons&amp;ver=4.5.3' type='text/css' media='all' />
         <style>
 		.error{
 			background:red;
@@ -113,8 +117,8 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
 		}
 		</style>
         
-         
-      
+        <input type="hidden" name="hearth" value="<? echo base64_encode($user_id); ?>" /> 
+     
          <p>
         <? if(preg_match("/facebook\.com/",$user->user_url) || preg_match("/google\.com/",$user->user_url)){ ?>
         <em>Note: Your account was registered via social media. </em>
@@ -129,7 +133,14 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
         <label for="lname">Last Name</label>
         <input name="lname" id="lname" type="text" value="<? echo  get_user_meta( $user_id, 'last_name', true ); ?>"   />
         </p>
-        
+         <p>
+        <label for="occupation">Occupation</label>
+        <input name="occupation" id="occupation" type="text" value="<? echo  get_user_meta( $user_id, 'occupation', true ); ?>"  />
+        </p>
+         <p>
+        <label for="retired"><input name="retired" id="retired" type="checkbox" value="1" <? echo  (get_user_meta( $user_id, 'retired', true ))?'checked=""':''; ?>  /> Retired?</label>
+      
+        </p>
         <p>
         <label for="uemail">Email</label>
     
@@ -141,15 +152,19 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
         <? if(1 || !preg_match("/facebook\.com/",$user->user_url) && !preg_match("/google\.com/",$user->user_url)){ ?>
           <p>
         <label for="user_email">Change Password</label>
-      
+    
         <input name="upass" id="user_password" type="password" value="" placeholder="new password"   />  <input name="ucpass"  id="confirm_password" type="password" value="" placeholder="confirm password"   />
         <div class="error pwmatch passwords" >Passwords must match.</div>
          <div class="error pwconfirm passwords" >Please confirm password .</div>
+         <span id="pass-strength-result"></span>
         <br><em>Note: Only if you want to change your password. Otherwise leave blank.</em>
        
         </p>
         <? } ?>
-        
+          <p>
+        <label for="description">Bio</label>
+        <textarea name="description" id="description"  ><? echo$user->description; ?></textarea>
+        </p>
         <p>
          <label for="gender">Gender</label>
  <? $v = get_user_meta( $user_id, 'gender', true ) ; 
@@ -246,6 +261,77 @@ jQuery(document).ready(function(){
 			return false;  
 		}  
 	}  
+});
+
+function checkPasswordStrength( $pass1,
+                                $pass2,
+                                $strengthResult,
+                                $submitButton,
+                                blacklistArray ) {
+        var pass1 = $pass1.val();
+    var pass2 = $pass2.val();
+ 
+    // Reset the form & meter
+    $submitButton.attr( 'disabled', 'disabled' );
+        $strengthResult.removeClass( 'short bad good strong' );
+ 
+    // Extend our blacklist array with those from the inputs & site data
+    blacklistArray = blacklistArray.concat( wp.passwordStrength.userInputBlacklist() )
+ 
+    // Get the password strength
+    var strength = wp.passwordStrength.meter( pass1, blacklistArray, pass2 );
+ 
+    // Add the strength meter results
+    switch ( strength ) {
+ 
+        case 2:
+            $strengthResult.addClass( 'bad' ).html( pwsL10n.bad );
+            break;
+ 
+        case 3:
+            $strengthResult.addClass( 'good' ).html( pwsL10n.good );
+            break;
+ 
+        case 4:
+            $strengthResult.addClass( 'strong' ).html( pwsL10n.strong );
+            break;
+ 
+        case 5:
+            $strengthResult.addClass( 'short' ).html( pwsL10n.mismatch );
+            break;
+ 
+        default:
+            $strengthResult.addClass( 'short' ).html( pwsL10n.short );
+ 
+    }
+ 
+    // The meter function returns a result even if pass2 is empty,
+    // enable only the submit button if the password is strong and
+    // both passwords are filled up
+    if ((4 === strength ||  3 === strength ) && '' !== pass2.trim() ) {
+        $submitButton.removeAttr( 'disabled' );
+    }
+	if('' == pass2.trim() && '' == pass1.trim()){
+		 $submitButton.removeAttr( 'disabled' );
+		  $strengthResult.html('').removeAttr('class');
+	}
+ 
+    return strength;
+}
+ 
+jQuery( document ).ready( function( $ ) {
+    // Binding to trigger checkPasswordStrength
+    $( 'body' ).on( 'keyup', 'input[name=upass], input[name=ucpass]',
+        function( event ) {
+            checkPasswordStrength(
+                $('input[name=upass]'),         // First password field
+                $('input[name=ucpass]'), // Second password field
+                $('#pass-strength-result'),           // Strength meter
+                $('#profile-group-edit-submit'),           // Submit button
+                ['black', 'listed', 'word']        // Blacklisted words
+            );
+        }
+    );
 });
 
 </script>

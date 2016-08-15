@@ -530,7 +530,7 @@ function readersChoice($cid){
 	echo $featured_image;
 	?>
     <a href="<? echo $permalink; ?>" class="homeLink"> <? echo (get_the_title())?get_the_title():"Untitled"; ?></a> 
-	<? newCommentCount($pid) ?>
+	<? newCommentCount(get_the_id()) ?>
     <div class="author" style="font-size:14px;">
       <?
 	  $anon = get_post_meta($post->ID, 'stories_is_anonymous', true);
@@ -1098,3 +1098,35 @@ function the_post_thumbnail_caption() {
 	  }
   }
 }
+
+
+
+function retrospect_ad_code($atts){
+		global $wpdb;
+		$a = extract(shortcode_atts(array('story'=>'','user'=>''), $atts));
+		ob_start();
+		if(current_user_can('administrator')){ 
+			if(!empty($story)){
+				?>
+				<div class="retro_ad">
+				<?
+				echo get_post_meta($story,'ad_code','true');
+				?>
+				</div>
+				<?
+			}
+			if(!empty($user)){
+				?>
+				<div class="retro_ad">
+				<?
+				echo get_user_meta($user,'ad_code','true');
+				?>
+				</div>
+				<?
+			}
+		}
+		$content = ob_get_contents();
+		ob_end_clean();
+		return $content;
+}
+add_shortcode("retrospectadcode", "retrospect_ad_code");

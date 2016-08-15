@@ -1,3 +1,4 @@
+<? @session_start(); ?>
 <h2>Retrospect Settings</h2>
 <form method="post" action="options.php">
   <?php settings_fields( 'mythos-settings-group' ); ?>
@@ -21,6 +22,7 @@
           </div></td>
       </tr>
       <tr>
+    
         <th scope="row"><label for="myth_time_travel">Time Travel Activation</label></th>
         <td id="ttnote"><input type="button" onclick="activatett()" id="att" <? if(!empty($_SESSION[timetravel])){ ?>style="display:none;"<? } ?> value="Activate" />
           <input type="button" onclick="deactivatett()" id="datt" style="background:red;color:white;cursor:pointer;<? if(empty($_SESSION[timetravel])){ ?>display:none;<? } ?>" value="Time Travel is activated for IP <? echo $_SESSION[timetravel]; ?>. Deactivate." />

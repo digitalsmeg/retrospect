@@ -392,7 +392,7 @@ function showStories($post){
       
       <div style="color:white;background:orange;">Notice: Changing the publication date will not effect 'My Own Topic' stories. These stories will always refer to their actual publication date.</div>
       <? } else { ?>
-      <input type="text" name="first_time" class="datepicker"  value="<?php echo $ft; ?>" />
+      <input type="text" name="first_time" class="datepicker"  value="<?php echo get_post_meta( $post->ID , 'first_time' , true ); ?>" />
         <div style="color:grey;">Note: You can alter the publication date. The publication date is the date shown when the story is displayed, but it also determines if the story is visible to the public now, or when the prompt goes live. For example, if you set this stories date to before its selected prompt, it will be visible before the prompt goes live.</div>
         <? } ?>
         </td>
@@ -401,12 +401,23 @@ function showStories($post){
       <th scope="row"><label for="stories_some_setting">Featured Story For Selected Prompt</label></th>
       <td><input type="checkbox" name="stories_featured_story" value="on" <?php if($feat == true){ ?>checked="" <? } ?>" /></td>
     </tr>
+    
+   
     <? } ?>
     <tr valign="top">
       <th scope="row"><label for="stories_some_text">Tags</label></th>
       <td><input type="text" name="stories_tags" style="width:100%" value="<?php echo esc_attr( get_post_meta( $post->ID , 'stories_tags' , true )  ); ?>" />
         <div style="color:grey;">Note: Tags are keywords for your story that help others find it. Separate tags with commas.</div></td>
     </tr>
+    <? if(current_user_can('administrator')){  ?>
+     <tr valign="top">
+      <th scope="row"><label for="">Ad Code</label></th>
+      <td>
+    <textarea  name="ad_code" style="margin: 0px; height: 167px; width: 657px;resize:both;"><? echo get_post_meta($post->ID, "ad_code", true); ?></textarea>
+    <br><em>Note: to display this in content use shortcode [retrospectadcode story=<? echo $post->ID; ?>]</em>
+    </td>
+    </tr>
+    <? } ?>
   </tbody>
 </table>
 <? if(!current_user_can('administrator')){  ?>

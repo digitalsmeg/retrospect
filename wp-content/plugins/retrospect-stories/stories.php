@@ -103,8 +103,7 @@ function my_custom_init() {
 		 global $current_user;
       	get_currentuserinfo();
 		$nick = $current_user->user_nicename;
-		 echo "TEST";
-		 exit;
+		
 		wp_safe_redirect("/members/".$nick."/profile/edit/" );	
 		exit;
 	}

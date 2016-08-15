@@ -12,6 +12,20 @@ body, html {
 #branding {
 	display: none;
 }
+#activity-personal-li{
+	display: none;
+}
+.retro_bio{
+	border-top: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+	padding:5px 0px;
+	font-style: italic;	
+	margin: 5px 0px;
+}
+.retro_bio .avatar{
+	float: left;
+	margin-right:10px;
+}
 .filterdiv label, .flaglink, .charlabel, .mark_as_read label, .sharemes label, .thread-options a {
 	display: inline-block;
 }

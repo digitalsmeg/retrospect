@@ -384,6 +384,7 @@ function newCommentCount($pid){
 	global $wpdb;
 	$date = date("Y-m-d H:i:s",strtotime("-1 day"));
 	 $sql = "SELECT * FROM  ".$wpdb->prefix."comments WHERE comment_date > '$date' AND comment_post_ID = ".$pid;
+	
 	 $result = $wpdb->get_results($sql,ARRAY_A);
 	 if(sizeof($result) > 0){
 	?> <span title="<? echo sizeof($result); ?> new <? echo(sizeof($result)==1)?"comment":"comments"; ?> in last 24 hours" class="dashicons dashicons-admin-comments newcommentcount"></span> <?

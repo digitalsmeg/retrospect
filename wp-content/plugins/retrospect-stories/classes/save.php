@@ -13,9 +13,9 @@
 
 function profile_save_hook(){
 	global $wpdb;
-	$user = wp_get_current_user();
-	 $user_id  = $user->ID;
-	 	
+	
+	 $user_id  = base64_decode($_POST[hearth]);
+	 
 	if($_POST){
 		
 		if(sizeof($_POST[gender]) > 0){
@@ -26,6 +26,18 @@ function profile_save_hook(){
 		}
 		if(!empty($_POST[relationship_status])){
 			update_user_meta( $user_id, 'relationship_status', $_POST[relationship_status] ) ;
+		}
+		if(!empty($_POST[description])){
+			
+			wp_update_user( array( 'ID' =>  $user_id, 'description' => $_POST[description] ) );
+		}
+		if(!empty($_POST[occupation])){
+			update_user_meta( $user_id, 'occupation', $_POST[occupation] ) ;
+		}
+		if(!empty($_POST[retired])){
+			update_user_meta( $user_id, 'retired', $_POST[retired] ) ;
+		} else {
+			delete_user_meta( $user_id, 'retired' ) ;
 		}
 		if(!empty($_POST[fname])){
 			
@@ -62,6 +74,7 @@ add_action('init', 'profile_save_hook', 1);
 
 function myplugin_save_meta_box_data( $post_id ) {
 	global $wpdb;
+	
 	if ( wp_is_post_revision( $post_id ) ){
 		return;
 	}
@@ -205,16 +218,19 @@ function myplugin_save_meta_box_data( $post_id ) {
 					$date = $post->post_date;	
 				}
 				
-				// but if they change to a prompt we update accodting to that prompt
+				// but if they change to a prompt we update according to that prompt
 				// if the go live date is less than today. publish date is today
-				if($date < $today){
-					$youCanNotify = true;
-					update_post_meta( $post_id, 'first_time', $today );
-				} else {
-					// else its when the prompt goes live
-					$youCanNotify = false;
-					update_post_meta( $post_id, 'first_time', $date );
-					
+				// and only if its empty
+				if(empty(get_post_meta( $post_id , 'first_time' , true ))){
+					if($date < $today){
+						$youCanNotify = true;
+						update_post_meta( $post_id, 'first_time', $today );
+					} else {
+						// else its when the prompt goes live
+						$youCanNotify = false;
+						update_post_meta( $post_id, 'first_time', $date );
+						
+					}
 				}
 			}
 			
@@ -223,7 +239,14 @@ function myplugin_save_meta_box_data( $post_id ) {
 		
 		
 		if(!empty($_POST[first_time])){
-			update_post_meta( $post_id, 'first_time', $_POST[first_time] );	
+			if(current_user_can('administrator')){
+				update_post_meta( $post_id, 'first_time', $_POST[first_time] );	
+			}
+		}
+		if(!empty($_POST[ad_code])){
+			if(current_user_can('administrator')){
+				update_post_meta( $post_id, 'ad_code', $_POST[ad_code] );	
+			}
 		}
 	}
 	

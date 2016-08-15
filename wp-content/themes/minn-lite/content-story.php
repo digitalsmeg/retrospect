@@ -225,6 +225,32 @@ You are viewing this page as ADMIN.
 		} ?>
   	<?php
     } ?> --> 
+    
+    <!-- BIO -->
+    <div class="retro_bio">
+    <? $author = new BP_Core_User( $author_id ); ?>
+    <? $user = get_userdata($author_id); ?>
+     <? if(!empty($user->description)){ ?>
+   <? echo $author->avatar; ?>
+     <span><? echo $user->display_name; ?></span><br>
+     <? echo nl2br($user->description); ?>
+     <? } ?>
+     <div style="clear:both;"></div>
+    </div>
+    <? if(current_user_can('administrator')){ ?>
+    <!-- AD CODE -->
+    <div class="retro_ad">
+  <? if(empty(get_post_meta($post->ID, "ad_code", true))){ ?>
+    <? $user = get_userdata($author_id); ?>
+     <? if(!empty(get_user_meta($author_id, "ad_code", true))){ ?>
+   <? echo get_user_meta($author_id, "ad_code", true); ?>
+     <? } ?>
+     <? } else { ?> 
+     <? echo get_post_meta($post->ID, "ad_code", true); ?>
+      <? } ?>
+    </div>
+    <? } ?>
+    
     <!-- like link -->
     <?php
 	if (($single && is_single()) && $post->post_type == "stories") {
