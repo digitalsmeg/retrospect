@@ -414,7 +414,7 @@ function showStories($post){
       <th scope="row"><label for="">Ad Code</label></th>
       <td>
     <textarea  name="ad_code" style="margin: 0px; height: 167px; width: 657px;resize:both;"><? echo get_post_meta($post->ID, "ad_code", true); ?></textarea>
-    <br><em>Note: to display this in content use shortcode [retrospectadcode story=<? echo $post->ID; ?>]</em>
+    <br><em>Note: to display this in content use shortcode [retrospectadcode]. You can only user this shortcode on a page that loads either a story OR a author page.</em>
     </td>
     </tr>
     <? } ?>

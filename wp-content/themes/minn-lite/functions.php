@@ -54,3 +54,4 @@ class WPGo_Main_Theme extends WPGo_Framework {
 global $wpgo_theme_object;
 $wpgo_theme_object = new WPGo_Main_Theme( 'Minn Lite' );
 
+

@@ -74,11 +74,13 @@ $curauth = get_userdatabylogin(sanitize_text_field($_GET[s]));
 
 ?>
 <h1>Searching Website</h1>
-<?php $loop = new WP_Query( array( 'post__not_in' => $not, 's'=> $_GET[s], 'post_type' => array("page","prompts"), 'posts_per_page' =>  10 , 'paged' => $paged) ); ?>
+<?php 
+$loop = new WP_Query( array( 'post__not_in' => $not, 's'=> $_GET[s], 'post_type' => array("page","prompts","post"), 'posts_per_page' =>  10 , 'paged' => $paged) ); 
+$loop = new WP_Query( array( 's'=> $_GET[s], 'post_type' => array("stories"), 'posts_per_page' =>  10 , 'paged' => $paged) );
+?>
 	
-<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-<?  get_template_part( 'content', '' ); ?>
-<?php endwhile; ?>
+<?php WPGo_Hooks::wpgo_after_content_open(); ?>
+<?php get_template_part( 'loops/loop', 'search' ); ?>
 
 <? } ?>
 

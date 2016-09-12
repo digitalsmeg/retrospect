@@ -432,11 +432,17 @@ function setPrivacy(){
 }
 
 function setOptins(){
+		if(empty($_POST[id])){
+			$current_user = wp_get_current_user();
+			$_POST[id] = $current_user->ID;
+		}
 		$i = get_user_meta($_POST[id], "retro_opt", true);
 		if($i > 0){
 			 delete_user_meta($_POST[id], "retro_opt");
+			 echo 0;
 		} else {
 			update_user_meta($_POST[id], "retro_opt",1);
+			echo 1;
 		}
 		wp_die();
 }

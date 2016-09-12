@@ -9,7 +9,7 @@
  * 
  *
  */
- 
+
  function editor_message($atts){
 		global $wpdb;
 		ob_start();
@@ -713,6 +713,7 @@ function acceptTerms(){
 	global $wpdb,  $current_user;
 
 	
+
 	
 	if($_POST[retro_terms]){
 		update_user_meta( $current_user->ID, 'retro_terms', 1);
@@ -723,6 +724,10 @@ function acceptTerms(){
 		
 		update_user_meta( $current_user->ID, 'retro_beta', 1);
 		update_user_meta( $current_user->ID, 'retro_beta_date', date("Y-m-d"));	
+	}
+	
+	if($_POST[retro_opt] > 0){
+		update_user_meta( $current_user->ID, 'retro_opt', 1);
 	}
 	
 	
@@ -766,10 +771,22 @@ function acceptTerms(){
         I accept Retrospect’s <a href="/terms-of-service/" target="_blank">Terms of Use</a></label>
   </p>
    </div>
+   
+   <div class="box">
+   
+            <label><strong>Newsletter Sign-up</strong> </label>
+           <p>
+      <label>
+              <input checked="checked"  type="checkbox" name="retro_opt" id="retro_opt" value="1">
+              Send me Retrospect’s weekly newsletter with new prompts, polls, tips, and more</label>
+         
+   </div>
+   <!--
    <div class="box">
      <label><strong>Beta Software</strong></label>
      <p>The Retrospect website is currently in beta, pre-release form. Retrospect membership is free during the beta test period. </p>
    </div>
+   -->
     <p>
       <input name="signup_submit" style="background: #FF0F54;
   border-radius: 5px; float:left;
@@ -1082,13 +1099,13 @@ function getFirstImage($html){
 		return "";
 	}
 }
-
+if(!function_exists("the_post_thumbnail_caption")){
 function the_post_thumbnail_caption() {
   global $post, $wpdb;
 
   $thumbnail_id    = get_post_thumbnail_id($post->ID);
  
- 
+ echo "SELECT * FROM  ".$wpdb->prefix."posts WHERE ID = '$thumbnail_id'";
  $q = $wpdb->get_results("SELECT * FROM  ".$wpdb->prefix."posts WHERE ID = '$thumbnail_id'");
  foreach ($q as $a) {
 	
@@ -1098,35 +1115,60 @@ function the_post_thumbnail_caption() {
 	  }
   }
 }
+}
 
 
 
 function retrospect_ad_code($atts){
-		global $wpdb;
+	global $wpd,$adstoryid;
+	
+	
 		$a = extract(shortcode_atts(array('story'=>'','user'=>''), $atts));
 		ob_start();
-		if(current_user_can('administrator')){ 
-			if(!empty($story)){
-				?>
-				<div class="retro_ad">
-				<?
-				echo get_post_meta($story,'ad_code','true');
-				?>
-				</div>
-				<?
-			}
-			if(!empty($user)){
-				?>
-				<div class="retro_ad">
-				<?
-				echo get_user_meta($user,'ad_code','true');
-				?>
-				</div>
-				<?
-			}
+		if(preg_match("/\/author\//",$_SERVER[REQUEST_URI])){
+			$author_id = get_the_author_meta('ID');	
+		} else {
+			$story = $adstoryid;
+			$post = get_post($story);
+			$user = $post->post_author;	
+		}
+		
+	
+		
+		
+		if(1){ 
+		
+				if(get_post_meta($story,'ad_code','true')){
+					?>
+					<div class="retro_ad">
+					<?
+					echo get_post_meta($story,'ad_code','true');
+					?>
+					</div>
+					<?
+				}elseif(get_user_meta($user,'ad_code','true')){
+					?>
+					<div class="retro_ad">
+					<?
+					echo get_user_meta($user,'ad_code','true');
+					?>
+					</div>
+					<?
+				}
+				if(!empty($author_id)){
+					?>
+					<div class="retro_ad">
+					<?
+					echo get_user_meta($author_id,'ad_code','true');
+					?>
+					</div>
+					<?
+				}
+			
 		}
 		$content = ob_get_contents();
 		ob_end_clean();
 		return $content;
 }
+
 add_shortcode("retrospectadcode", "retrospect_ad_code");

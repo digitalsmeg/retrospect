@@ -3,7 +3,32 @@ var wpid = post__in = 0;
 var page = 1;
 var loader;
 
+var xnavs = ['xprofile-personal-li','settings-personal-li','activity-personal-li','messages-personal-li','members-following-personal-li','members-followers-personal-li'];
+
 jQuery(document).ready(function(){
+
+		if(jQuery("#public-personal-li").hasClass("selected") || jQuery("#edit-personal-li").hasClass("selected") || jQuery("#change-avatar-personal-li").hasClass("selected")){
+				
+			jQuery("#xprofile-personal-li").addClass("selected");	
+		}
+		
+		
+		if(jQuery("#notifications-personal-li").hasClass("selected") || jQuery("#profile-personal-li").hasClass("selected")){
+				
+			jQuery("#settings-personal-li").addClass("selected");	
+		}
+		
+		if(jQuery("#inbox-personal-li").hasClass("selected") || jQuery("#starred-personal-li").hasClass("selected") || jQuery("#sentbox-personal-li").hasClass("selected") || jQuery("#compose-personal-li").hasClass("selected") || jQuery("#notices-personal-li").hasClass("selected")){
+				
+			jQuery("#messages-personal-li").addClass("selected");	
+		}
+		if(jQuery(".members.following").length > 0){
+			jQuery("#members-following-personal-li").addClass("selected");	
+		}
+		if(jQuery(".members.followers").length > 0){
+			jQuery("#members-followers-personal-li").addClass("selected");	
+		}
+		
 		if(jQuery("#nootherstories").length > 0){
 			jQuery("#nootherstories").parent().find(".content").css({height:"0px"});		
 		}

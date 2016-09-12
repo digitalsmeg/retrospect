@@ -13,7 +13,7 @@ $site = "beta";
 
 
 
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
+error_reporting(E_ERROR);
 
 
 require_once plugin_dir_path(__FILE__) . 'fpdf/fpdf.php';
@@ -25,8 +25,9 @@ require_once plugin_dir_path(__FILE__) . 'classes/meta.php';
 require_once plugin_dir_path(__FILE__) . 'classes/save.php';
 require_once plugin_dir_path(__FILE__) . 'classes/admin.php';
 require_once plugin_dir_path(__FILE__) . 'classes/social.php';
-require_once plugin_dir_path(__FILE__) . 'classes/content.php';
 require_once plugin_dir_path(__FILE__) . 'classes/story.php';
+require_once plugin_dir_path(__FILE__) . 'classes/content.php';
+
 
 
 /*
@@ -92,14 +93,16 @@ function main_menu() {
 function my_custom_init() {
 	/* Stories */
 	global $wpdb;
+
+
 	$pluginfolder = get_bloginfo('url') . '/' . PLUGINDIR . '/' . dirname(plugin_basename(__FILE__));
 	wp_enqueue_style('story-admin-styles',$pluginfolder.'/css/style.css');
-	if($_SERVER[REDIRECT_URL] == "/lost-password/"){
+	if($_SERVER['REDIRECT_URL'] == "/lost-password/"){
 		wp_safe_redirect("/wp-login.php?action=lostpassword" );	
 		exit;
 	}
 	
-	if(preg_match("/wp-admin\/profile.php/",$_SERVER[REQUEST_URI]) && !current_user_can( 'administrator' ) && is_admin() && is_user_logged_in()){
+	if(preg_match("/wp-admin\/profile.php/",$_SERVER['REQUEST_URI']) && !current_user_can( 'administrator' ) && is_admin() && is_user_logged_in()){
 		 global $current_user;
       	get_currentuserinfo();
 		$nick = $current_user->user_nicename;
@@ -673,7 +676,7 @@ $user = wp_get_current_user();
 				$menu = str_replace('<a href="/members/admin/profile/">My Account</a>','<a href="/wp-login.php">' . __('Sign In &amp; Start Sharing') . '</a>',$menu);	
 				return $menu;
 			} else {
-				$profilelink = '<li class="lastLink"><a href="/wp-login.php">' . __('Sign In &amp; Start Sharing') . '</a></li>';
+				$profilelink = '<li class="lastLink"><a href="/wp-login.php">' . __('Sign In or Register') . '</a></li>';
 				$menu = $menu . $profilelink;
 				return $menu;
 			}
@@ -1670,7 +1673,7 @@ add_filter( 'wp_mail_from', 'custom_wp_mail_from' );
 function custom_wp_mail_from( $original_email_address ) {
 	//Make sure the email is from the same domain 
 	//as your website to avoid being marked as spam.
-	return 'beta@myretrospect.com';
+	return 'team@myretrospect.com';
 }
 
 
@@ -1860,7 +1863,7 @@ function wp_notify_moderator($comment_id) {
 
 
 
-	<p id="backtoblog"><a href="http://beta.myretrospect.com/" title="Are you lost?">← Back to Retrospect</a></p>
+	<p id="backtoblog"><a href="http://www.myretrospect.com/" title="Are you lost?">← Back to Retrospect</a></p>
 	
 	</div>
 

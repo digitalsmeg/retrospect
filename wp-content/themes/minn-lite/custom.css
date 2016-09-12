@@ -885,12 +885,36 @@ display:none;
 	font-weight: 400;
 	display: block;
 }
+
+#buddypress div.profile h4 {
+    clear: both;
+}
 .print {
 	display: none;
 }
 .categories ul {
 	list-style: disc !important;
 }
+#buddypress div.item-list-tabs {
+    clear: none;
+    float: left!important;
+}
+#item-body:before, .standard-form:before, #message:before, #activity-filter-select{
+	display:block;
+	clear: both;
+	content:'';	
+}
+#general-personal-li{
+	display:none;	
+}
+
+#buddypress div.message-search {
+    float: none!important; 
+    margin: 20px 0px!important;
+	clear: both;
+    padding-top: 10px;
+}
+
 #buddypress div.item-list-tabs ul li {
 	float: left;
 	margin: 0;

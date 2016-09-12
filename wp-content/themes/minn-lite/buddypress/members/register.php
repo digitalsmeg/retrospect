@@ -164,11 +164,12 @@ p.description {
               <input type="checkbox" name="retro_privacy" id="retro_privacy" value="I accept Retrospect’s Terms of Use" required>
               I accept Retrospect’s <a href="/privacy-policy/">Privacy Policy</a></label>
           </div>
+          <!--
           <div class="checkbox">
           <strong><label>Beta Software</label></strong><br>
           The Retrospect website is currently in beta, pre-release form. Retrospect membership is free during the beta test period.
           </div>
-         <!--
+         
            <div class="checkbox">
                <label for="field_3"> Beta Service Confidentiality Agreement *</label>
            <p>The Beta Agreement states that you will not disclose proprietary or confidential information about Retrospect that you learn by being a Beta Tester.</p>
@@ -185,7 +186,7 @@ p.description {
           <div class="checkbox">
             <label for="field_4"> Newsletter Sign-up </label>
             <label>
-              <input checked="checked" onclick="jQuery(this).attr('checked',true);"  type="checkbox" name="retro_opt" id="retro_opt" value="Send me Retrospect’s weekly newsletter with new prompts, polls, tips, and more">
+              <input checked="checked"  type="checkbox" name="retro_opt" id="retro_opt" value="Send me Retrospect’s weekly newsletter with new prompts, polls, tips, and more">
               Send me Retrospect’s weekly newsletter with new prompts, polls, tips, and more</label>
           </div>
           <p class="description"> </p>

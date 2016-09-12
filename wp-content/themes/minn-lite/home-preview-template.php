@@ -9,7 +9,7 @@ get_header();
   <?php WPGo_Hooks::wpgo_after_content_open(); ?>
   <?
 
-$currentID = getCurrent();
+$currentID = @getCurrent();
 
 ?>
   <?php $loop = new WP_Query( array( 'post_type' => 'prompts', 'posts_per_page' => 1, 'post__in' => array($currentID)) ); ?>
@@ -35,7 +35,7 @@ $currentID = getCurrent();
         </span><span class="start"><a href="/wp-admin/post-new.php?post_type=stories&prompt=<? echo the_ID(); ?>">Start Writing</a></span> </div>
       <div class="retrospect">
        <p><? echo nl2br(get_option('myth_home_text')); ?></p>
-        <a class="more right" href="/about-us">Learn More</a>
+        <a class="more right" style="font-size:24px;font-family: 'Sorts Mill Goudy', serif !important;" href="/wp-login.php">Join Now</a>
         <div class="clear"></div>
       </div>
     </div>

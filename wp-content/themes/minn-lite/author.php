@@ -121,4 +121,5 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 <?php get_sponsor(); ?>
 </aside>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

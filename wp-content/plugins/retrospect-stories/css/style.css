@@ -3,7 +3,7 @@
 	display:none!important;
 }
 
-tr.active[data-slug=woocommerce] {
+tr.active[data-slug=woocommerce],tr.inactive[data-slug=woocommerce] {
     display: none!important;
 }
 div#profile-page.wrap form#your-profile #profile-nav {

@@ -237,10 +237,12 @@ menuswitchopen=false;
 
 					?>
     <form role="search" id="topSearch" method="get" class="search-form" action="/">
-      <input style="padding-left: 10px; margin-bottom: 10px;width: 80%;" type="search" placeholder="Search..." value="<? echo $_GET[s]; ?>" onKeydown="if (event.keyCode==13){jQuery('#topSearch').submit();}" name="s">
+      <input style="padding-left: 10px; margin-bottom: 10px;width: 80%;" type="search" placeholder="Search Stories..." value="<? echo $_GET[s]; ?>" onKeydown="if (event.keyCode==13){jQuery('#topSearch').submit();}" name="s">
       <a class="more" href="javascript:jQuery('#topSearch').submit();" style="display:inline-block;border-radius:0px;height:20px;  height: 26px;
 
   line-height: 28px;">Go</a>
+  <br>
+  <a href="?s= ">Advanced Search</a>
     </form>
   </header>
   

@@ -248,6 +248,9 @@ function myplugin_save_meta_box_data( $post_id ) {
 				update_post_meta( $post_id, 'ad_code', $_POST[ad_code] );	
 			}
 		}
+		if(empty($_POST[ad_code])){
+			delete_post_meta( $post_id, 'ad_code' );	
+		}
 	}
 	
 	if($_POST[publish] != "Publish"){

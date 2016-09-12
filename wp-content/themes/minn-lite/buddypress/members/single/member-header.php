@@ -82,7 +82,7 @@ do_action( 'bp_before_member_header' ); ?>
 		 do_action( 'bp_profile_header_meta' );
 		 $user = wp_get_current_user(); 
 		 
-		$loop = new WP_Query( array( 'author' => $user->ID, 'post_type' => array("stories")) ); 
+		$loop = new WP_Query( array( 'post_status' => 'publish', 'author' => $bp->displayed_user->id, 'posts_per_page' => -1 , 'post_type' => array("stories")) ); 
 		 ?>
          <? if($bp->loggedin_user->id == $bp->displayed_user->id){ ?>
 <a href="/wp-admin/edit.php?post_type=stories" class="button fav bp-secondary-action" title="Mark as Favorite">Manage Stories (<? echo $loop->post_count; ?>)</a>

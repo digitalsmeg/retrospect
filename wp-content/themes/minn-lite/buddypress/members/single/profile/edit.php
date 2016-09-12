@@ -16,7 +16,7 @@ do_action( 'bp_before_profile_edit_content' );
 if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) ) :
 	while ( bp_profile_groups() ) : bp_the_profile_group(); ?>
 
-<form action="<?php bp_the_profile_group_edit_form_action(); ?>" method="post" id="profile-edit-form" class="standard-form <?php bp_the_profile_group_slug(); ?>">
+<form action="<?php bp_the_profile_group_edit_form_action(); ?>" autocomplete="off" method="post" id="profile-edit-form" class="standard-form <?php bp_the_profile_group_slug(); ?>">
 
 	<?php
 
@@ -106,7 +106,7 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
 		}
 		wp_enqueue_script( 'password-strength-meter' );
 		?>
-        <link rel='stylesheet' href='/wp-admin/load-styles.php?c=1&amp;dir=ltr&amp;load%5B%5D=dashicons,admin-bar,common,forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,widgets,site-icon,&amp;load%5B%5D=l10n,buttons,wp-auth-check,editor-buttons&amp;ver=4.5.3' type='text/css' media='all' />
+        <link rel='stylesheet' href='/wp-admin/load-styles.php?c=1&amp;dir=ltr&amp;load%5B%5D=forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,widgets,site-icon,&amp;load%5B%5D=l10n,buttons,wp-auth-check,editor-buttons&amp;ver=4.5.3' type='text/css' media='all' />
         <style>
 		.error{
 			background:red;
@@ -152,12 +152,11 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
         <? if(1 || !preg_match("/facebook\.com/",$user->user_url) && !preg_match("/google\.com/",$user->user_url)){ ?>
           <p>
         <label for="user_email">Change Password</label>
-    
+        <em>Note: Only if you want to change your password. Otherwise leave blank.</em><br>
         <input name="upass" id="user_password" type="password" value="" placeholder="new password"   />  <input name="ucpass"  id="confirm_password" type="password" value="" placeholder="confirm password"   />
         <div class="error pwmatch passwords" >Passwords must match.</div>
          <div class="error pwconfirm passwords" >Please confirm password .</div>
-         <span id="pass-strength-result"></span>
-        <br><em>Note: Only if you want to change your password. Otherwise leave blank.</em>
+         <span id="pass-strength-result"></span><br>
        
         </p>
         <? } ?>
@@ -170,7 +169,7 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
  <? $v = get_user_meta( $user_id, 'gender', true ) ; 
 
  ?>
-    <select onchange="jQuery('#gender').val('');" name="gender[0]" required>
+    <select onchange="jQuery('#gender').val('');" name="gender[0]" >
     <option value="">Please choose...</option>
     <? foreach($genders as $key=>$value){ 
 	$key = $key + 1;
@@ -188,7 +187,7 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
     
     <label for="relationship_status">Relationship Status</label>
     <? $v = get_user_meta( $user_id, 'relationship_status', true ) ; ?>
-    <select name="relationship_status" required>
+    <select name="relationship_status" >
     <option value="">Please choose...</option>
     <? foreach($relationships as $key=>$value){ 
 	$key = $key + 1;
@@ -202,9 +201,9 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
 <p>
                 <label for="field_1">Newsletter</label>
                 <? if(get_user_meta($user->ID, "retro_opt", true) == 1){ ?>
-                	You have opted to receive the newsletter: <form method="post"><input type="hidden" name="retro_opt" value="0" />  <input type="submit" value="Opt-Out" />    
+                	<span id="opt">You have opted to receive the newsletter</span>: <input id="optb"  type="button" onclick="setOptins();" value="Opt-Out" />    
                 <? } else { ?>
-                	You are not receiving our newsletter: <form method="post"><input type="hidden" name="retro_opt" value="1" />  <input type="submit" value="Opt-In" />            <? } ?>
+                	<span id="opt">You are not receiving our newsletter</span>: <input id="optb" type="button" onclick="setOptins();" value="Opt-In" />     <? } ?>
                 </p>
 	<?php
 
@@ -217,6 +216,19 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
 
 	<input type="hidden" name="field_ids" id="field_ids" value="<?php bp_the_profile_field_ids(); ?>" />
 <script>
+
+function setOptins(){
+	 jQuery.post(ajaxurl, {action: 'set_optins'}, function(response) {
+		 if(response.toString() == "1"){
+				 jQuery("#opt").html('You have opted to receive the newsletter');
+				 jQuery("#optb").val('Opt-Out');
+		 } else {
+			  jQuery("#opt").html('You are not receiving our newsletter');
+				 jQuery("#optb").val('Opt-In');
+		 }
+	  });	
+}
+
 jQuery(document).ready(function(){
 	jQuery("#upass").val('');
 	jQuery("#profile-edit-form").on("submit",function(){

@@ -185,7 +185,7 @@ function story_notifications() {
 }
 
 
-add_action('shutdown', 'story_notifications');
+add_action('init', 'story_notifications');
 
 
 
@@ -245,6 +245,8 @@ add_action('shutdown', 'follower_notifications');
 function sendNotify($title,$msg,$author,$post_id,$notify = "",$stub = 'View the [type] at'){
 	$admins = getAdmins();
 	
+	
+	
 	//$notify = bp_get_user_meta( $p->post_author, 'notification_story_follow_story', true );
 	$anon = get_post_meta($post_id, 'stories_is_anonymous', true);
 	$post = get_post($post_id);
@@ -256,7 +258,7 @@ function sendNotify($title,$msg,$author,$post_id,$notify = "",$stub = 'View the 
 	}
 	$msg = str_replace('{$author}',$dn,$msg);
 	$msg = str_replace('{$title}',$post->post_title,$msg);
-	
+	echo $msg;
 	$instant =  bp_get_user_meta( $author, 'notification_story_comment_reply', true ) ;
 	
 	$types = ["prompts"=>"prompt","stories"=>"story"];			

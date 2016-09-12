@@ -1,6 +1,6 @@
 <?php
-$user = wp_get_current_user();
-global $embargoed, $embargoedate;
+$currentuser = wp_get_current_user();
+global $embargoed, $embargoedate,$adstoryid;
 $exc = get_the_excerpt();
 ?>
 <?php
@@ -41,7 +41,7 @@ foreach($result as $prompt){
 $user_id = get_current_user_id();
 $read = get_post_meta($post->ID, "mark_as_read" . $user_id, true);
 ?>
-<?php if ($golive <= date("Y-m-d") || $is_current || $user->ID == $post->post_author || current_user_can("administrator")) { ?>
+<?php if ($golive <= date("Y-m-d") || $is_current || $user_id == $post->post_author || current_user_can("administrator")) { ?>
 <?
 if (current_user_can("administrator") && is_single()){
 ?>
@@ -51,7 +51,7 @@ You are viewing this page as ADMIN.
 }
 ?>
 <div class="storyPromptContainer<?php if ($read) { ?> markedAsRead<?php } ?>">
-  <?php if ((current_user_can("administrator") || $user->ID == $post->post_author)) { ?>
+  <?php if ((current_user_can("administrator") || $user_id == $post->post_author)) { ?>
   <?php if (0) { ?>
   <p>This story will go live on <?php echo date("F j, Y", strtotime($golive)); ?>. It is hidden from public view. [<?php echo $golive; ?>]</p>
   <?php } ?>
@@ -62,6 +62,7 @@ You are viewing this page as ADMIN.
     <? echo (get_the_title())?get_the_title():"Untitled"; ?>
     </a> <span class="author">by
     <?php
+	$adstoryid = $post->ID;
 	  $anon = get_post_meta($post->ID, 'stories_is_anonymous', true);
 	  $original_post_id = $post->ID;
 	if ($anon) { 
@@ -199,7 +200,7 @@ You are viewing this page as ADMIN.
 			'style' => 'margin:0px 5px 5px 0px'
 		));
 		}
-		the_post_thumbnail_caption();
+		?><p class="wp-caption-text"><? the_post_thumbnail_caption(); ?></p><?
 		$excerpt = get_the_excerpt();
 	
 		if(!empty($post->post_excerpt)){
@@ -237,7 +238,7 @@ You are viewing this page as ADMIN.
      <? } ?>
      <div style="clear:both;"></div>
     </div>
-    <? if(current_user_can('administrator')){ ?>
+    <? if(0){ ?>
     <!-- AD CODE -->
     <div class="retro_ad">
   <? if(empty(get_post_meta($post->ID, "ad_code", true))){ ?>
@@ -283,14 +284,14 @@ You are viewing this page as ADMIN.
 		} ?>
     <!-- PDF LINK -->
     <?php
-	if ((current_user_can("administrator") || $user->ID == $post->post_author) && ($single && is_single()) && $post->post_type == "stories") {
+	if ((current_user_can("administrator") || $user_id == $post->post_author) && ($single && is_single()) && $post->post_type == "stories") {
 		?>
     <div stlye="clear:both;"></div>
     <?
 	} ?>
     <!-- flag checkbox -->
     <?php
-		if (($single && is_single()) && $post->post_type == "stories") {
+		if (($single && is_single()) && $post->post_type == "stories" && $user_id > 0) {
 			reportSystem($post->ID);
 		} ?>
     <?php
@@ -307,7 +308,8 @@ You are viewing this page as ADMIN.
     <?php
 	} ?>
     <?php
-	if ($user->ID == $post->post_author) { ?>
+
+	if ($user_id == $post->post_author) { ?>
     <a class="more" href="/wp-admin/post.php?post=<?php
 		echo $post->ID; ?>&action=edit">Edit Your
     <?php
@@ -322,7 +324,7 @@ You are viewing this page as ADMIN.
     </a>
     <?php
 	}  else { ?>
-    <? if (($single && is_single()) && $post->post_type == "stories") { ?>
+    <? if (($single && is_single()) && $post->post_type == "stories" && $user_id > 0) { ?>
   
     <a class="more" style="background-color: rgb(0, 86, 114);" href="/wp-admin/post-new.php?post_type=stories&prompt=<? echo $prompted_post->ID; ?>&response=<? echo $post->ID; ?>">Write a story in response</a>
      <? } ?>

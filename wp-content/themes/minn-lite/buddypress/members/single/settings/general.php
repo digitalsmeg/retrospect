@@ -7,7 +7,12 @@ do_action( 'bp_before_member_settings_template' ); ?>
 <form action="<?php echo bp_displayed_user_domain() . bp_get_settings_slug() . '/general'; ?>" method="post" class="standard-form" id="settings-form">
 Please visit your <a style="color:blue;text-decoration:underline;" href="/wp-admin/profile.php">profile</a> to change your first or last name.
 	<?php 
-	
+	 global $current_user;
+      	get_currentuserinfo();
+		$nick = $current_user->user_nicename;
+		
+		wp_safe_redirect("/members/".$nick."/settings/notifications/" );	
+		exit;
 	//if ( !is_super_admin() ) : 
 	if(0):
 	?>
