@@ -1,0 +1,572 @@
+0000.000 (0) Opened log file at time: Mon, 18 Jan 2016 18:47:12 +0000 on http://beta.myretrospect.com
+0000.001 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.11.20 WP: 4.4.1 PHP: 5.5.30 (Linux s4-sanjose.accountservergroup.com 3.14.25-grsec.3.el5 #1 SMP Mon Jan 5 14:23:02 GMT 2015 x86_64) MySQL: 5.5.40 Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 43.5M | 44.3M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.094 (0) Free space on disk containing Updraft's temporary directory: 677142 Mb
+0000.097 (0) Tasks: Backup files: 1 (schedule: manual) Backup DB: 1 (schedule: manual)
+0000.101 (0) Requesting semaphore lock (fd)
+0000.103 (0) Set semaphore last lock (fd) time to 2016-01-18 18:47:12
+0000.103 (0) Semaphore lock (fd) complete
+0000.106 (0) Backup run: resumption=0, nonce=1203551a96aa, begun at=1453142832 (0s ago), job type=backup
+0000.108 (0) Scheduling a resumption (1) after 300 seconds (1453143132) in case this run gets aborted
+0000.125 (0) Checking if we have a zip executable available
+0000.125 (0) Testing: /usr/bin/zip
+0000.131 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.133 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.134 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=128) (out=105) (deflated 18%)
+0000.134 (0) Output: total bytes=128, compressed=105 -> 18% savings
+0000.139 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=135) (out=111) (deflated 18%)
+0000.140 (0) Output: total bytes=263, compressed=216 -> 18% savings
+0000.140 (0) Stderr output: 
+0000.141 (0) Stderr output: 
+0000.141 (0) Stderr output: 
+0000.148 (0) Working binary zip found: /usr/bin/zip
+0000.150 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.151 (0) Creation of backups of directories: beginning
+0000.153 (0) Beginning creation of dump of plugins (split every: 500 Mb)
+0001.011 (0) Total entities for the zip file: 613 directories, 3422 files (0 skipped as non-modified), 50.9 Mb
+0001.014 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0001.017 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 200 files added (on-disk size: 0 Kb)
+0001.019 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 300 files added (on-disk size: 0 Kb)
+0001.022 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 400 files added (on-disk size: 0 Kb)
+0001.024 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 500 files added (on-disk size: 0 Kb)
+0001.025 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (4.4 Mb, 3422 files batched, 501 (501) added so far); re-opening (prior size: 0 Kb)
+0001.531 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: size is now: 1.30 Mb
+0001.539 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 600 files added (on-disk size: 1375.2 Kb)
+0001.542 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 700 files added (on-disk size: 1375.2 Kb)
+0001.545 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 800 files added (on-disk size: 1375.2 Kb)
+0001.547 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 900 files added (on-disk size: 1375.2 Kb)
+0001.550 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 1000 files added (on-disk size: 1375.2 Kb)
+0001.551 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (16.2 Mb, 3422 files batched, 501 (1002) added so far); re-opening (prior size: 1375.2 Kb)
+0002.925 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: size is now: 6.40 Mb
+0002.943 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 1100 files added (on-disk size: 6516.1 Kb)
+0002.948 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 1200 files added (on-disk size: 6516.1 Kb)
+0002.952 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 1300 files added (on-disk size: 6516.1 Kb)
+0002.957 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 1400 files added (on-disk size: 6516.1 Kb)
+0002.961 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 1500 files added (on-disk size: 6516.1 Kb)
+0002.962 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (1.7 Mb, 3422 files batched, 501 (1503) added so far); re-opening (prior size: 6516.1 Kb)
+0003.499 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 1600 files added (on-disk size: 7207.1 Kb)
+0003.502 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 1700 files added (on-disk size: 7207.1 Kb)
+0003.505 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 1800 files added (on-disk size: 7207.1 Kb)
+0003.507 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 1900 files added (on-disk size: 7207.1 Kb)
+0003.510 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 2000 files added (on-disk size: 7207.1 Kb)
+0003.510 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (7.7 Mb, 3422 files batched, 501 (2004) added so far); re-opening (prior size: 7207.1 Kb)
+0004.071 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: size is now: 11.80 Mb
+0004.081 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 2100 files added (on-disk size: 12055 Kb)
+0004.083 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 2200 files added (on-disk size: 12055 Kb)
+0004.086 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 2300 files added (on-disk size: 12055 Kb)
+0004.089 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 2400 files added (on-disk size: 12055 Kb)
+0004.091 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 2500 files added (on-disk size: 12055 Kb)
+0004.092 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.2 Mb, 3422 files batched, 501 (2505) added so far); re-opening (prior size: 12055 Kb)
+0004.848 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: size is now: 15.60 Mb
+0004.858 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 2600 files added (on-disk size: 15960.5 Kb)
+0004.861 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 2700 files added (on-disk size: 15960.5 Kb)
+0004.864 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 2800 files added (on-disk size: 15960.5 Kb)
+0004.867 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 2900 files added (on-disk size: 15960.5 Kb)
+0004.870 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 3000 files added (on-disk size: 15960.5 Kb)
+0004.871 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (10.1 Mb, 3422 files batched, 501 (3006) added so far); re-opening (prior size: 15960.5 Kb)
+0005.949 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 3100 files added (on-disk size: 17981.5 Kb)
+0005.951 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 3200 files added (on-disk size: 17981.5 Kb)
+0005.954 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 3300 files added (on-disk size: 17981.5 Kb)
+0005.956 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip.tmp: 3400 files added (on-disk size: 17981.5 Kb)
+0006.786 (0) Created plugins zip (0) - 20064.3 Kb in 6.5 s (3067.6 Kb/s) (SHA1 checksum: 57407c1fed4a7719b57435653a3ff887675c054f)
+0006.788 (0) Beginning creation of dump of themes (split every: 500 Mb)
+0006.893 (0) Total entities for the zip file: 38 directories, 180 files (0 skipped as non-modified), 1.9 Mb
+0006.895 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-themes.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0007.098 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-themes.zip.tmp: size is now: 1.20 Mb
+0007.108 (0) Created themes zip (0) - 1193.3 Kb in 0.2 s (5176.3 Kb/s) (SHA1 checksum: 78d4465b9897da5192caffa82f5891011ea209f5)
+0007.110 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone
+0007.111 (0) Looking for candidates to back up in: /home3/myretros/public_html/beta.myretrospect.com/wp-content/uploads
+0007.112 (0) finding files: group-avatars: adding to list (1)
+0007.113 (0) finding files: siteorigin-widgets: adding to list (2)
+0007.113 (0) finding files: avatars: adding to list (3)
+0007.114 (0) finding files: 2016: adding to list (4)
+0007.115 (0) finding files: 2015: adding to list (5)
+0007.115 (0) Beginning creation of dump of uploads (split every: 500 Mb)
+0007.242 (0) Total entities for the zip file: 28 directories, 1028 files (0 skipped as non-modified), 203 Mb
+0007.245 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0007.248 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: 200 files added (on-disk size: 0 Kb)
+0007.249 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 Mb added on this batch (26.1 Mb, 1028 files batched, 204 (204) added so far); re-opening (prior size: 0 Kb)
+0008.016 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: size is now: 26.20 Mb
+0008.022 (0) A useful amount of data was added after this amount of zip processing: 1.6 s (normalised: 1.5 s, rate: 17050.6 Kb/s)
+0008.024 (0) Performance is good - will increase the amount of data we attempt to batch (time=1.56879806519, normalised_time=1.50141273011, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=104758935)
+0008.028 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: 300 files added (on-disk size: 26794.9 Kb)
+0008.031 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: 400 files added (on-disk size: 26794.9 Kb)
+0008.034 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: 500 files added (on-disk size: 26794.9 Kb)
+0008.037 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: 600 files added (on-disk size: 26794.9 Kb)
+0008.038 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 99.9 Mb added on this batch (99.9 Mb, 1028 files batched, 450 (654) added so far); re-opening (prior size: 26794.9 Kb)
+0013.049 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: size is now: 89.50 Mb
+0013.058 (0) A useful amount of data was added after this amount of zip processing: 5.6 s (normalised: 5.6 s, rate: 18256.1 Kb/s)
+0013.059 (0) Performance is good - will increase the amount of data we attempt to batch (time=5.60441398621, normalised_time=5.60380748931, max_time=-1, data points known=0, old_max_bytes=104758935, new_max_bytes=112165453)
+0013.062 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: 700 files added (on-disk size: 91618.2 Kb)
+0013.064 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: 800 files added (on-disk size: 91618.2 Kb)
+0013.067 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: 900 files added (on-disk size: 91618.2 Kb)
+0013.070 (0) Zip: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: 1000 files added (on-disk size: 91618.2 Kb)
+0017.230 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip.tmp: size is now: 143.90 Mb
+0017.751 (0) Created uploads zip (0) - 147393.9 Kb in 10.5 s (13977.4 Kb/s) (SHA1 checksum: c1ce1e0d99a862867a3e4f6029209a793b9e74fa)
+0017.754 (0) Beginning backup of other directories found in the content directory (index: 0)
+0017.755 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql
+0017.756 (0) Looking for candidates to back up in: /home3/myretros/public_html/beta.myretrospect.com/wp-content
+0017.757 (0) finding files: plugins: skipping: this is the plugins directory
+0017.757 (0) finding files: upgrade: skipping: excluded by options
+0017.758 (0) finding files: index.php: adding to list (1)
+0017.759 (0) finding files: themes: skipping: this is the themes directory
+0017.759 (0) finding files: updraft: skipping: this is the updraft directory
+0017.760 (0) finding files: uploads: skipping: this is the uploads directory
+0017.851 (0) Total entities for the zip file: 0 directories, 1 files (0 skipped as non-modified), 0 Mb
+0017.871 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-others.zip.tmp: size is now: 0.00 Mb
+0017.874 (0) Created others zip (0) - 0.2 Kb in 0 s (6.8 Kb/s) (SHA1 checksum: dde6a27fc6fba436fede2166d02f914d998a63bf)
+0017.879 (0) Saving backup status to database (elements: 8)
+0017.880 (0) Beginning creation of database dump (WordPress DB)
+0017.882 (0) Testing: /usr/bin/mysqldump
+0017.893 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0017.901 (0) Table wp_options: Total expected rows (approximate): 3892
+0017.951 (0) Table wp_options: Total rows added: 1516 in 0.05 seconds
+0017.952 (0) Table wp_options: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_options.table.gz - 117.8 Kb)
+0017.955 (0) Table wp_users: Total expected rows (approximate): 60
+0017.960 (0) Table wp_users: Total rows added: 60 in 0.00 seconds
+0017.961 (0) Table wp_users: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_users.table.gz - 4.6 Kb)
+0017.964 (0) Table wp_usermeta: Total expected rows (approximate): 1245
+0017.991 (0) Table wp_usermeta: Total rows added: 1558 in 0.03 seconds
+0017.992 (0) Table wp_usermeta: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_usermeta.table.gz - 19.6 Kb)
+0017.996 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0017.997 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0017.998 (0) Table wp_commentmeta: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_commentmeta.table.gz - 0.4 Kb)
+0018.001 (0) Table wp_comments: Total expected rows (approximate): 138
+0018.011 (0) Table wp_comments: Total rows added: 132 in 0.01 seconds
+0018.012 (0) Table wp_comments: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_comments.table.gz - 12 Kb)
+0018.015 (0) Table wp_links: Total expected rows (approximate): 0
+0018.040 (0) Table wp_links: Total rows added: 0 in 0.02 seconds
+0018.041 (0) Table wp_links: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_links.table.gz - 0.4 Kb)
+0018.044 (0) Table wp_postmeta: Total expected rows (approximate): 1669
+0018.090 (0) Table wp_postmeta: Total rows added: 2032 in 0.05 seconds
+0018.092 (0) Table wp_postmeta: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_postmeta.table.gz - 41.6 Kb)
+0018.096 (0) Table wp_posts: Total expected rows (approximate): 416
+0018.237 (0) Table wp_posts: Total rows added: 900 in 0.14 seconds
+0018.239 (0) Table wp_posts: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_posts.table.gz - 237.2 Kb)
+0018.245 (0) Table wp_signups: Total expected rows (approximate): 61
+0018.267 (0) Table wp_signups: Total rows added: 61 in 0.02 seconds
+0018.268 (0) Table wp_signups: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_signups.table.gz - 6.2 Kb)
+0018.272 (0) Table wp_term_relationships: Total expected rows (approximate): 23
+0018.274 (0) Table wp_term_relationships: Total rows added: 23 in 0.00 seconds
+0018.274 (0) Table wp_term_relationships: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_term_relationships.table.gz - 0.4 Kb)
+0018.277 (0) Table wp_term_taxonomy: Total expected rows (approximate): 4
+0018.279 (0) Table wp_term_taxonomy: Total rows added: 4 in 0.00 seconds
+0018.280 (0) Table wp_term_taxonomy: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_term_taxonomy.table.gz - 0.5 Kb)
+0018.283 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0018.285 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0018.285 (0) Table wp_termmeta: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_termmeta.table.gz - 0.4 Kb)
+0018.288 (0) Table wp_terms: Total expected rows (approximate): 4
+0018.290 (0) Table wp_terms: Total rows added: 4 in 0.00 seconds
+0018.291 (0) Table wp_terms: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_terms.table.gz - 0.4 Kb)
+0018.294 (0) Table wp_bad_behavior: Total expected rows (approximate): 23
+0018.320 (0) Table wp_bad_behavior: Total rows added: 23 in 0.03 seconds
+0018.321 (0) Table wp_bad_behavior: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bad_behavior.table.gz - 2.2 Kb)
+0018.324 (0) Table wp_bp_activity: Total expected rows (approximate): 914
+0018.361 (0) Table wp_bp_activity: Total rows added: 914 in 0.04 seconds
+0018.362 (0) Table wp_bp_activity: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_activity.table.gz - 20.1 Kb)
+0018.366 (0) Table wp_bp_activity_meta: Total expected rows (approximate): 0
+0018.367 (0) Table wp_bp_activity_meta: Total rows added: 0 in 0.00 seconds
+0018.368 (0) Table wp_bp_activity_meta: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_activity_meta.table.gz - 0.3 Kb)
+0018.371 (0) Table wp_bp_follow: Total expected rows (approximate): 63
+0018.373 (0) Table wp_bp_follow: Total rows added: 63 in 0.00 seconds
+0018.374 (0) Table wp_bp_follow: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_follow.table.gz - 0.6 Kb)
+0018.378 (0) Table wp_bp_friends: Total expected rows (approximate): 4
+0018.398 (0) Table wp_bp_friends: Total rows added: 4 in 0.02 seconds
+0018.399 (0) Table wp_bp_friends: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_friends.table.gz - 0.4 Kb)
+0018.402 (0) Table wp_bp_groups: Total expected rows (approximate): 2
+0018.404 (0) Table wp_bp_groups: Total rows added: 2 in 0.00 seconds
+0018.405 (0) Table wp_bp_groups: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_groups.table.gz - 0.5 Kb)
+0018.408 (0) Table wp_bp_groups_groupmeta: Total expected rows (approximate): 6
+0018.410 (0) Table wp_bp_groups_groupmeta: Total rows added: 6 in 0.00 seconds
+0018.411 (0) Table wp_bp_groups_groupmeta: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_groups_groupmeta.table.gz - 0.5 Kb)
+0018.414 (0) Table wp_bp_groups_members: Total expected rows (approximate): 4
+0018.416 (0) Table wp_bp_groups_members: Total rows added: 4 in 0.00 seconds
+0018.417 (0) Table wp_bp_groups_members: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_groups_members.table.gz - 0.5 Kb)
+0018.420 (0) Table wp_bp_messages_messages: Total expected rows (approximate): 76
+0018.437 (0) Table wp_bp_messages_messages: Total rows added: 76 in 0.02 seconds
+0018.439 (0) Table wp_bp_messages_messages: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_messages_messages.table.gz - 3.1 Kb)
+0018.443 (0) Table wp_bp_messages_meta: Total expected rows (approximate): 0
+0018.444 (0) Table wp_bp_messages_meta: Total rows added: 0 in 0.00 seconds
+0018.445 (0) Table wp_bp_messages_meta: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_messages_meta.table.gz - 0.3 Kb)
+0018.448 (0) Table wp_bp_messages_notices: Total expected rows (approximate): 0
+0018.450 (0) Table wp_bp_messages_notices: Total rows added: 0 in 0.00 seconds
+0018.450 (0) Table wp_bp_messages_notices: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_messages_notices.table.gz - 0.3 Kb)
+0018.453 (0) Table wp_bp_messages_recipients: Total expected rows (approximate): 215
+0018.458 (0) Table wp_bp_messages_recipients: Total rows added: 215 in 0.00 seconds
+0018.459 (0) Table wp_bp_messages_recipients: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_messages_recipients.table.gz - 1.5 Kb)
+0018.462 (0) Table wp_bp_notifications: Total expected rows (approximate): 110
+0018.466 (0) Table wp_bp_notifications: Total rows added: 110 in 0.00 seconds
+0018.467 (0) Table wp_bp_notifications: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_notifications.table.gz - 1.9 Kb)
+0018.471 (0) Table wp_bp_notifications_meta: Total expected rows (approximate): 0
+0018.473 (0) Table wp_bp_notifications_meta: Total rows added: 0 in 0.00 seconds
+0018.474 (0) Table wp_bp_notifications_meta: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_notifications_meta.table.gz - 0.3 Kb)
+0018.477 (0) Table wp_bp_user_blogs: Total expected rows (approximate): 7
+0018.481 (0) Table wp_bp_user_blogs: Total rows added: 7 in 0.00 seconds
+0018.482 (0) Table wp_bp_user_blogs: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_user_blogs.table.gz - 0.3 Kb)
+0018.486 (0) Table wp_bp_user_blogs_blogmeta: Total expected rows (approximate): 7
+0018.488 (0) Table wp_bp_user_blogs_blogmeta: Total rows added: 7 in 0.00 seconds
+0018.489 (0) Table wp_bp_user_blogs_blogmeta: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_user_blogs_blogmeta.table.gz - 0.5 Kb)
+0018.492 (0) Table wp_bp_xprofile_data: Total expected rows (approximate): 63
+0018.494 (0) Table wp_bp_xprofile_data: Total rows added: 63 in 0.00 seconds
+0018.495 (0) Table wp_bp_xprofile_data: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_xprofile_data.table.gz - 1.8 Kb)
+0018.499 (0) Table wp_bp_xprofile_fields: Total expected rows (approximate): 1
+0018.501 (0) Table wp_bp_xprofile_fields: Total rows added: 1 in 0.00 seconds
+0018.502 (0) Table wp_bp_xprofile_fields: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_xprofile_fields.table.gz - 0.5 Kb)
+0018.505 (0) Table wp_bp_xprofile_groups: Total expected rows (approximate): 1
+0018.506 (0) Table wp_bp_xprofile_groups: Total rows added: 1 in 0.00 seconds
+0018.507 (0) Table wp_bp_xprofile_groups: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_xprofile_groups.table.gz - 0.4 Kb)
+0018.522 (0) Table wp_bp_xprofile_meta: Total expected rows (approximate): 4
+0018.523 (0) Table wp_bp_xprofile_meta: Total rows added: 4 in 0.00 seconds
+0018.524 (0) Table wp_bp_xprofile_meta: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_xprofile_meta.table.gz - 0.4 Kb)
+0018.527 (0) Table wp_likebtn_item: Total expected rows (approximate): 0
+0018.529 (0) Table wp_likebtn_item: Total rows added: 0 in 0.00 seconds
+0018.530 (0) Table wp_likebtn_item: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_likebtn_item.table.gz - 0.4 Kb)
+0018.533 (0) Table wp_login_redirects: Total expected rows (approximate): 4
+0018.535 (0) Table wp_login_redirects: Total rows added: 4 in 0.00 seconds
+0018.535 (0) Table wp_login_redirects: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_login_redirects.table.gz - 0.4 Kb)
+0018.539 (0) Table wp_wpmm_subscribers: Total expected rows (approximate): 0
+0018.540 (0) Table wp_wpmm_subscribers: Total rows added: 0 in 0.00 seconds
+0018.541 (0) Table wp_wpmm_subscribers: finishing file (backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_wpmm_subscribers.table.gz - 0.3 Kb)
+0018.544 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_options.table.gz (1/36): adding to final database dump
+0018.572 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_users.table.gz (2/36): adding to final database dump
+0018.574 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_usermeta.table.gz (3/36): adding to final database dump
+0018.582 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_commentmeta.table.gz (4/36): adding to final database dump
+0018.583 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_comments.table.gz (5/36): adding to final database dump
+0018.587 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_links.table.gz (6/36): adding to final database dump
+0018.588 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_postmeta.table.gz (7/36): adding to final database dump
+0018.604 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_posts.table.gz (8/36): adding to final database dump
+0018.670 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_signups.table.gz (9/36): adding to final database dump
+0018.672 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_term_relationships.table.gz (10/36): adding to final database dump
+0018.673 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_term_taxonomy.table.gz (11/36): adding to final database dump
+0018.674 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_termmeta.table.gz (12/36): adding to final database dump
+0018.675 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_terms.table.gz (13/36): adding to final database dump
+0018.675 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bad_behavior.table.gz (14/36): adding to final database dump
+0018.677 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_activity.table.gz (15/36): adding to final database dump
+0018.685 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_activity_meta.table.gz (16/36): adding to final database dump
+0018.686 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_follow.table.gz (17/36): adding to final database dump
+0018.687 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_friends.table.gz (18/36): adding to final database dump
+0018.688 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_groups.table.gz (19/36): adding to final database dump
+0018.688 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_groups_groupmeta.table.gz (20/36): adding to final database dump
+0018.689 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_groups_members.table.gz (21/36): adding to final database dump
+0018.690 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_messages_messages.table.gz (22/36): adding to final database dump
+0018.692 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_messages_meta.table.gz (23/36): adding to final database dump
+0018.693 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_messages_notices.table.gz (24/36): adding to final database dump
+0018.693 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_messages_recipients.table.gz (25/36): adding to final database dump
+0018.695 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_notifications.table.gz (26/36): adding to final database dump
+0018.696 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_notifications_meta.table.gz (27/36): adding to final database dump
+0018.697 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_user_blogs.table.gz (28/36): adding to final database dump
+0018.698 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_user_blogs_blogmeta.table.gz (29/36): adding to final database dump
+0018.699 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_xprofile_data.table.gz (30/36): adding to final database dump
+0018.700 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_xprofile_fields.table.gz (31/36): adding to final database dump
+0018.701 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_xprofile_groups.table.gz (32/36): adding to final database dump
+0018.702 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_bp_xprofile_meta.table.gz (33/36): adding to final database dump
+0018.703 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_likebtn_item.table.gz (34/36): adding to final database dump
+0018.704 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_login_redirects.table.gz (35/36): adding to final database dump
+0018.705 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db-table-wp_wpmm_subscribers.table.gz (36/36): adding to final database dump
+0018.705 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db.gz: finished writing out complete database file (448 Kb)
+0018.711 (0) Total database tables backed up: 36 (backup_2016-01-18-1047_Retrospect_1203551a96aa-db.gz, size: 483520, checksum (SHA1): 0792d145d71bb533176e20a99afe7b8f8a568b9b)
+0018.713 (0) Saving backup history
+0018.716 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0018.717 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0018.717 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0018.718 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-others.zip: others: This file has not yet been successfully uploaded: will queue
+0018.719 (0) backup_2016-01-18-1047_Retrospect_1203551a96aa-db.gz: db: This file has not yet been successfully uploaded: will queue
+0018.721 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0018.723 (0) Cloud backup selection (1/1): dropbox (last)
+0018.724 (0) Beginning dispatch of backup to remote (dropbox)
+0018.725 (0) Dropbox: begin cloud upload
+0018.729 (0) Dropbox: access gained
+0019.073 (0) Dropbox quota usage: normal=817.5 Mb, shared=6186.5 Mb, total=1051904 Mb, available=1044900 Mb
+0019.076 (0) Dropbox: Attempt to upload: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip to: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip
+0020.704 (0) Dropbox chunked upload: 5.1 % uploaded (AAAAAAAADk3FcukzWYERug, 1048576)
+0023.706 (0) Dropbox chunked upload: 10.2 % uploaded (AAAAAAAADk3FcukzWYERug, 2097152)
+0027.713 (0) Dropbox chunked upload: 15.3 % uploaded (AAAAAAAADk3FcukzWYERug, 3145728)
+0030.808 (0) Dropbox chunked upload: 20.4 % uploaded (AAAAAAAADk3FcukzWYERug, 4194304)
+0032.956 (0) Dropbox chunked upload: 25.5 % uploaded (AAAAAAAADk3FcukzWYERug, 5242880)
+0035.926 (0) Dropbox chunked upload: 30.6 % uploaded (AAAAAAAADk3FcukzWYERug, 6291456)
+0039.662 (0) Dropbox chunked upload: 35.7 % uploaded (AAAAAAAADk3FcukzWYERug, 7340032)
+0042.250 (0) Dropbox chunked upload: 40.8 % uploaded (AAAAAAAADk3FcukzWYERug, 8388608)
+0042.876 (0) Dropbox chunked upload: 45.9 % uploaded (AAAAAAAADk3FcukzWYERug, 9437184)
+0046.835 (0) Dropbox chunked upload: 51 % uploaded (AAAAAAAADk3FcukzWYERug, 10485760)
+0048.834 (0) Dropbox chunked upload: 56.1 % uploaded (AAAAAAAADk3FcukzWYERug, 11534336)
+0051.353 (0) Dropbox chunked upload: 61.2 % uploaded (AAAAAAAADk3FcukzWYERug, 12582912)
+0053.116 (0) Dropbox chunked upload: 66.3 % uploaded (AAAAAAAADk3FcukzWYERug, 13631488)
+0056.586 (0) Dropbox chunked upload: 71.5 % uploaded (AAAAAAAADk3FcukzWYERug, 14680064)
+0060.561 (0) Dropbox chunked upload: 76.6 % uploaded (AAAAAAAADk3FcukzWYERug, 15728640)
+0063.049 (0) Dropbox chunked upload: 81.7 % uploaded (AAAAAAAADk3FcukzWYERug, 16777216)
+0064.626 (0) Dropbox chunked upload: 86.8 % uploaded (AAAAAAAADk3FcukzWYERug, 17825792)
+0066.268 (0) Dropbox chunked upload: 91.9 % uploaded (AAAAAAAADk3FcukzWYERug, 18874368)
+0072.198 (0) Dropbox chunked upload: 97 % uploaded (AAAAAAAADk3FcukzWYERug, 19922944)
+0077.050 (0) Dropbox chunked upload: 100 % uploaded (AAAAAAAADk3FcukzWYERug, 20545887)
+0083.268 (0) Recording as successfully uploaded: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip (52ed5b11a120a5f9a322357535afc1ed)
+0083.277 (0) Deleting local file: backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip: OK
+0083.278 (0) Dropbox: File upload success (backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip): 20064 Kb in 64s (312 Kb/s)
+0083.389 (0) Dropbox quota usage: normal=837.1 Mb, shared=6186.5 Mb, total=1051904 Mb, available=1044880.4 Mb
+0083.391 (0) Dropbox: Attempt to upload: backup_2016-01-18-1047_Retrospect_1203551a96aa-themes.zip to: backup_2016-01-18-1047_Retrospect_1203551a96aa-themes.zip
+0085.283 (0) Dropbox chunked upload: 85.8 % uploaded (AAAAAAAADk6GRmP1h3CnIw, 1048576)
+0088.122 (0) Dropbox chunked upload: 100 % uploaded (AAAAAAAADk6GRmP1h3CnIw, 1221924)
+0090.217 (0) Recording as successfully uploaded: backup_2016-01-18-1047_Retrospect_1203551a96aa-themes.zip (755272fd3751eca919f1097d24be8740)
+0090.221 (0) Deleting local file: backup_2016-01-18-1047_Retrospect_1203551a96aa-themes.zip: OK
+0090.223 (0) Dropbox: File upload success (backup_2016-01-18-1047_Retrospect_1203551a96aa-themes.zip): 1193 Kb in 6s (174 Kb/s)
+0090.349 (0) Dropbox quota usage: normal=838.3 Mb, shared=6186.5 Mb, total=1051904 Mb, available=1044879.2 Mb
+0090.350 (0) Dropbox: Attempt to upload: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip to: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip
+0092.096 (0) Dropbox chunked upload: 0.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 1048576)
+0094.650 (0) Dropbox chunked upload: 1.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 2097152)
+0098.614 (0) Dropbox chunked upload: 2.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 3145728)
+0102.090 (0) Dropbox chunked upload: 2.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 4194304)
+0103.828 (0) Dropbox chunked upload: 3.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 5242880)
+0105.439 (0) Dropbox chunked upload: 4.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 6291456)
+0109.343 (0) Dropbox chunked upload: 4.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 7340032)
+0112.189 (0) Dropbox chunked upload: 5.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 8388608)
+0114.045 (0) Dropbox chunked upload: 6.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 9437184)
+0119.390 (0) Dropbox chunked upload: 6.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 10485760)
+0121.479 (0) Dropbox chunked upload: 7.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 11534336)
+0125.359 (0) Dropbox chunked upload: 8.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 12582912)
+0126.485 (0) Dropbox chunked upload: 9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 13631488)
+0130.080 (0) Dropbox chunked upload: 9.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 14680064)
+0134.103 (0) Dropbox chunked upload: 10.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 15728640)
+0136.965 (0) Dropbox chunked upload: 11.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 16777216)
+0138.918 (0) Dropbox chunked upload: 11.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 17825792)
+0142.467 (0) Dropbox chunked upload: 12.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 18874368)
+0146.084 (0) Dropbox chunked upload: 13.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 19922944)
+0149.210 (0) Dropbox chunked upload: 13.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 20971520)
+0151.152 (0) Dropbox chunked upload: 14.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 22020096)
+0154.714 (0) Dropbox chunked upload: 15.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 23068672)
+0158.104 (0) Dropbox chunked upload: 16 % uploaded (AAAAAAAADk9-9w_WWMhowA, 24117248)
+0161.313 (0) Dropbox chunked upload: 16.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 25165824)
+0162.689 (0) Dropbox chunked upload: 17.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 26214400)
+0164.664 (0) Dropbox chunked upload: 18.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 27262976)
+0167.385 (0) Dropbox chunked upload: 18.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 28311552)
+0170.002 (0) Dropbox chunked upload: 19.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 29360128)
+0171.039 (0) Dropbox chunked upload: 20.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 30408704)
+0175.049 (0) Dropbox chunked upload: 20.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 31457280)
+0178.555 (0) Dropbox chunked upload: 21.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 32505856)
+0181.416 (0) Dropbox chunked upload: 22.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 33554432)
+0183.048 (0) Dropbox chunked upload: 22.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 34603008)
+0186.415 (0) Dropbox chunked upload: 23.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 35651584)
+0190.317 (0) Dropbox chunked upload: 24.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 36700160)
+0194.887 (0) Dropbox chunked upload: 25 % uploaded (AAAAAAAADk9-9w_WWMhowA, 37748736)
+0196.474 (0) Dropbox chunked upload: 25.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 38797312)
+0200.075 (0) Dropbox chunked upload: 26.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 39845888)
+0204.235 (0) Dropbox chunked upload: 27.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 40894464)
+0206.918 (0) Dropbox chunked upload: 27.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 41943040)
+0208.618 (0) Dropbox chunked upload: 28.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 42991616)
+0210.220 (0) Dropbox chunked upload: 29.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 44040192)
+0215.611 (0) Dropbox chunked upload: 29.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 45088768)
+0218.954 (0) Dropbox chunked upload: 30.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 46137344)
+0219.896 (0) Dropbox chunked upload: 31.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 47185920)
+0223.519 (0) Dropbox chunked upload: 32 % uploaded (AAAAAAAADk9-9w_WWMhowA, 48234496)
+0227.499 (0) Dropbox chunked upload: 32.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 49283072)
+0231.019 (0) Dropbox chunked upload: 33.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 50331648)
+0232.699 (0) Dropbox chunked upload: 34 % uploaded (AAAAAAAADk9-9w_WWMhowA, 51380224)
+0235.698 (0) Dropbox chunked upload: 34.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 52428800)
+0239.517 (0) Dropbox chunked upload: 35.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 53477376)
+0242.657 (0) Dropbox chunked upload: 36.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 54525952)
+0243.213 (0) Dropbox chunked upload: 36.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 55574528)
+0246.000 (0) Dropbox chunked upload: 37.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 56623104)
+0249.779 (0) Dropbox chunked upload: 38.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 57671680)
+0252.473 (0) Dropbox chunked upload: 38.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 58720256)
+0254.087 (0) Dropbox chunked upload: 39.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 59768832)
+0257.633 (0) The scheduled resumption is within 45 seconds - will reschedule
+0257.635 (0) Rescheduling resumption 1: moving to 345 seconds from now (1453143435)
+0257.638 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 300 + 45 = 345
+0257.639 (0) Dropbox chunked upload: 40.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 60817408)
+0261.617 (0) Dropbox chunked upload: 41 % uploaded (AAAAAAAADk9-9w_WWMhowA, 61865984)
+0264.561 (0) Dropbox chunked upload: 41.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 62914560)
+0266.227 (0) Dropbox chunked upload: 42.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 63963136)
+0268.942 (0) Dropbox chunked upload: 43.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 65011712)
+0271.504 (0) Dropbox chunked upload: 43.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 66060288)
+0274.273 (0) Dropbox chunked upload: 44.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 67108864)
+0275.722 (0) Dropbox chunked upload: 45.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 68157440)
+0277.461 (0) Dropbox chunked upload: 45.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 69206016)
+0279.799 (0) Dropbox chunked upload: 46.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 70254592)
+0282.246 (0) Dropbox chunked upload: 47.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 71303168)
+0283.313 (0) Dropbox chunked upload: 47.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 72351744)
+0286.791 (0) Dropbox chunked upload: 48.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 73400320)
+0290.609 (0) Dropbox chunked upload: 49.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 74448896)
+0296.833 (0) Dropbox chunked upload: 50 % uploaded (AAAAAAAADk9-9w_WWMhowA, 75497472)
+0297.589 (0) Dropbox chunked upload: 50.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 76546048)
+0301.138 (0) Dropbox chunked upload: 51.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 77594624)
+0304.607 (0) Dropbox chunked upload: 52.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 78643200)
+0307.667 (0) Dropbox chunked upload: 52.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 79691776)
+0308.975 (0) Dropbox chunked upload: 53.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 80740352)
+0311.960 (0) Dropbox chunked upload: 54.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 81788928)
+0314.583 (0) Dropbox chunked upload: 54.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 82837504)
+0317.725 (0) The time we have been running (317.7) is approaching the resumption interval (345) - increasing resumption interval to 348
+0317.727 (0) Dropbox chunked upload: 55.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 83886080)
+0318.391 (0) The time we have been running (318.4) is approaching the resumption interval (348) - increasing resumption interval to 349
+0318.393 (0) Dropbox chunked upload: 56.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 84934656)
+0321.430 (0) The time we have been running (321.4) is approaching the resumption interval (349) - increasing resumption interval to 352
+0321.436 (0) Dropbox chunked upload: 57 % uploaded (AAAAAAAADk9-9w_WWMhowA, 85983232)
+0325.339 (0) The time we have been running (325.3) is approaching the resumption interval (352) - increasing resumption interval to 356
+0325.342 (0) Dropbox chunked upload: 57.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 87031808)
+0328.493 (0) The time we have been running (328.5) is approaching the resumption interval (356) - increasing resumption interval to 359
+0328.495 (0) Dropbox chunked upload: 58.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 88080384)
+0330.278 (0) The time we have been running (330.3) is approaching the resumption interval (359) - increasing resumption interval to 361
+0330.280 (0) Dropbox chunked upload: 59.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 89128960)
+0333.948 (0) The time we have been running (333.9) is approaching the resumption interval (361) - increasing resumption interval to 364
+0333.950 (0) Dropbox chunked upload: 59.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 90177536)
+0339.909 (0) The time we have been running (339.9) is approaching the resumption interval (364) - increasing resumption interval to 370
+0339.913 (0) Dropbox chunked upload: 60.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 91226112)
+0344.130 (0) The time we have been running (344.1) is approaching the resumption interval (370) - increasing resumption interval to 375
+0344.132 (0) Dropbox chunked upload: 61.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 92274688)
+0345.909 (0) The time we have been running (345.9) is approaching the resumption interval (375) - increasing resumption interval to 376
+0345.912 (0) Dropbox chunked upload: 61.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 93323264)
+0348.907 (0) The time we have been running (348.9) is approaching the resumption interval (376) - increasing resumption interval to 379
+0348.909 (0) Dropbox chunked upload: 62.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 94371840)
+0352.195 (0) The time we have been running (352.2) is approaching the resumption interval (379) - increasing resumption interval to 383
+0352.197 (0) Dropbox chunked upload: 63.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 95420416)
+0355.434 (0) The time we have been running (355.4) is approaching the resumption interval (383) - increasing resumption interval to 386
+0355.436 (0) Dropbox chunked upload: 63.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 96468992)
+0356.778 (0) The time we have been running (356.8) is approaching the resumption interval (386) - increasing resumption interval to 387
+0356.781 (0) Dropbox chunked upload: 64.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 97517568)
+0361.311 (0) The time we have been running (361.3) is approaching the resumption interval (387) - increasing resumption interval to 392
+0361.313 (0) Dropbox chunked upload: 65.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 98566144)
+0366.479 (0) The time we have been running (366.5) is approaching the resumption interval (392) - increasing resumption interval to 397
+0366.480 (0) Dropbox chunked upload: 66 % uploaded (AAAAAAAADk9-9w_WWMhowA, 99614720)
+0369.034 (0) The time we have been running (369) is approaching the resumption interval (397) - increasing resumption interval to 400
+0369.036 (0) Dropbox chunked upload: 66.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 100663296)
+0371.026 (0) The time we have been running (371) is approaching the resumption interval (400) - increasing resumption interval to 402
+0371.028 (0) Dropbox chunked upload: 67.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 101711872)
+0375.379 (0) The time we have been running (375.4) is approaching the resumption interval (402) - increasing resumption interval to 406
+0375.381 (0) Dropbox chunked upload: 68.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 102760448)
+0379.949 (0) The time we have been running (379.9) is approaching the resumption interval (406) - increasing resumption interval to 410
+0379.951 (0) Dropbox chunked upload: 68.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 103809024)
+0383.133 (0) The time we have been running (383.1) is approaching the resumption interval (410) - increasing resumption interval to 414
+0383.135 (0) Dropbox chunked upload: 69.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 104857600)
+0384.670 (0) The time we have been running (384.7) is approaching the resumption interval (414) - increasing resumption interval to 415
+0384.673 (0) Dropbox chunked upload: 70.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 105906176)
+0387.408 (0) The time we have been running (387.4) is approaching the resumption interval (415) - increasing resumption interval to 418
+0387.410 (0) Dropbox chunked upload: 70.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 106954752)
+0391.045 (0) The time we have been running (391) is approaching the resumption interval (418) - increasing resumption interval to 422
+0391.047 (0) Dropbox chunked upload: 71.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 108003328)
+0394.763 (0) The time we have been running (394.8) is approaching the resumption interval (422) - increasing resumption interval to 425
+0394.765 (0) Dropbox chunked upload: 72.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 109051904)
+0396.334 (0) The time we have been running (396.3) is approaching the resumption interval (425) - increasing resumption interval to 427
+0396.337 (0) Dropbox chunked upload: 72.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 110100480)
+0397.891 (0) The time we have been running (397.9) is approaching the resumption interval (427) - increasing resumption interval to 428
+0397.893 (0) Dropbox chunked upload: 73.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 111149056)
+0400.652 (0) The time we have been running (400.6) is approaching the resumption interval (428) - increasing resumption interval to 431
+0400.656 (0) Dropbox chunked upload: 74.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 112197632)
+0403.442 (0) The time we have been running (403.4) is approaching the resumption interval (431) - increasing resumption interval to 434
+0403.445 (0) Dropbox chunked upload: 75 % uploaded (AAAAAAAADk9-9w_WWMhowA, 113246208)
+0405.052 (0) The time we have been running (405) is approaching the resumption interval (434) - increasing resumption interval to 436
+0405.054 (0) Dropbox chunked upload: 75.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 114294784)
+0407.447 (0) The time we have been running (407.4) is approaching the resumption interval (436) - increasing resumption interval to 438
+0407.449 (0) Dropbox chunked upload: 76.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 115343360)
+0410.262 (0) The time we have been running (410.3) is approaching the resumption interval (438) - increasing resumption interval to 441
+0410.264 (0) Dropbox chunked upload: 77.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 116391936)
+0413.352 (0) The time we have been running (413.3) is approaching the resumption interval (441) - increasing resumption interval to 444
+0413.354 (0) Dropbox chunked upload: 77.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 117440512)
+0413.953 (0) Dropbox chunked upload: 78.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 118489088)
+0415.974 (0) The time we have been running (416) is approaching the resumption interval (444) - increasing resumption interval to 446
+0415.977 (0) Dropbox chunked upload: 79.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 119537664)
+0418.931 (0) The time we have been running (418.9) is approaching the resumption interval (446) - increasing resumption interval to 449
+0418.933 (0) Dropbox chunked upload: 79.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 120586240)
+0421.907 (0) The time we have been running (421.9) is approaching the resumption interval (449) - increasing resumption interval to 452
+0421.909 (0) Dropbox chunked upload: 80.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 121634816)
+0423.786 (0) The time we have been running (423.8) is approaching the resumption interval (452) - increasing resumption interval to 454
+0423.788 (0) Dropbox chunked upload: 81.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 122683392)
+0429.588 (0) The time we have been running (429.6) is approaching the resumption interval (454) - increasing resumption interval to 460
+0429.590 (0) Dropbox chunked upload: 82 % uploaded (AAAAAAAADk9-9w_WWMhowA, 123731968)
+0431.868 (0) The time we have been running (431.9) is approaching the resumption interval (460) - increasing resumption interval to 462
+0431.870 (0) Dropbox chunked upload: 82.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 124780544)
+0435.713 (0) The time we have been running (435.7) is approaching the resumption interval (462) - increasing resumption interval to 466
+0435.714 (0) Dropbox chunked upload: 83.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 125829120)
+0436.979 (0) The time we have been running (437) is approaching the resumption interval (466) - increasing resumption interval to 467
+0436.982 (0) Dropbox chunked upload: 84.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 126877696)
+0439.329 (0) The time we have been running (439.3) is approaching the resumption interval (467) - increasing resumption interval to 470
+0439.332 (0) Dropbox chunked upload: 84.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 127926272)
+0442.168 (0) The time we have been running (442.2) is approaching the resumption interval (470) - increasing resumption interval to 473
+0442.170 (0) Dropbox chunked upload: 85.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 128974848)
+0444.626 (0) The time we have been running (444.6) is approaching the resumption interval (473) - increasing resumption interval to 475
+0444.629 (0) Dropbox chunked upload: 86.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 130023424)
+0446.586 (0) The time we have been running (446.6) is approaching the resumption interval (475) - increasing resumption interval to 477
+0446.589 (0) Dropbox chunked upload: 86.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 131072000)
+0450.071 (0) The time we have been running (450.1) is approaching the resumption interval (477) - increasing resumption interval to 481
+0450.074 (0) Dropbox chunked upload: 87.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 132120576)
+0454.150 (0) The time we have been running (454.1) is approaching the resumption interval (481) - increasing resumption interval to 485
+0454.153 (0) Dropbox chunked upload: 88.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 133169152)
+0458.410 (0) The time we have been running (458.4) is approaching the resumption interval (485) - increasing resumption interval to 489
+0458.412 (0) Dropbox chunked upload: 88.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 134217728)
+0459.120 (0) The time we have been running (459.1) is approaching the resumption interval (489) - increasing resumption interval to 490
+0459.122 (0) Dropbox chunked upload: 89.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 135266304)
+0462.505 (0) The time we have been running (462.5) is approaching the resumption interval (490) - increasing resumption interval to 493
+0462.507 (0) Dropbox chunked upload: 90.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 136314880)
+0466.350 (0) The time we have been running (466.3) is approaching the resumption interval (493) - increasing resumption interval to 497
+0466.351 (0) Dropbox chunked upload: 91 % uploaded (AAAAAAAADk9-9w_WWMhowA, 137363456)
+0469.021 (0) The time we have been running (469) is approaching the resumption interval (497) - increasing resumption interval to 500
+0469.023 (0) Dropbox chunked upload: 91.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 138412032)
+0471.510 (0) The time we have been running (471.5) is approaching the resumption interval (500) - increasing resumption interval to 502
+0471.513 (0) Dropbox chunked upload: 92.4 % uploaded (AAAAAAAADk9-9w_WWMhowA, 139460608)
+0473.863 (0) The time we have been running (473.9) is approaching the resumption interval (502) - increasing resumption interval to 504
+0473.865 (0) Dropbox chunked upload: 93.1 % uploaded (AAAAAAAADk9-9w_WWMhowA, 140509184)
+0476.723 (0) The time we have been running (476.7) is approaching the resumption interval (504) - increasing resumption interval to 507
+0476.725 (0) Dropbox chunked upload: 93.8 % uploaded (AAAAAAAADk9-9w_WWMhowA, 141557760)
+0480.847 (0) The time we have been running (480.8) is approaching the resumption interval (507) - increasing resumption interval to 511
+0480.849 (0) Dropbox chunked upload: 94.5 % uploaded (AAAAAAAADk9-9w_WWMhowA, 142606336)
+0482.567 (0) The time we have been running (482.6) is approaching the resumption interval (511) - increasing resumption interval to 513
+0482.570 (0) Dropbox chunked upload: 95.2 % uploaded (AAAAAAAADk9-9w_WWMhowA, 143654912)
+0484.248 (0) The time we have been running (484.2) is approaching the resumption interval (513) - increasing resumption interval to 515
+0484.250 (0) Dropbox chunked upload: 95.9 % uploaded (AAAAAAAADk9-9w_WWMhowA, 144703488)
+0487.031 (0) The time we have been running (487) is approaching the resumption interval (515) - increasing resumption interval to 518
+0487.033 (0) Dropbox chunked upload: 96.6 % uploaded (AAAAAAAADk9-9w_WWMhowA, 145752064)
+0490.172 (0) The time we have been running (490.2) is approaching the resumption interval (518) - increasing resumption interval to 521
+0490.174 (0) Dropbox chunked upload: 97.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 146800640)
+0492.095 (0) The time we have been running (492.1) is approaching the resumption interval (521) - increasing resumption interval to 523
+0492.098 (0) Dropbox chunked upload: 98 % uploaded (AAAAAAAADk9-9w_WWMhowA, 147849216)
+0495.599 (0) The time we have been running (495.6) is approaching the resumption interval (523) - increasing resumption interval to 526
+0495.601 (0) Dropbox chunked upload: 98.7 % uploaded (AAAAAAAADk9-9w_WWMhowA, 148897792)
+0498.078 (0) The time we have been running (498.1) is approaching the resumption interval (526) - increasing resumption interval to 529
+0498.081 (0) Dropbox chunked upload: 99.3 % uploaded (AAAAAAAADk9-9w_WWMhowA, 149946368)
+0505.054 (0) The time we have been running (505.1) is approaching the resumption interval (529) - increasing resumption interval to 536
+0505.056 (0) Dropbox chunked upload: 100 % uploaded (AAAAAAAADk9-9w_WWMhowA, 150931357)
+0669.955 (1) Opened log file at time: Mon, 18 Jan 2016 18:58:22 +0000 on http://beta.myretrospect.com
+0669.956 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.11.20 WP: 4.4.1 PHP: 5.5.30 (Linux s4-sanjose.accountservergroup.com 3.14.25-grsec.3.el5 #1 SMP Mon Jan 5 14:23:02 GMT 2015 x86_64) MySQL: 5.5.40 Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 36.3M | 36.8M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0670.063 (1) Free space on disk containing Updraft's temporary directory: 676997.3 Mb
+0670.074 (1) Backup run: resumption=1, nonce=1203551a96aa, begun at=1453142832 (670s ago), job type=backup, previous check-in=505.1s
+0670.075 (1) Scheduling a resumption (2) after 536 seconds (1453144038) in case this run gets aborted
+0670.083 (1) Checking if we have a zip executable available
+0670.084 (1) Zip engine: found/will use a binary zip: /usr/bin/zip
+0670.085 (1) Creation of backups of directories: already finished
+0670.085 (1) Saving backup status to database (elements: 8)
+0670.088 (1) Database dump (WordPress DB): Creation was completed already
+0670.089 (1) Saving backup history
+0670.093 (1) backup_2016-01-18-1047_Retrospect_1203551a96aa-plugins.zip: plugins: This file has already been successfully uploaded
+0670.094 (1) backup_2016-01-18-1047_Retrospect_1203551a96aa-themes.zip: themes: This file has already been successfully uploaded
+0670.095 (1) backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0670.096 (1) backup_2016-01-18-1047_Retrospect_1203551a96aa-others.zip: others: This file has not yet been successfully uploaded: will queue
+0670.097 (1) backup_2016-01-18-1047_Retrospect_1203551a96aa-db.gz: db: This file has not yet been successfully uploaded: will queue
+0670.099 (1) Requesting upload of the files that have not yet been successfully uploaded (3)
+0670.100 (1) Cloud backup selection (1/1): dropbox (last)
+0670.102 (1) Beginning dispatch of backup to remote (dropbox)
+0670.103 (1) Dropbox: begin cloud upload
+0670.107 (1) Dropbox: access gained
+0670.361 (1) Dropbox quota usage: normal=982.2 Mb, shared=6186.5 Mb, total=1051904 Mb, available=1044735.3 Mb
+0670.362 (1) This is a resumption: 150931357 bytes had already been uploaded
+0670.363 (1) Dropbox: Attempt to upload: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip to: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip
+0670.791 (1) Recording as successfully uploaded: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip (0ed75cf3c52474f6abda94353e6aea8a)
+0670.897 (1) Deleting local file: backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip: OK
+0670.899 (1) Dropbox: File upload success (backup_2016-01-18-1047_Retrospect_1203551a96aa-uploads.zip): 147393 Kb in 0s (274788 Kb/s)
+0671.024 (1) Dropbox quota usage: normal=982.2 Mb, shared=6186.5 Mb, total=1051904 Mb, available=1044735.3 Mb
+0671.025 (1) Dropbox: Attempt to upload: backup_2016-01-18-1047_Retrospect_1203551a96aa-others.zip to: backup_2016-01-18-1047_Retrospect_1203551a96aa-others.zip
+0671.424 (1) Dropbox chunked upload: 100 % uploaded (AAAAAAAADlBGF_ZFLd7FHg, 178)
+0672.811 (1) Recording as successfully uploaded: backup_2016-01-18-1047_Retrospect_1203551a96aa-others.zip (aeb5c53de218477bcef0a100a87733e0)
+0672.814 (1) Deleting local file: backup_2016-01-18-1047_Retrospect_1203551a96aa-others.zip: OK
+0672.815 (1) Dropbox: File upload success (backup_2016-01-18-1047_Retrospect_1203551a96aa-others.zip): 0 Kb in 1s (0 Kb/s)
+0672.952 (1) Dropbox quota usage: normal=982.2 Mb, shared=6186.5 Mb, total=1051904 Mb, available=1044735.3 Mb
+0672.954 (1) Dropbox: Attempt to upload: backup_2016-01-18-1047_Retrospect_1203551a96aa-db.gz to: backup_2016-01-18-1047_Retrospect_1203551a96aa-db.gz
+0673.893 (1) Dropbox chunked upload: 100 % uploaded (AAAAAAAADlHQZiuSGts4LA, 483520)
+0676.052 (1) Recording as successfully uploaded: backup_2016-01-18-1047_Retrospect_1203551a96aa-db.gz (a04933c8c6a6051fac850f2b84504793)
+0676.055 (1) Deleting local file: backup_2016-01-18-1047_Retrospect_1203551a96aa-db.gz: OK
+0676.056 (1) Dropbox: File upload success (backup_2016-01-18-1047_Retrospect_1203551a96aa-db.gz): 472 Kb in 3s (152 Kb/s)
+0676.058 (1) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0676.059 (1) Number of backup sets in history: 2
+0676.060 (1) Examining backup set with datestamp: 1453142832 (Jan 18 2016 18:47:12)
+0676.061 (1) 1453142832: this backup set remains non-empty (1/1); will retain in history
+0676.061 (1) Examining backup set with datestamp: 1448053139 (Nov 20 2015 20:58:59)
+0676.062 (1) 1448053139: this backup set remains non-empty (1/1); will retain in history
+0676.063 (1) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0676.065 (1) Resume backup (1203551a96aa, 1): finish run
+0676.066 (1) There were no errors in the uploads, so the 'resume' event (2) is being unscheduled
+0676.069 (1) No email will/can be sent - the user has not configured an email address.
+0676.070 (1) The backup apparently succeeded and is now complete

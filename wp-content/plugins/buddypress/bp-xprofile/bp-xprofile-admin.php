@@ -1047,11 +1047,11 @@ class BP_XProfile_User_Admin {
 		</div>  
         
          <div class="bp-profile-field">
-         <label for="gender">Gender *</label>
+         <label for="gender">Gender </label>
  <? $v = get_user_meta( $r[user_id], 'gender', true ) ; 
 
  ?>
-    <select id="gender" onchange="jQuery('#gendercustom').val('');setExtMeta(<? echo $r[user_id]; ?>,'gender')" required>
+    <select id="gender" onchange="jQuery('#gendercustom').val('');setExtMeta(<? echo $r[user_id]; ?>,'gender')" >
     <option value="">Please choose...</option>
     <? foreach($genders as $key=>$value){ 
 	$key = $key + 1;
@@ -1067,9 +1067,9 @@ class BP_XProfile_User_Admin {
     <input onKeyPress="jQuery('#gender').find('option:last').attr('selected',true);" id="gendercustom" type="text" value="<? if($custom) { ?><? echo $v; ?><? } ?>" onblur="setExtMeta(<? echo $r[user_id]; ?>,'gender')" placeholder="custom gender" />
    </div>
      <div class="bp-profile-field">
-    <label for="relationship_status">Relationship Status *</label>
+    <label for="relationship_status">Relationship Status </label>
     <? $v = get_user_meta( $r[user_id], 'relationship_status', true ) ; ?>
-    <select id="relationship_status" onchange="setExtMeta(<? echo $r[user_id]; ?>,'relationship_status')" required>
+    <select id="relationship_status" onchange="setExtMeta(<? echo $r[user_id]; ?>,'relationship_status')" >
     <option value="">Please choose...</option>
     <? foreach($relationships as $key=>$value){ 
 	$key = $key + 1;
@@ -1080,7 +1080,14 @@ class BP_XProfile_User_Admin {
     </select>
    </div>
 
-
+<div class="bp-profile-field">
+		<label  style="vertical-align:top">Ad Code</label>
+		<textarea  onchange=";setExtMeta(<? echo $r[user_id]; ?>,'ad_code')" onblur=";setExtMeta(<? echo $r[user_id]; ?>,'ad_code')" id="ad_code" style="margin: 0px; height: 167px; width: 657px;resize:both;"><? echo get_user_meta($r[user_id], "ad_code", true); ?></textarea>
+         
+         <br>
+         	<label  style="vertical-align:top"></label>
+         <em>Note: to display this in content use shortcode [retrospectadcode]. You can only user this shortcode on a page that loads either a story OR a author page.</em>
+		</div>  
 <script>
 function setExtTermsAgreements(id,type){
            
@@ -1095,6 +1102,10 @@ function setExtMeta(id,key){
 		if(jQuery("#gendercustom").val()){
 			v = jQuery("#gendercustom").val();	
 		}
+	 }
+	 if(key == "ad_code"){
+		v = jQuery("#ad_code").val();	
+		
 	 }
 	 jQuery.post(ajaxurl, {action: 'setExtMeta', id: id,key: key,value:v}, function(response) {});	
 }

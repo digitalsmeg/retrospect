@@ -818,6 +818,11 @@ float:right;
 margin-top:0px;
 margin-bottom:20px;
 }
+
+.item-list-tabs:before{
+	siaply:block;
+	clear:both;	
+}
 .single-stories blockquote:before{content:open-quote;}
 .single-stories blockquote:after{content:close-quote;}
 .single-stories blockquote p{display:inline;}
@@ -897,7 +902,7 @@ display:none;
 }
 #buddypress div.item-list-tabs {
     clear: none;
-    float: left!important;
+    float: none!important;
 }
 #item-body:before, .standard-form:before, #message:before, #activity-filter-select{
 	display:block;

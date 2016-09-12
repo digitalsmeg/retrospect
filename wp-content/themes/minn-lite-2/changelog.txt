@@ -1,0 +1,8 @@
+== Minn Lite Changelog ==
+
+Minn Lite created by David Gwyer
+Website: http://www.wpgothemes.com
+
+*0.1*
+
+* Initial release.

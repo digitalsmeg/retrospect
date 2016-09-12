@@ -1,0 +1,69 @@
+/* Icons */
+
+.wpgo-buttons a {
+	text-decoration: none;
+}
+
+.wpgo-buttons i {
+	margin-left: 6px;
+}
+
+h3 i {
+	margin-left: 6px;
+}
+
+.icon-info-sign {
+	color: #c6c6c6;
+}
+
+.icon-twitter-sign {
+	color: #00aced;
+}
+
+.icon-facebook-sign {
+	color: #3b5998;
+}
+
+.wpgo-icon {
+	display:      block;
+	padding-left: 15px;
+}
+
+.wpgo-reset-link {
+	padding-left:    0;
+	background:      none;
+	border:          0;
+	cursor:          pointer;
+	color:           #21759b;
+	text-decoration: underline;
+}
+
+.wpgo-reset-link:hover, .wpgo-reset-link:active {
+	color: #d54e21;
+}
+
+.wpgo-dashicon-font {
+	display:                inline-block;
+	line-height:            1;
+	font:                   normal 24px/1 'dashicons';
+	-webkit-font-smoothing: antialiased;
+	vertical-align:         top;
+}
+
+.wpgo-twitter-button:before {
+	content: '\f301';
+}
+
+.wpgo-buttons span a {
+	color: #00acee;
+}
+
+.wpgo-facebook-button:before {
+	content: '\f305';
+}
+
+p.submit, #wpgo-theme-options-reset { display: none !important; }
+
+.wpgo-upgrade-image { width: 100%; max-width:480px; }
+
+.wpgo-buttons.mg p.description { margin-bottom: 10px; }

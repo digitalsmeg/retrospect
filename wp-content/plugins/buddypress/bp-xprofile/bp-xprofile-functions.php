@@ -755,8 +755,8 @@ function xprofile_sync_wp_profile( $user_id = 0 ) {
 	}
 
 	bp_update_user_meta( $user_id, 'nickname',   $fullname  );
-	bp_update_user_meta( $user_id, 'first_name', $firstname );
-	bp_update_user_meta( $user_id, 'last_name',  $lastname  );
+	//bp_update_user_meta( $user_id, 'first_name', $firstname );
+	//bp_update_user_meta( $user_id, 'last_name',  $lastname  );
 
 	global $wpdb;
 

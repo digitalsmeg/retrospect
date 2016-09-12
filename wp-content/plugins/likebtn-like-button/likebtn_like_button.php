@@ -4031,12 +4031,12 @@ MARKUP;
 
         if ($alignment == LIKEBTN_ALIGNMENT_RIGHT) {
             $style .= 'text-align:right;';
-            $markup = '<div class="fs_likebtn_container" style="'.$style.'">' . $markup . '</div>';
+            //$markup = '<div class="fs_likebtn_container" style="'.$style.'">' . $markup . '</div>';
         } elseif ($alignment == LIKEBTN_ALIGNMENT_CENTER) {
             $style .= 'text-align:center;';
-            $markup = '<div class="fs_likebtn_container" style="'.$style.'">' . $markup . '</div>';
+           // $markup = '<div class="fs_likebtn_container" style="'.$style.'">' . $markup . '</div>';
         } else {
-            $markup = '<div class="fs_likebtn_container" style="'.$style.'">' . $markup . '</div>';
+            //$markup = '<div class="fs_likebtn_container" style="'.$style.'">' . $markup . '</div>';
         }
     }
 
