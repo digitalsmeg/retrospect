@@ -58,6 +58,14 @@
 
       </tr>
          -->
+         
+           <tr valign="top">
+        <th scope="row"><label for="myth_universal_ad_code">Universal Ad Code:</</th>
+      <td><textarea name="myth_universal_ad_code" style="margin: 0px; width: 100%; height: 185px;"><? echo get_option('myth_universal_ad_code'); ?></textarea>
+      </td>
+
+      </tr>
+         
         <tr valign="top">
         <th scope="row"><label for="myth_home_text">Home Text:</</th>
       <td><textarea name="myth_home_text" style="margin: 0px; width: 100%; height: 185px;"><? echo get_option('myth_home_text'); ?></textarea>

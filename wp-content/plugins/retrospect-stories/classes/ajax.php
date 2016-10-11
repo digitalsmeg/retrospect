@@ -480,15 +480,41 @@ function filterStories_callback(){
 	$user_id = get_current_user_id();
 	
 	if(!empty($_POST[wpid])){
+		if($_POST[wpid] == 5520){
+			// if prompt-based filter
+			$sql = "SELECT * FROM ".$wpdb->prefix."posts  WHERE post_status = 'publish' AND post_type = 'stories'";
+			$result = $wpdb->get_results($sql);
+			
+			$thePosts = array();
+			
+			
+			foreach($result as $row){
+				$thePosts[$row->ID] = $row->ID;
+			}
+			$total = sizeof($thePosts);
+			
+		} elseif($_POST[wpid] == 5759){
+			 $sql = "SELECT * FROM  ".$wpdb->prefix."postmeta WHERE meta_key = 'stories_featured_story'";
+			
+			 $result = $wpdb->get_results($sql);
+			 $thePosts = array();
+			 foreach($result as $row){
+				$thePosts[$row->meta_value] = $row->meta_value;
+			 }
+			
+			 $total = sizeof($thePosts);
+		} else {
 		// if prompt-based filter
-		$sql = "SELECT * FROM ".$wpdb->prefix."usermeta LEFT JOIN ".$wpdb->prefix."posts ON ".$wpdb->prefix."posts.ID = ".$wpdb->prefix."usermeta.meta_value WHERE meta_key = 'stories_prompted_{$_POST[wpid]}' AND post_type = 'stories'"; 
-		$result = $wpdb->get_results($sql);
-		
-		$thePosts = array();
-		$total = sizeof($result);
-		foreach($result as $row){
-			$thePosts[$row->meta_value] = $row->meta_value;
+			$sql = "SELECT * FROM ".$wpdb->prefix."usermeta LEFT JOIN ".$wpdb->prefix."posts ON ".$wpdb->prefix."posts.ID = ".$wpdb->prefix."usermeta.meta_value WHERE meta_key = 'stories_prompted_{$_POST[wpid]}' AND post_type = 'stories'"; 
+			$result = $wpdb->get_results($sql);
+			
+			$thePosts = array();
+			$total = sizeof($result);
+			foreach($result as $row){
+				$thePosts[$row->meta_value] = $row->meta_value;
+			}
 		}
+		
 	} else {
 		// if shared-based filter
 		$thePosts = explode(",",$_POST['post__in']);	
@@ -500,12 +526,17 @@ function filterStories_callback(){
 	
 	$paged = ($_POST[page]) ? $_POST[page] : 1;
 	
-	
+	if($_POST[all] == "true"){
+		$toShow = -1;
+	} else { 
+		$toShow = 5;
+	}
+	unset($thePosts[$_POST[exclude]]);
 	$qarray = array(
 					'post__in' => $thePosts,
 	 				'post_type' => 'stories', 
 					'post_status' => 'publish', 
-					'posts_per_page' => 5 , 
+					'posts_per_page' => $toShow , 
 					'paged' => $paged );	
 					
 					
@@ -518,8 +549,10 @@ function filterStories_callback(){
 	
 	switch($_POST[sorter]){
 		case 0:
-			$qarray['orderby'] = 'date';
+			$qarray['orderby'] = 'meta_value';
+			$qarray['meta_key'] = 'first_time';
 			$qarray['order'] = 'DESC';
+			
 			break;
 		case 1:
 			$qarray['orderby'] = 'date';
@@ -534,13 +567,16 @@ function filterStories_callback(){
 			
 			break;
 		default: 
-			$qarray['orderby'] = 'date';
+			$qarray['orderby'] = 'meta_value';
+			$qarray['meta_key'] = 'first_time';
 			$qarray['order'] = 'DESC';
+			
 			break;
 	}
 	if(sizeof($_POST[values]) > 0){
 		$meta_array = array( 'relation' => 'OR');
 		//$meta_array = array();
+	
 		$f_array = array();
 		$display = array();
 		foreach($_POST[values] as $key=>$value){
@@ -587,7 +623,7 @@ function filterStories_callback(){
 	 // http://codex.wordpress.org/Class_Reference/WP_Query
 	
 	$loop = new WP_Query($qarray);
-				
+		
 		
 				// ive read = key = mark_as_read{userid} = 1
 				// havent read  = key = mark_as_read{userid} = null
@@ -602,6 +638,7 @@ function filterStories_callback(){
 			?>
 <?php 
 $pagecount = 0;
+
 while ( $loop->have_posts() ){
 	$a++;
 	$loop->the_post(); 

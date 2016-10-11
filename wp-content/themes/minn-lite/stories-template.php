@@ -24,6 +24,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 global $post;
 
 $timeline = get_post_meta($post->ID, 'timeline', true);
+
 //echo $timeline;
  $word = "stories";
 if($timeline == "current"){
@@ -68,7 +69,7 @@ if($timeline == "current"){
 		// this loop shows the upcoming prompts
 		$loop = new WP_Query( array( 'post_type' => 'prompts', 'posts_per_page' => 4, 'meta_key' => 'stories_embargo_until', 'meta_value' => $date , meta_compare => '>', 'orderby'=>'meta_value','order' => 'ASC','paged' => $paged) );
 		
-}elseif($timeline == "past"){
+} elseif($timeline == "past"){
 	
 		$currentID = getCurrent();
 	 	$sql = "SELECT * FROM  ".$wpdb->prefix."postmeta WHERE meta_key = 'stories_embargo_until' AND post_id = ". $currentID;
@@ -88,6 +89,45 @@ if($timeline == "current"){
 		// this loops shows past prompts
 		$loop = new WP_Query( array( 'post_type' => 'prompts', 'posts_per_page' => 5, 'meta_key' => 'stories_embargo_until', 'meta_value' => $date , meta_compare => '<', 'orderby'=>'meta_value','order' => 'DESC','paged' => $paged) );
 		
+		
+		
+} elseif($timeline == "all"){
+	
+		$currentID = getCurrent();
+	 	$sql = "SELECT * FROM  ".$wpdb->prefix."postmeta WHERE meta_key = 'stories_embargo_until' AND post_id = ". $currentID;
+		
+		$result = $wpdb->get_results($sql,ARRAY_A);
+		$sas = $result[0];
+		
+		$date = $sas[meta_value];
+		if(empty($_GET[sort])){
+				$_GET[sort] = "title-ASC";
+			}
+			
+		?>
+        <h1 class="page-title entry-title">All Past Prompts</h1>
+       	 <form method="get" id="pform">
+        Sort: <select name="sort" onchange="jQuery('#pform').submit();">
+        <option <? if($_GET[sort] == 'title-ASC'){ ?>selected<? } ?> value="title-ASC">Title Ascending</option>
+        <option <? if($_GET[sort] == 'title-DESC'){ ?>selected<? } ?> value="title-DESC">Title Descending</option>
+        <option <? if($_GET[sort] == 'date-ASC'){ ?>selected<? } ?> value="date-ASC">Date Ascending</option>
+        <option <? if($_GET[sort] == 'date-DESC'){ ?>selected<? } ?> value="date-DESC">Date Descending</option>
+        </select>
+        </form>
+        
+        <?
+		$temp = explode("-",$_GET[sort]);
+		$by = $temp[0];
+		$sort = $temp[1];	
+		$word = "prompts";
+		
+		
+		// this loops shows past prompts
+		if($by != "title"){
+		$loop = new WP_Query( array( 'post_type' => 'prompts', 'posts_per_page' => -1, 'meta_key' => 'stories_embargo_until', 'meta_value' => $date , meta_compare => '<', 'orderby'=>'meta_value','order' => $sort,'paged' => $paged) );
+		} else {
+			$loop = new WP_Query( array( 'post_type' => 'prompts', 'posts_per_page' => -1, 'meta_key' => 'stories_embargo_until', 'meta_value' => $date , meta_compare => '<', 'orderby'=>'title','order' => $sort,'paged' => $paged) );
+		}
 		
 		
 } elseif($timeline == "surprise"){
@@ -116,7 +156,7 @@ if($timeline == "current"){
 	?>     <h1 class="page-title entry-title">My Own Topic</h1><?
 	$loop = new WP_Query( array( 'post_type' => 'topic', 'posts_per_page' => 0 , 'paged' => $paged) );
 } else {
-	
+	 // fallback loop
 		$loop = new WP_Query( array( 'post_type' => 'stories','posts_per_page' => 10, 'meta_key' => 'first_time', 'orderby' => 'meta_value', 'order'=> 'DESC', 'paged' => $paged) );
 		
 
@@ -180,5 +220,6 @@ $d = date("Y-m-d",strtotime($d));
 	
 
 	</main><!-- .content -->
+ 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

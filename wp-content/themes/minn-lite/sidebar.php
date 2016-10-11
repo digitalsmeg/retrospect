@@ -20,9 +20,11 @@
 		WPGo_Utility::custom_widget_area_loop( 'primary-archive' );
 	} /* SINGULAR PAGE SIDEBARS. */
 	elseif ( is_singular() ) {
+		
 		if ( ! empty( $primary_custom_widget_areas ) ) {
 			WPGo_Utility::render_custom_widget_areas( $primary_custom_widget_areas );
 		} elseif ( is_single() ) {
+			
 			/* Check for custom posts type pages via filter hook. */
 			WPGo_Utility::custom_widget_area_loop( 'primary-posts', 'primary-post-widget-area', 'primary_post_generic_default_widgets.php', true );
 		} elseif ( is_page() ) {

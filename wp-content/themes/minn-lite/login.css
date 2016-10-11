@@ -1,0 +1,44 @@
+.fbc {
+}
+body.login {background:url(http://www.myretrospect.com/wp-content/uploads/2016/10/login-background-1.jpg) no-repeat center center;
+background-size:cover;
+padding-left:40%;padding-top:4%;}
+.login h1 a {
+	background-image: url(/wp-content/themes/minn-lite/images/RetrospectLogoandtag.png) !important;
+	background-size: 245px;
+	background-color: #B19E95;
+	background-position:center center;
+	height: 88px;
+	width: 100%;
+}
+#login{margin-top:0%;}
+.login #nav, #backtoblog {
+	padding: 10px 30px 20px 30px !important;
+	background:rgba(255,255,255,0.9);
+	margin: 2px 0 0 !important;
+	text-shadow: 0px 0px 3px #fff, 0px 0px 4px #fff, 0px 0px 6px #fff ;
+}
+#backtoblog{padding-bottom:10px !important;font-weight:bold;}
+#backtoblog a{color:#005672 !important;}
+#nav a {
+	font-size: 14px;
+	padding: 4px;
+	font-weight:bold;
+	color:#005672 !important;
+}
+#backtoblog a:hover, #nav a:hover{color:#B19E95 !important;}
+*:focus {
+	outline: 0!important;
+	border: 0!important;
+}
+#nav .dont {
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+	font-size:15px !important;
+	color:#005672;
+}
+.login form{background:rgba(255,255,255,0.9) !important;}
+.login form label{font-weight:bold;	color:#005672 !important;}
+.login form .button{background:#005672 !important;font-weight:bold;}
+.login form .button:hover{background:#B19E95 !important;color:#005672 !important;text-shadow:0px 0px 3px #fff !important; }

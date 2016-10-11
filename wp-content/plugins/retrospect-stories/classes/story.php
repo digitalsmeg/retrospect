@@ -283,7 +283,7 @@ function showStories($post){
 		}
 	
 
-	 $loop = new WP_Query( array( 'posts_per_page' => -1, 'post_type' => 'prompts', 'orderby'=>'date','order' => 'ASC','meta_key' => 'stories_embargo_until' , 'orderby'=>'meta_value','order' => 'ASC') );
+	 $loop = new WP_Query( array( 'post__not_in'=> array(5520,5759),'posts_per_page' => -1, 'post_type' => 'prompts', 'orderby'=>'date','order' => 'ASC','meta_key' => 'stories_embargo_until' , 'orderby'=>'meta_value','order' => 'ASC') );
 
 		?>
         <style>
@@ -301,7 +301,7 @@ function showStories($post){
 			height: auto!important;
 		}		
         </style>
-        <select name="changepromptto">
+        <select name="changepromptto" onchange="if(!confirm('If you change the prompt this story is assigned to you will affect the publication date to effectively be that of the date the Writing Prompt was published, today, or original -- whichever is latest. Click OK to confirm this choice.')){window.location='';}">
           <option  value="">-- Choose a Prompt --</option>
           <option  value="0" <? if($prompt == 0 || $prompt == ""){ ?>selected=""<? } ?>>My Own Topic</option>
           <?php 

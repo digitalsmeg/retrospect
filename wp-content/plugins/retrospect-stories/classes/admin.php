@@ -32,7 +32,6 @@ function init_the_admin() {
 	register_setting( 'mythos-settings-group', 'myth_event_7' );
 	register_setting( 'mythos-settings-group', 'myth_event_8' );
 	register_setting( 'mythos-settings-group', 'myth_event_9' );
-	register_setting( 'mythos-settings-group', 'myth_event_10' );
 	register_setting( 'mythos-settings-group', 'myth_event_1_s' );
 	register_setting( 'mythos-settings-group', 'myth_event_2_s' );
 	register_setting( 'mythos-settings-group', 'myth_event_3_s' );
@@ -42,9 +41,9 @@ function init_the_admin() {
 	register_setting( 'mythos-settings-group', 'myth_event_7_s' );
 	register_setting( 'mythos-settings-group', 'myth_event_8_s' );
 	register_setting( 'mythos-settings-group', 'myth_event_9_s' );
-	register_setting( 'mythos-settings-group', 'myth_event_10_s' );
 	register_setting( 'mythos-settings-group', 'myth_deferred_date' );
 	register_setting( 'mythos-settings-group', 'myth_deferred_date_interval' );
+	register_setting( 'mythos-settings-group', 'myth_universal_ad_code' );
 	
 	$role = get_role( 'administrator' );
 	if(current_user_can("administrator")){
@@ -204,6 +203,9 @@ add_filter( 'manage_votes_posts_columns', 'add_votes_columns');
  
 function custom_columns( $column, $post_id ) {
 	global $wpdb;
+	if(($post_id == 5520 || $post_id == 5759) && $column != "story_count"){
+		return false;	
+	}
 	$firsttime = get_post_meta( $post_id, 'first_time' , true);
 	 if(empty($firsttime)){
 		
@@ -240,6 +242,8 @@ function custom_columns( $column, $post_id ) {
 		?><a href="<? echo $perm; ?>" target="_blank">View</a><?	
 		}
 		break;
+	 case 'post_title':
+	 	
 	 case 'story_likes':
 	 	
 	 	$sql = "SELECT * FROM  ".$wpdb->prefix."usermeta WHERE meta_key='fs_votes_".$post_id."' AND meta_value = 1";
@@ -252,11 +256,23 @@ function custom_columns( $column, $post_id ) {
 	 	break;
 		
 	 case 'story_count':
+	 	if($post_id == 5520){
+			$sql = "SELECT * FROM  $wpdb->posts  WHERE post_type = 'stories' AND post_status = 'publish'";
+			$result = $wpdb->get_results($sql,ARRAY_A);
+			$tot = sizeof($result);
+			echo $tot;	
 	 	
-	 	$sql = "SELECT * FROM  ".$wpdb->prefix."usermeta LEFT JOIN $wpdb->posts ON meta_value = ID WHERE meta_key LIKE '%stories_prompted_".$post_id."' AND post_status = 'publish'";
-		$result = $wpdb->get_results($sql,ARRAY_A);
-		$tot = sizeof($result);
-		echo $tot;
+		} elseif($post_id == 5759){
+			 $sql = "SELECT * FROM  ".$wpdb->prefix."postmeta WHERE meta_key = 'stories_featured_story'";
+			$result = $wpdb->get_results($sql,ARRAY_A);
+			$tot = sizeof($result);
+			echo $tot;
+		} else {
+			$sql = "SELECT * FROM  ".$wpdb->prefix."usermeta LEFT JOIN $wpdb->posts ON meta_value = ID WHERE meta_key LIKE '%stories_prompted_".$post_id."' AND post_status = 'publish'";
+			$result = $wpdb->get_results($sql,ARRAY_A);
+			$tot = sizeof($result);
+			echo $tot;
+		}
 		break;
 	 
      case 'stories_embargo_until':

@@ -111,7 +111,29 @@ function featured_MostPopular(){
 
 }
 
+
+function showFeatured($cid){
+	global $wpdb;
+	
+	 $sql = "SELECT * FROM  ".$wpdb->prefix."postmeta WHERE meta_key = 'stories_featured_story' AND  post_id = ".$cid;
+		$result = $wpdb->get_results($sql,ARRAY_A);
+	
+	if($result[0][meta_value] > 0){
+	
+	$loop = new WP_Query( array( 'post_type' => 'stories', 'p' => $result[0][meta_value], 'post_status' => 'publish'));
+	
+	while ( $loop->have_posts() ) : $loop->the_post();
+	?><h2>Featured Story</h2><?
+	get_template_part( 'content', 'story' );
+	?><input type="hidden" value="<? echo $result[0][meta_value]; ?>" id="exclude" /><?
+	?><hr /><?
+   	endwhile;
+	}
+}
+
 add_shortcode("homeStories", "home_Stories");
+
+
 function home_Stories(){
 	
 	
@@ -348,6 +370,29 @@ function otherRecentStories(){
 		if(1){
   		$pid = get_the_ID();
 		
+		
+		$sql = "SELECT * FROM  " . $wpdb->prefix . "usermeta WHERE user_id = " . $post->post_author . " AND meta_key LIKE 'stories_prompted_%' AND meta_value = " . $pid;
+$result = $wpdb->get_results($sql,ARRAY_A);
+
+foreach($result as $prompt){
+	$temp = explode("_", $prompt[meta_key]);
+	$p = $temp[2];
+	$prompted_post = get_post($p);
+	$golive = $prompted_post->stories_embargo_until;
+	if ($prompted_post->ID == $currentID) {
+		$is_current = true;
+	}
+	else {
+		$is_current = false;
+	}
+	
+	
+	if ($p > 0) {
+		$prompted_by = '<div class="promptedBy" style="font-size:12px;">Prompted By <a style="text-decoration:underline;" href="' . get_permalink($prompted_post->ID) . '">' . $prompted_post->post_title . '</a></div>';
+	}
+}
+		
+		
   		$permalink = get_permalink($pid);
 		$featured_image = newFeaturedImage($pid );
 		
@@ -365,11 +410,14 @@ function otherRecentStories(){
       <? } else { ?>
       by
       <?php the_author_posts_link(); ?>
-      <? } ?> <div style="font-size:10px;">Published on <? echo date("F j, Y",strtotime(get_post_meta( $post->ID, 'first_time' , true))); ?></div>
+      <? } ?>
     </div>
+   
     <div class="text">
       <?  the_excerpt_max_charlength(130); ?>
+       <? echo $prompted_by; ?>
     </div>
+    
     <div class="clear-fix"></div>
   </div>
   <?
@@ -427,7 +475,7 @@ function twoRandomStories($cid){
 	$loop = new WP_Query( array( 'post__in' => $thePosts,'post_type' => 'stories','orderby'   => 'rand', 'posts_per_page' => 2) );
 	
 	
-	?><div class="col6 homeps">
+	?><div>
     <?
 	while ( $loop->have_posts() ) : $loop->the_post();
   		$pid = get_the_ID();
@@ -435,7 +483,7 @@ function twoRandomStories($cid){
   		$permalink = get_permalink($pid);
 		
    		?>
-  <div>
+  <div  class="col6 homeps">
     
     <? if(1){ 
 	$featured_image = newFeaturedImage($pid );
@@ -573,8 +621,8 @@ function featured_LastWeek(){
 	ob_start();
 	 
   	?>
-<div class="content lastweek">
-<h1 style="margin:0px;">Check Out Stories from the Previous Prompt</h1>
+<div class="content">
+<h1 style="margin:0px;">Stories from the Previous Prompt:</h1>
 <?
 	$prompt  = getLast();
 	$prompt = $prompt[0];
@@ -622,13 +670,17 @@ function featured_LastWeek(){
 	
 	
 	?>
-<div class="col6 homeps">
-  <h1 style=""><a href="<?php echo get_permalink($prompt[post_id]); ?>"><? echo $prompt[post_title]; ?></a> </h1>
-  <a href="<?php echo get_permalink($prompt[post_id]); ?>"><img style="height: 300px!important;" src="<? echo $image; ?>" /></a><? echo $caption; ?></div>
+
+  <h1 style="font-size:28px;margin-top:0px;"><a href="<?php echo get_permalink($prompt[post_id]); ?>"><? echo $prompt[post_title]; ?></a> </h1>
+  <!--
+  <a href="<?php echo get_permalink($prompt[post_id]); ?>"><img style="height: 300px!important;" src="<? echo $image; ?>" /></a><? echo $caption; ?>
+  -->
+ <?  twoRandomStories($prompt[post_id]); ?>
+
 <?
 	
     //readersChoice($prompt[post_id]); 
-	twoRandomStories($prompt[post_id]); 
+	
     $content = ob_get_contents();
 	ob_end_clean();
 	return $content;
@@ -1134,9 +1186,9 @@ function retrospect_ad_code($atts){
 		}
 		
 	
-		
-		
-		if(1){ 
+		$universal =  get_option('myth_universal_ad_code');
+	
+		if(!preg_match("/\/prompts\//",$_SERVER[REQUEST_URI])){ 
 		
 				if(get_post_meta($story,'ad_code','true')){
 					?>
@@ -1154,7 +1206,11 @@ function retrospect_ad_code($atts){
 					?>
 					</div>
 					<?
+				} else if(!empty($universal)){
+					$showUniversal = "true";
+					
 				}
+				
 				if(!empty($author_id)){
 					?>
 					<div class="retro_ad">
@@ -1163,6 +1219,8 @@ function retrospect_ad_code($atts){
 					?>
 					</div>
 					<?
+				} elseif($showUniversal == "true"){
+					echo $universal;	
 				}
 			
 		}

@@ -9,8 +9,9 @@ $currentID = getCurrent();
 
 
 ?>
-<div class="writing-prompt storyPromptContainer<? if($post->stories_hide_until > date("Y-m-d") && (get_option('myth_embargo_debug') == "on" && current_user_can('administrator'))){ ?> embargoDebug<? } ?>">
+<div class="<? if(isset($_GET[sort])){ ?>all-prompts <? } ?><? if(isset($_GET[all])){ ?>all-stories <? } ?>writing-prompt storyPromptContainer<? if($post->stories_hide_until > date("Y-m-d") && (get_option('myth_embargo_debug') == "on" && current_user_can('administrator'))){ ?> embargoDebug<? } ?>">
 <? 
+
 $sc = storyCountWritingPrompt($post->ID);
 if($sc > 0){
 	if($sc == 1){
@@ -28,7 +29,7 @@ if($sc > 0){
 	<div class="post-meta" >
 
 		<? if(!is_single()){ ?>						
-
+  <? 	if(!isset($_GET[sort])){ ?>
 								<p<?php echo $header_align_meta; ?>>
 	<time class="date" datetime="<?php echo date("F j, Y",strtotime($post->stories_embargo_until)); ?>"><? if($date < $post->stories_embargo_until){
 			?>Goes Live on <? 
@@ -51,8 +52,8 @@ if($sc > 0){
 
 						
 								</p>
-                                <!--
-<div class="fb-likes" data-href="http://<? echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div><img src="/wp-content/plugins/mythos-stories/images/fake-db.png" style="cursor:pointer"/><Br> -->
+                                <? } ?>
+                              
             
 							</div>
                               <? } ?>
@@ -64,6 +65,9 @@ if($sc > 0){
 			
 		?>
         <input type="hidden" id="wpid" value="<? echo $wpid; ?>" />
+        <? if(isset($_GET[all])){ ?> <input type="hidden" id="allstories" value="true" /><? } else { ?>
+        <input type="hidden" id="allstories" value="false" />
+        <? } ?>
 		<?php if($image != ""){ ?><img style="display:block;margin:0px 0px 10px 0px;" src="<? echo $image; ?>" /> <? } else { 
 		if(is_single()){ 
 			the_post_thumbnail('medium',array('align'=>'left','style'=>'margin:0px 5px 5px 0px'));
@@ -72,9 +76,9 @@ if($sc > 0){
 			echo nl2br($content);
 			$golive = $post->stories_embargo_until;
 
-			if($user->ID > 0){ ?>
+			if($user->ID > 0 && (int)$wpid != 5520 && (int)$wpid != 5759){ ?>
        			<a class="more" href="/wp-admin/post-new.php?post_type=stories&prompt=<? echo $post->ID; ?>">Start Writing</a>
-       		<? } else { ?>
+       		<? } else if((int)$wpid != 5520 && (int)$wpid != 5759){ ?>
      
        			<a class="more" href="/wp-login.php?redirect_to=<? echo get_permalink(); ?>">Start Writing</a>
        		<? 
@@ -84,8 +88,10 @@ if($sc > 0){
      
        <?
 		} else { 
+		if(!isset($_GET[sort])){
 			the_post_thumbnail('thumbnail',array('align'=>'left','style'=>'margin:0px 5px 5px 0px'));
 			echo nl2br(strip_tags(get_the_content()));
+		}
 		}
 		
 		
@@ -95,22 +101,21 @@ if($sc > 0){
 		?>  
       
      <div class="clear"></div>
-     
+   
      <? if(!is_single()){ ?>
      	<? if($date >= $post->stories_embargo_until || $is_current){ ?>
         <a class="more" href="<? echo  get_permalink(); ?>">Read Stories</a>
         <? } ?>
        
-       
-      <? if($user->ID > 0){ ?>
+    
+      <? if($user->ID > 0 && (int)$wpid != 5520 && (int)$wpid != 5759){ ?>
        <a class="more" href="/wp-admin/post-new.php?post_type=stories&prompt=<? echo $post->ID; ?>">Start Writing</a>
        <? } else { ?>
-       <? if(!is_single()){ ?>
+       <? if(!is_single() && (int)$wpid != 5520 && (int)$wpid != 5759){ ?>
        <a class="more" href="/wp-login.php?redirect_to=<? echo get_permalink(); ?>">Start Writing</a>
        <? } ?>
        <? } ?>
-        <? if($author_id == $user->ID && !is_single()) { ?>
-     <a class="more right" href="/wp-admin/post.php?post=<? echo $post->ID ; ?>&action=edit">Edit Your Prompt</a> 
+        <? if($author_id == $user->ID && !is_single()) { ?> <a class="more right" style="margin-left:5px;" href="/wp-admin/post.php?post=<? echo $post->ID ; ?>&action=edit">Edit Your Prompt</a> 
        <? } ?> 
        <? } ?>
         
@@ -146,7 +151,7 @@ if($sc > 0){
 		 $word = "stories";
 		// not being used due to ajax
 		
-		if($total > 0){
+		if(1){
 			wp_reset_query();
 			$paged = (get_query_var('page')) ? get_query_var('page') : 1;
 			
@@ -184,6 +189,7 @@ if($sc > 0){
 			
 		?>
          <!-- begin ajax stories -->
+        <? showFeatured($wpid); ?>
         <div class="ajaxstories">
       <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<? if(storyHasPermission($post)){  ?>
@@ -237,8 +243,7 @@ if($sc > 0){
 		foreach($ch as $key=>$value){
 		$value = trim($value);
 		?>
-  		<label><? echo $value; ?> <input type="checkbox"  class="afilter"   value="<? echo $value; ?>"> </label> 
-  		<br>
+  		<label><? echo $value; ?> <input type="checkbox"  class="afilter"   value="<? echo $value; ?>"> </label>
     <? } ?>
    
       
@@ -256,14 +261,20 @@ if($sc > 0){
       <strong>Sort By</strong> <select class="sorter">
      <option value="0">newest first</option>
      <option value="1">oldest first</option>
-     <option value="2">most popular first</option>
+     <option value="2">most reader response first</option>
      <option value="3">surprise me</option>
      </select>
      </div>
       <div class="clear"></div>
-     <hr />
-         
-      
+	 <? if (!isset($_GET['all']) && !preg_match("/\/prompts\/all\//",$_SERVER['REQUEST_URI']) ){ ?>
+        <hr />
+        <? if (preg_match("/\/prompts\/featured\//",$_SERVER['REQUEST_URI']) ){ ?>
+        <a href="<? echo get_permalink($wpid); ?>?all">See All Featured Stories</a>
+         <? } else { ?>
+          <a href="<? echo get_permalink($wpid); ?>?all">See All Stories From This Prompt</a>
+          <? } ?>
+	 <? } ?>
+       <hr />
     </div>
     </aside>
      <? } ?>

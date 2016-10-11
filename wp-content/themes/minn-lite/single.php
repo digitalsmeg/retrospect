@@ -98,9 +98,9 @@ No Stories found.
 	
 
 	</main><!-- .content -->
-    
-    <? if($slug != "terms-of-service"){
-			get_sidebar(); 
-		} ?>
+ 
+    <? if($slug != "terms-of-service"){ 
+		get_sidebar(); 
+	} ?>
 
 <?php get_footer(); ?>

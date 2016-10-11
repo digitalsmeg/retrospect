@@ -72,8 +72,24 @@ p.description {
 
 			/** This action is documented in bp-templates/bp-legacy/buddypress/activity/index.php */
 			do_action( 'template_notices' ); ?>
+            
+        <h2>Register Using Your Facebook or Google Account*</h2>
+            <div id="paneLogin" class="docBox  ">
+        <div class="doc-content isFacebook">
+
+          <div class="clear"></div>
+         <? facebook('reg','register'); ?>
+         
+          <div class="orbox">
+            <div class="orword centered"> or </div>
+          </div>        
+         
+          
+          </div>
+        </div>
+        <h2>Register Directly with Retrospect</h2>
       <p>
-        <?php _e( 'Registering for <a href="/">Retrospect</a> is easy. Just fill in the fields below, and we\'ll set up a new account for you in no time.', 'buddypress' ); ?>
+        <?php _e( 'Registering for Retrospect is easy. Just fill in the fields below, and we\'ll set up a new account for you in no time.', 'buddypress' ); ?>
       </p>
       <?php
 
@@ -101,11 +117,11 @@ p.description {
 				 */
 				do_action( 'bp_signup_username_errors' ); ?>
         <input type="text" name="signup_username" id="signup_username" value="<?php bp_signup_username_value(); ?>" <?php bp_form_field_attributes( 'username' ); ?>/>
-        <p class="description">Your identifier on the site.</p>
+        <p class="description">The name you use to sign in; may differ from your public Display name</p>
         <label for="field_1"> Display Name * </label>
         <? do_action( 'bp_field_1_errors' ); ?>
         <input id="field_1" name="field_1" type="text" value="<? echo $_POST[field_1]; ?>" aria-required="true">
-        <p class="description"> Your author byline for stories you write </p>
+        <p class="description"> Appears publicly on your stories and comments </p>
         <label for="signup_email">
           <?php _e( 'Email Address', 'buddypress' ); ?>
           <?php _e( '*', 'buddypress' ); ?>
@@ -155,14 +171,14 @@ p.description {
             <p > You retain copyright and ownership of your content, and grant us rights to it as explained in the Retrospect Terms of Use. </p>
             <label>
               <input type="checkbox" name="retro_terms" id="retro_terms" value="I accept Retrospect’s Terms of Use" required>
-              I accept Retrospect’s <a href="/terms-of-service/">Terms of Use</a></label>
+              I accept Retrospect’s <a style="text-decoration:underline;" href="/terms-of-service/">Terms of Use</a></label>
               </div>
                <div class="checkbox">
                <label for="field_2"> Privacy Policy * </label>
             <p > The Privacy Policy describes how Retrospect Media Inc. and its affiliates treat information collected or provided in connection with your use of our website.</p>
               <label>
               <input type="checkbox" name="retro_privacy" id="retro_privacy" value="I accept Retrospect’s Terms of Use" required>
-              I accept Retrospect’s <a href="/privacy-policy/">Privacy Policy</a></label>
+              I accept Retrospect’s <a  style="text-decoration:underline;" href="/privacy-policy/">Privacy Policy</a></label>
           </div>
           <!--
           <div class="checkbox">
@@ -321,21 +337,8 @@ p.description {
   display: inline-block;
   padding: 10px;" id="signup_submit" value="<?php esc_attr_e( 'Complete Sign-Up', 'buddypress' ); ?>" />
   <div style="clear:both;"></div>
-  <p></p>
-  <div id="paneLogin" class="docBox  ">
-        <div class="doc-content isFacebook">
-          <div class="orbox">
-            <div class="orword centered"> or </div>
-          </div>
-          <div class="clear"></div>
-         <? facebook('reg','register'); ?>
-        
-         
-          <p  class="description">* You will be asked to accept Terms of Use after registering with either Facebook or Google.</p>
-           <p  class="description">** Registering with your Facebook or Google account will use the email address associated with those accounts.</p>
-          </div>
-          
-        </div>
+  
+          <p  class="description">* You will be asked to accept Terms of Use after registering with either Facebook or Google. Registering with your Facebook or Google account will use the email address associated with those accounts.</p>
       </div>
       <?php
 

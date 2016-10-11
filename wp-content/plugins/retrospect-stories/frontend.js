@@ -169,7 +169,7 @@ function getStories(){
 			jQuery(".afilter:checked").each(function(){
 				values.push(jQuery(this).val());
 			});
-			jQuery.post(ajaxurl, {action: 'filterStories', values:values,page:page,post__in:post__in,wpid:wpid,sorter: jQuery(".sorter").find("option:selected").val() }, function(response) {
+			jQuery.post(ajaxurl, {exclude:  jQuery("#exclude").val(),action: 'filterStories', all: jQuery("#allstories").val(),values:values,page:page,post__in:post__in,wpid:wpid,sorter: jQuery(".sorter").find("option:selected").val() }, function(response) {
 				jQuery(".ajaxstories").html(response);
 				jQuery(".rating").each(function(){
 				var r = jQuery(this).find(".therating").val();	

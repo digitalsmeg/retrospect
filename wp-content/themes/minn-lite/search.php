@@ -22,12 +22,19 @@ $curauth = get_userdatabylogin(sanitize_text_field($_GET[s]));
 <div class="">
 <div class="search">
 
-                    <form id="form1" <? if(!empty($_GET[web_search_submit])){ ?>style="display:none;"<? } ?>role="search" method="get" class="search-form" action="<? echo esc_url( home_url( '/' ) ) ; ?>" >
+                    <form id="form1" <? if(!empty($_GET[web_search_submit]) || !empty($_GET[web_search_prompt_submit]) ){ ?>style="display:none;"<? } ?>role="search" method="get" class="search-form" action="<? echo esc_url( home_url( '/' ) ) ; ?>" >
 
                         <input style="width:70%" type="search" placeholder="Search Stories" value="<? echo get_search_query(); ?>" name="s">
 
                         <input type="submit" class="search-submit" value="<? echo  esc_attr(__( 'Search', 'wpgothemes' )); ?> Stories">
 
+                    </form>
+                     <form id="form4" <? if(empty($_GET[web_search_prompt_submit])){ ?>style="display:none;"<? } ?>role="search" method="get" class="search-form" action="<? echo esc_url( home_url( '/' ) ) ; ?>" >
+
+                        <input style="width:70%" type="search" placeholder="Search Prompts" value="<? echo get_search_query(); ?>" name="s">
+
+                        <input type="submit" class="search-submit" value="<? echo  esc_attr(__( 'Search', 'wpgothemes' )); ?> Prompts">
+<input type="hidden" name="web_search_prompt_submit" value="Search" />
                     </form>
                     <form id="form2"  <? if(empty($_GET[web_search_submit])){ ?>style="display:none;"<? } ?> role="search" method="get" class="search-form" action="<? echo esc_url( home_url( '/' ) ) ; ?>" >
 
@@ -45,12 +52,13 @@ $curauth = get_userdatabylogin(sanitize_text_field($_GET[s]));
 
                     </form>
 			<label ><input onclick="jQuery('.search>.search-form').hide();jQuery('#form1').show();" type="radio" value="1" name="sf" <? if(empty($_GET[web_search_submit])){ ?>checked=""<? } ?> > Search Stories </label>
+            <label ><input onclick="jQuery('.search>.search-form').hide();jQuery('#form4').show();" type="radio" value="1" name="sf" <? if(!empty($_GET[web_search_prompt_submit])){ ?>checked=""<? } ?> > Search Prompts </label>
 			<label >  <input onclick="jQuery('.search>.search-form').hide();jQuery('#form2').show();" type="radio" value="1" name="sf" <? if(!empty($_GET[web_search_submit])){ ?>checked=""<? } ?>> Search Website</label>
 			<label > <input onclick="jQuery('.search>.search-form').hide();jQuery('#form3').show();" type="radio" value="1" name="sf" > Search Members </label>
                 </div>
 </div>
 <? //'author_name' => $_GET[s],  ?>
-<? if(empty($_GET[web_search_submit])){ ?>
+<? if(empty($_GET[web_search_submit]) && empty($_GET[web_search_prompt_submit])){ ?>
 <h1>Searching Stories</h1>
 
 
@@ -69,7 +77,30 @@ $curauth = get_userdatabylogin(sanitize_text_field($_GET[s]));
 
 <span class="next"><?php next_posts_link( '&lt;&lt; Older posts', $loop->max_num_pages ); ?></span>
 <span class="prev"><?php previous_posts_link( 'Newer posts  &gt;&gt;', $loop->max_num_pages ); ?>
-<? } else {  
+<? } elseif(!empty($_GET[web_search_prompt_submit])){ ?>
+<h1>Searching Prompts</h1>
+
+
+
+
+<?php $loop = new WP_Query( array( 's'=> $_GET[s], 'post_type' => array("prompts"), 'posts_per_page' =>  10 , 'paged' => $paged) ); ?>
+	
+
+
+
+			
+
+<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<? if(empty($_GET[web_search_prompt_submit])){ ?>
+<?  get_template_part( 'content', 'story' ); ?>
+<? } else { ?>
+<?  get_template_part( 'content', 'prompt' ); ?>
+<? } ?>
+<?php endwhile; ?>
+
+<span class="next"><?php next_posts_link( '&lt;&lt; Older posts', $loop->max_num_pages ); ?></span>
+<span class="prev"><?php previous_posts_link( 'Newer posts  &gt;&gt;', $loop->max_num_pages ); ?>
+<? } else  {  
  $not = array(1291,1289,30,28,289,771,1406,1408);
 
 ?>

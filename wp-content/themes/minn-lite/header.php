@@ -242,7 +242,7 @@ menuswitchopen=false;
 
   line-height: 28px;">Go</a>
   <br>
-  <a href="?s= ">Advanced Search</a>
+  <a href="/index.php?s= ">Advanced Search</a>
     </form>
   </header>
   

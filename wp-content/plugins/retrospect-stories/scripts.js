@@ -1,6 +1,12 @@
 
 jQuery(document).ready(function(){
 	addNewFilter();
+	jQuery("#post-5520").find(".row-title").append(" - DO NOT DELETE ");
+	jQuery("#cb-select-5520").remove();
+	jQuery("#post-5520").find(".row-actions").remove();
+	jQuery("#post-5759").find(".row-title").append(" - DO NOT DELETE ");
+	jQuery("#cb-select-5759").remove();
+	jQuery("#post-5759").find(".row-actions").remove();
 	try{
 		jQuery("[for=ping_status]").remove();
 		jQuery("[for=default_ping_status]").remove();

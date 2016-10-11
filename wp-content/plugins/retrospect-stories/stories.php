@@ -293,16 +293,40 @@ function mythos_stories_setting_form(){
 function storyCountWritingPrompt($wpid){
 	
 	global $wpdb;
-	
-		$sql = "SELECT * FROM ".$wpdb->prefix."usermeta LEFT JOIN ".$wpdb->prefix."posts ON ".$wpdb->prefix."posts.ID = ".$wpdb->prefix."usermeta.meta_value WHERE meta_key = 'stories_prompted_{$wpid}' AND post_type = 'stories'"; 
-		$result = $wpdb->get_results($sql);
 		
-		$thePosts = array(0);
-		$total = sizeof($result);
-		foreach($result as $row){
-			$thePosts[$row->meta_value] = $row->meta_value;
+		if($wpid == 5520){
+			// if prompt-based filter
+			$sql = "SELECT * FROM ".$wpdb->prefix."posts  WHERE post_status = 'publish' AND post_type = 'stories'";
+			$result = $wpdb->get_results($sql);
+			
+			$thePosts = array();
+			
+			
+			foreach($result as $row){
+				$thePosts[$row->ID] = $row->ID;
+			}
+			$total = sizeof($thePosts);
+		} elseif($wpid == 5759){ 
+		$sql = "SELECT * FROM  ".$wpdb->prefix."postmeta WHERE meta_key = 'stories_featured_story'";
+			
+			 $result = $wpdb->get_results($sql);
+			 $thePosts = array();
+			 foreach($result as $row){
+				$thePosts[$row->meta_value] = $row->meta_value;
+			 }
+			
+			 $total = sizeof($thePosts);
+		} else {
+			$sql = "SELECT * FROM ".$wpdb->prefix."usermeta LEFT JOIN ".$wpdb->prefix."posts ON ".$wpdb->prefix."posts.ID = ".$wpdb->prefix."usermeta.meta_value WHERE meta_key = 'stories_prompted_{$wpid}' AND post_type = 'stories'"; 
+			$result = $wpdb->get_results($sql);
+			
+			$thePosts = array(0);
+			$total = sizeof($result);
+			foreach($result as $row){
+				$thePosts[$row->meta_value] = $row->meta_value;
+			}
+		
 		}
-	
 	
 	
 	
@@ -738,41 +762,7 @@ jQuery(function() {
  jQuery("#nav").prepend('<div class="dont">Don\'t have an account?</div>');
 });
 </script>
-<style type="text/css">
-
-		.fbc{
-            
-        }
-		.login h1 a { 
-        	background-image: url(/wp-content/themes/minn-lite/images/RetrospectLogoandtag.png) !important; 
-	 		background-size: 245px;
-			background-color: #B19E95;
-            height: 68px;
-            width: 100%;
-        }
-        
-        
-        .login #nav {
-            margin: 2px 0 0 !important;
-        }
-         #nav a{
-        	
-           font-size:14px;
-            padding: 4px;
-        }
-        
-        *:focus{
-        outline: 0!important;
-        border: 0!important;
-        }
-        
-        #nav .dont{
-        	display: block;
-            font-weight:bold;
-            color: #005672;
-            margin-top:10px;
-        }
-	</style>
+<link rel='stylesheet' id='story-login-styles-css'  href='/wp-content/themes/minn-lite/login.css?ver=<? echo time(); ?>' type='text/css' media='all' />
 <?
 }
 add_action('login_head', 'custom_login_logo');
@@ -2052,7 +2042,7 @@ function bp_custom_screen_content() {
       <strong>Sort By</strong> <select class="sorter">
      <option value="0">newest first</option>
      <option value="1">oldest first</option>
-     <option value="2">most popular first</option>
+     <option value="2">most reader response first</option>
      <option value="3">surprise me</option>
      </select>
      </div>
@@ -2061,6 +2051,8 @@ function bp_custom_screen_content() {
          
       
     </div>
+    
+  
     </aside>
  <?
  }

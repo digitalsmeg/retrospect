@@ -131,7 +131,18 @@ function myplugin_save_meta_box_data( $post_id ) {
 	}
 	
 	if($_POST[post_type] == "stories" && isset($_POST[changepromptto])){
-	$post = get_post( $post_id);
+		$post = get_post( $post_id);
+		
+		$sql = "SELECT * FROM  ".$wpdb->prefix."usermeta WHERE user_id =  $post->post_author AND meta_key LIKE '%stories_prompted_%' AND meta_value = $post_id"; 	
+		
+		$result = $wpdb->get_results($sql,ARRAY_A);
+		
+		$temp0 = explode("_",$result[0][meta_key]);
+		if($temp0[2] != $_POST[changepromptto]){
+			delete_post_meta( $post_id, 'first_time' );
+		}
+		
+		
 		$sql = "DELETE FROM ".$wpdb->prefix."usermeta WHERE user_id =  $post->post_author AND meta_key LIKE '%stories_prompted_%' AND meta_value = $post_id"; 	
 		$wpdb->query($sql);
 		$sql = "INSERT INTO ".$wpdb->prefix."usermeta VALUES ('', $post->post_author, 'stories_prompted_".$_POST[changepromptto]."',$post_id)"; 	

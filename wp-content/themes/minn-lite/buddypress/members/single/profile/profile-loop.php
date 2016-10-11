@@ -48,7 +48,7 @@ do_action( 'bp_before_profile_loop_content' ); ?>
                             </td></tr>
                              <? } ?>
                              
-                             <? if(!empty(get_user_meta( $user_id, 'gender', true ))){ ?>
+                             <? if(!empty(get_user_meta( $user_id, 'gender', true )) && get_user_meta( $user_id, 'gender', true ) != "3"){ ?>
                             <tr class="field_1 field_display-name required-field visibility-public field_type_textbox">
                             <td style="vertical-align:top;" class="label">Gender</td>
                             <? $g = get_user_meta( $user_id, 'gender', true ); ?>

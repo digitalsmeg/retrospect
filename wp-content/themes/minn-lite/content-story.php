@@ -40,13 +40,16 @@ foreach($result as $prompt){
 <?php
 $user_id = get_current_user_id();
 $read = get_post_meta($post->ID, "mark_as_read" . $user_id, true);
+$firsttime = get_post_meta( get_the_ID(), 'first_time' , true);
+// ;
 ?>
-<?php if ($golive <= date("Y-m-d") || $is_current || $user_id == $post->post_author || current_user_can("administrator")) { ?>
+<?php if ($golive <= date("Y-m-d") || $is_current || $user_id == $post->post_author  || $firsttime < date("Y-m-d") || current_user_can("administrator")) { ?>
 <?
+
 if (current_user_can("administrator") && is_single()){
 ?>
 <div style="background:red;color:white;padding:5px;" class="adminAlert">
-You are viewing this page as ADMIN.
+You are viewing this story as ADMIN. It might not be visible to the public.
 </div><?	
 }
 ?>
@@ -70,23 +73,24 @@ You are viewing this page as ADMIN.
 	?>
     Anonymous
     <?php
-	}
-	else { 
+	} else { 
 	$authorVariable = get_the_author();
 	?>
     <?php
 		the_author_posts_link(); 
 		$posttemp = $post;
+	$sc = storyCount($author_id);
+	
 		?>
-    <? if(storyCount($author_id)>0){ ?>
-    (<? echo storyCount($author_id);  ?>
-    <? if (storyCount($author_id) == 1){ ?>
+    <? if($sc>0){ ?>
+    (<? echo $sc;  ?>
+    <? if ($sc == 1){ ?>
     story
     <? } else { ?>
     stories
     <? } ?>)
     <? newCommentCount($post->ID); ?>
-    <? } ?>
+    <? } else { ?>(0 Live Stories)<? } ?>
     <?
 		wp_reset_query();
 		$post = $posttemp;
@@ -123,7 +127,7 @@ You are viewing this page as ADMIN.
     <time class="date" datetime="<?php
 	echo date("F j, Y", strtotime($post->post_date)); ?>" pubdate>
       <?php
-	  $firsttime = get_post_meta( get_the_ID(), 'first_time' , true);
+	 
 	  
 	  // this means its sans writing prompt (my own topic)
 	
@@ -344,7 +348,7 @@ You are viewing this page as ADMIN.
 		$thePosts = array(0);
 		foreach($result as $row){
 			$temp = explode("_", $row[meta_key]);
-			$prompt_id = $temp[2];
+			$prompt_id = $wpid = $temp[2];
 		}
 		
 		$sql = "SELECT * FROM " . $wpdb->prefix . "usermeta WHERE meta_key LIKE 'stories_prompted_{$prompt_id}'";
@@ -366,7 +370,11 @@ You are viewing this page as ADMIN.
 			'orderby' => 'date',
 			'order' => 'DESC'
 		));
+		
+		
+		
 ?>
+
 <?php if ($loops->post_count > 0) { ?>
 <div class="storyPromptContainer moreStoriesDiv">
   <h1  class="relatedStores">Read More Stories On This Prompt</h1>
@@ -400,12 +408,19 @@ You are viewing this page as ADMIN.
   </div>
   <?php }
 		endwhile; ?>
+        
+        
   <?php
   
   
   
-  if($count == 0){
+  if($count == 0 && !isset($hide)){
 	 ?>There are no other live stories written on this prompt.<? 
+  } else {
+	  	$totalCount = storyCountWritingPrompt($wpid);
+		if($totalCount > 11){
+	?>  <p class="allStoriesLink"><a href="<? echo get_permalink($prompted_post->ID); ?>?all">See All Stories From This Prompt</a></p>   <? 
+		}
   }
   		$sql = "SELECT * FROM " . $wpdb->prefix . "postmeta LEFT JOIN " . $wpdb->prefix . "posts ON " . $wpdb->prefix . "posts.ID = " . $wpdb->prefix . "postmeta.post_id  WHERE meta_key = 'stories_response' AND meta_value = $original_post_id AND post_status = 'publish'";
 		
@@ -427,7 +442,9 @@ You are viewing this page as ADMIN.
 		));
 
   $count = 0;
-  ?><ul style="padding-left:0px;"><?
+  ?>
+ 
+  <ul style="padding-left:0px;"><?
   		// depth 1
 		while ($loops->have_posts()){			
 			$loops->the_post(); 
